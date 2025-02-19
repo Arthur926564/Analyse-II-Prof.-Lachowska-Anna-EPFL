@@ -1,0 +1,153 @@
+\lecture{2}{2025-02-19}{EDO}{}
+\subsection{Théorème Existence et unicité d'une solution de EDVS}
+\begin{parag}{Théorème}
+    \begin{theoreme}
+        Soit $f: I \to \mathbb{R}$ une fonction continue telle que $f(y) \neq 0 \; \; \forall y \in I$
+        \\
+        $g : J \to \mathbb{R}$ une fonction continue. Alors pour tout coupe $(x_0 \in J, b_0 \in I)$, l'équation
+        \[f(y)\cdot y'(x) = g(x)\]
+        admet une solution $y : J' \subset J \to I$ vérifiant la condition initiale $y(x_0) = b_0$.
+        \\
+        Si $y_1: J_1 \to I $ et $y_2 : J_2 \to I$ sont deux solutions telles que $y_1(x_0) = y_2(x_0) = b_0$, alors $y_1 (x) = y_2(x)$ pour tout $x \in J_1 \cap J_2$
+    \end{theoreme}
+\end{parag}
+\begin{parag}{Démonstration}
+    \begin{framedremark}
+        Idée : $\int f(y)dy = \int g(x)dx \implies F(y) = G(x) \implies y(x) = F^{-1}(G(x))$
+    \end{framedremark}
+    Le reste de la preuve se trouve sur les pdf de Joachim Favre.
+\end{parag}
+\begin{parag}{Résumé}
+\begin{resume}
+        EDVS:
+        $f(y)\cdot y' = g(x)$ où $f: I \to \mathbb{R}$ continue (respectivement $J$ pour $g$), 
+        \\
+        Pour résoudre $\int f(y)dy = \int g(x)dx$
+        où $\int f(y)dy$ est une primitive (sans constante) et $\int g(x)dx$ est une primitive générale (avec une constante)
+    \end{resume}    
+\end{parag}
+\begin{parag}{Exemple}
+    \begin{subparag}{Exemple 1}
+        $\frac{y'(x)}{y^2(x)} = 1$ EDVS : $\frac{1}{x^2}$ est contiue sur $\mathbb{R}_+^*$ et $\R_-^*$
+        \\
+        On a aussi que $g(x)$ est continue sur $\R$. on fait donc:
+        \begin{align*}
+            \int \frac{1}{y^2}dy = \int dx \implies -\frac{1}{y} = x + C \\
+            y = -\frac{1}{x+C} \; \; \forall C \in \R
+        \end{align*}
+        la solution générale sur $]-\infty, -C [ $ et $] -C, \infty [$.
+        \\
+        Condition initiale $y(0) = b_0 \in \R^* \implies y(0) = -\frac{1}{C} = b_0 \implies C = -\frac{1}{b_0}$
+        \\
+        \begin{itemize}
+            \item Si $b_0 > 0 \implies \frac{1}{b_0} > 0  \implies y(x) = -\frac{1}{x - \frac{1}{b_0}}$ sur $] -\infty, \frac{1}{b_0} [$ - la solution particulière
+            \item Et vis versa pour $b_0 < 0$
+        \end{itemize}
+    \end{subparag}
+\end{parag}
+\subsection{Solution maximale}
+\begin{parag}{Solution maximale}
+    \begin{definition}
+        Une solution \important{solution maximale} de l'EDVS avec la condition initiale $y(x_0) = b_0$, $x \in J, b_0 \in I$ est une fonction $y(x)$ de classe $C^1$ satisfaisant l'équation, la condition initiale et qui est définie sur le plus \textbf{grand} intervalle possible. \\
+        Le théorème sur EDVS dit que si $f(y) \neq 0$ sur $I$, alors il existe une unique solution maximale. Toute solution avec la même condition initiale est une restriction de la solution maximale
+    \end{definition}
+\end{parag}
+\begin{parag}{Exemple 2}
+    L'équation différentielle $2yy' = 4x^3$ avec la condition initiale $y(0) = 0$ possède : 
+    \begin{enumerate}
+        \item Une seul solution sur $\R$
+        \item $2$ solutions sur $\R$
+        \item $3$ solutions sur $\R$
+        \item $4$ solutions sur $\R$
+    \end{enumerate}
+    En premier lieu il faudra résoudre:
+    \begin{align*}
+        \int 2ydy &= \int 4x^3 dx \\
+        y^2 &= x^4 + C \; \; \forall C \in \R \\
+        y &= \pm \sqrt{x^4 + C} \\
+        y(0) &= \pm \sqrt{C'} = 0 \implies C' = 0 \\
+        y(x) &= \pm \sqrt{x^4} = \pm x^2
+    \end{align*}
+    On voit ici qu'il y a $4$ solutions à cause des $\pm$ qui se rajoute entre eux:
+    \begin{itemize}
+        \item $y(x) = x^2, x \in \R$
+        \item $y(x) = -x^2, x \in \R$
+        \item $y(x) = \begin{cases} -x^2, x \leq 0 \\ x^2, x > 0\end{cases}$
+        \item $y(x) = \begin{cases}
+            x^2, x \leq 0 \\ -x^2 , x > 0
+        \end{cases}$
+    \end{itemize}
+\end{parag}
+
+\section{Equation différentielle linéaire du premier ordre (EDL1)}
+\begin{parag}{Definition}
+    \begin{definition}
+    Soit $I \subset \R$ un intervalle ouvert. Une équation de la forme:
+    \[y'(x) + p(x)y(x) = f(x), \text{ où } p, f: I \to \R \text{ sont continues }\]
+    est une \important{équation différentielle linéaire du premier ordre (EDL1)}
+    \end{definition}
+    Une solution est une fonction $y: I \to \R$ de classe $C^1$ satisfaisant l'équation.
+\end{parag}
+\begin{parag}{Comment résoudre une EDL1}
+    Considérant l'équation $y'(x) + p(x)y(x) = 0$
+    \\
+    Elle s'appelle \important{l'équation homogène associée} à l'EDL1 $y' + py = f$ qui nous amène : 
+    \[\begin{cases}
+        y (x) = 0 \; \; \forall x \in I \\
+        \frac{y'(x)}{y(x)} = -p(x) \; \; \; EDVS \implies \int \frac{dy}{y} = -\int p(x) dx
+    \end{cases}\]
+    Ce qui implique que $\ln |y| = -P(x) + C_1$ où $P(x)$ est une primitive de $p(x)$, $C_1 \in \R$, ensuite, $|y| = e^{-P(x) + C_1} = e^{C_1}e^{-P(x)} \implies y(x) = \pm C_2 e^{-P(x)}, C_2 \in \R_+^*$
+    \\
+    Mais on a aussi $y(x) = 0$ sur $I$ ce qui implique que 
+    \[y(x) = Ce^{-P(x)}\]
+    où $C \in \R$, $x \in I$ est la solution générale de l'équation homogène associée $y' + py = 0$ sur $I$
+\end{parag}
+\subsection{Principe de superposition de solutions}
+\begin{parag}{Principe}
+    Soit $I \subset \R$ ouvert, $p, f_1, f_2 : I \to \R$ fonctions continues
+    \\
+    Supposons que $v_1: I \to \R$ de classe $C^'$ est une solution 
+    \[y' + p(x)y(x) = 0\]
+\end{parag}
+\begin{parag}{Méthode de la variation de constante}
+    On cherche une solution particulière de $y'(x) + p(x) y(x) = f(x) : p, f :I\underbrace{ \to \R}_{\text{continue}}$ sout la forme : 
+    \\
+    \textbf{Ansatz:}
+    \[v(x) = \textcolor{red}{C(x)}e^{-P(x)}\] 
+    où $P(x)$ est une primitive de $p(x)$ sur $I$
+    \\
+    Si $v(x)$ est une solution $\implies v'(x) + p(x)v(x) = f(x)$
+    ce qui implique que 
+    \[C'e^{-P(x)} + C(x)(-e^{-P(x)})\cdot p(x) + p(x)Ce^{-P(x)} = f(x)\]
+    \\
+    Ce qui revient a dire 
+    \[C'(x) = f(x)e^{P(x)} \implies c(x) = \int f(x)e^{P(x)} dx\]
+    une solution particulière de l'équation $y'(x) + p(x) y(x) = f(x)$ est $v(x) = \left(\int f(x) e^{P(x)}dx\right)\cdot e^{-P(x)}$ où $P(x)$ est une primitive de $p(x)$ sur $I$
+\end{parag}
+\subsection{Théorème à savoir pour l'examen}
+\begin{parag}{Proposition}
+    Soit $p_1, f : I \to \R$ fonctions continues. Supposons que $v_0 : I \to \R$ est une solution partiulière de l'équation $y'(x) + p(x)y(x) = f(x)$
+    \\
+    Alors la solution générale de cette équation est:
+    \[v(x) = v_0(x) + Ce^{-P(x)}, \text{ pour tout } C \in \R, \text{ où } P(x) \text{ est une primitive de p(x) sur } I\]
+\end{parag}
+\begin{parag}{Démonstration}
+    \textbf{(1)} \\
+    Soit $v_1(x)$ une solution de $y'(x) + p(x)y(x) = f(x)$. On va démontrer qu'il existe $C \in \R$ tel que $v_1(x) = v_0(x) + Ce^{-P(x)}$, où $v_0(x)$ est une solution de $y'(x) + p(x)y(x) = f(x)$.
+    \\
+    Ce qui est équivalent à $\exists C \in \R: v_1(x) - v_0(x) = Ce^{-P(x)}$
+    \\
+    \textbf{(2)}
+    \\
+    Par le principe de \important{superposition des solutions}, la fonction $v_1(x) - v_0(x)$ est une solution de l'équation $y'(x) + p(x)y(x) = f(x)$ est $v(x) = v_0(x) + Ce^{-P(x)}$ où $C \in \R, x \in I$
+    \\
+    \textbf{(3)}
+    \\
+    $y'(x) + p(x)y(x) = 0$ est EDVS $\implies $ la solution générale de cette équation est $v(x) = Ce^{-P(x)}$, $C \in \R$ et $P(x)$ est une primitive de $p(x)$ sur $I$.
+    \\
+    \textbf{(4)}
+    \\
+    Donc, par la définition $v(x)$ est la \important{solution générale}.
+\end{parag}
+
+
