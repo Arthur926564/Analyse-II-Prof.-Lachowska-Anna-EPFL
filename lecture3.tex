@@ -1,0 +1,71 @@
+\lecture{3}{2025-02-24}{EDL1 Et Méthode de démonstration}{}
+\subsection{Rappel: Equation différentielles linéaires du premier ordre (EDL1)}
+\begin{parag}{Rappel}
+    \[y' + p(x)y = f(x)\]
+    Où $p, f: I \to \R$ fonctions continues. Alors la solution générale est donnée par la formule:
+    \[y(x) = y_{hom}(x) + y_{part}(x)\]
+    Où $y_{hom}(x)$ est la solution générale de l'équation générale de l'équation homogène associée: $y' + p(x)y = 0$ et $y_{part}(x)$ est une solution particulière de l'équation donnée : $y' + p(x)y = f(x)$.
+    \begin{itemize}
+        \item $y_{hom}(x) = Ce^{-P(x)}$, où $P(x) = \int p(x)dx$ est une primitive (sans constante), $C \in \R$.
+        \item $y_{part}(x) = \left(\int f(x) e^{P(x)}dx\right)e^{-P(x)}$
+    \end{itemize}
+    \begin{theoreme}
+        La solution générale de l'EDL1 : 
+        \[y(x) = Ce^{-P(x)} + \left(\int f(x)e^{P(x)}dx\right)e^{-P(x)}\]
+    \end{theoreme}
+    \begin{framedremark}
+        Attention avec le signe moins qui se trouve dans la solution homogène mais pas dans la solution particulière.
+    \end{framedremark}
+    
+\end{parag}
+
+\subsection{Application de EDVS (EDL1): Croissance et decroissance exponentielle}
+\begin{parag}{Exemple}
+    Soit $y = y(t)$ tel que $y' = ky, k \in \R$; $y = 0$ est une solution \\
+    EDVS: $\int \frac{dy}{y} = \int k dt \implies \ln |y| = kt + C_1 \implies |y| = e^{C_1}e'{kt} \implies y(t) = Ce^{kt}$
+    \\
+    Condition initiales : 
+    \begin{itemize}
+        \item $y(0) = C = y_0 > 0$
+        \item $y(t) = y_0e^{kt}$
+    \end{itemize}
+    \\
+    La solution maximale satisfaisant la condition initiale $y(0) = y_0$ est:
+    \[y(t) = y_0e^{kt}\]
+\end{parag}
+\section{Méthodes de démonstration}
+\begin{parag}{Méthode 3: Raisonnement par disjonction des cas}
+    \begin{definition}
+        Soient $P, Q$ deux propositions. Pour montrer que $P \implies Q$ on sépare l'hypothèse de $P$ de départ en différent cas possibles et on montre que l'implication est vraie dans chacun des cas. Il est très important de considérer \important{tous les cas possibles}
+    \end{definition}
+    \begin{subparag}{Ex1}
+        Pour tout $x, y \in \R$ on a:
+        \[||x| - |y| | \leq ||x - |\]
+    \end{subparag}
+    \begin{subparag}{Ex2}
+        Pour tout $n \in \mathbb{Z}$, $2n^2 + n + 1$ n'est pas divisible par $3$.
+    \end{subparag}
+\end{parag}
+\begin{parag}{Méthode 4: Comment démontrer les propositions de la forme $P \iff Q$}
+    Deux méthode existent:
+    \begin{enumerate}
+        \item $P \implies Q$ \important{ET} $Q \implies P$
+        \item Suite d'équivalences : $P \iff R_1 \iff R_2 \iff \cdots \iff Q$
+    \end{enumerate}
+    \begin{framedremark}
+        Pour la deuxième méthodes, il faut vérifier que chaque implication est une \textbf{équivalence}.
+    \end{framedremark}
+    \begin{subparag}{Ex3}
+        Soit $a, b \in \mathbb{N}$ : 
+        \begin{itemize}
+            \item $P : \{ ab + 1 = c^2$ pour un nombre naturel $c \}$
+            \item $Q: \{a = b \pm 2\}$
+        \end{itemize}
+    \end{subparag}
+
+    \begin{subparag}{Ex4}
+        Soient $z = \rho \underbrace{e^{i\varphi}}_{\rho > 0} \in \mathbb{C}^*$, $P :\{z^2 \in \R^*\}$, $Q: \{\varphi = \frac{\pi k}{2}, k \in \mathbb{Z}\}$
+        \\
+        On cherche ici à savoir la relation entre $P\; \, ??\;  \,Q$
+    \end{subparag}
+\end{parag}
