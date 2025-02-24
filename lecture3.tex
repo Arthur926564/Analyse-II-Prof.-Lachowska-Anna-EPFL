@@ -16,7 +16,83 @@
     \begin{framedremark}
         Attention avec le signe moins qui se trouve dans la solution homogène mais pas dans la solution particulière.
     \end{framedremark}
-    
+    \begin{subparag}{Ex1}
+        $y' - \underbrace{\frac{2}{x}}_{p(x)}y = \underbrace{x^3 + 1}_{f(x)}$ avec $p: ]-\infty, o[$ et $]0, \infty[ \to \R$ continue, $f : \R \to R$ est continue.
+        \\
+        $P(x) = \int -\frac{2}{x} = -2\ln|x| \implies P(x) = -2\ln|x|$ avec $x \neq 0$
+        \\
+        On a donc comme solution homogène:
+        \[y_{hom}(x) = Ce^{-P(x)} = Ce^{--2\ln|x|} = Ce^{--\ln|x|^2} = Ce^{--\ln x^2} = Cx^2\]
+        Sur $]-\infty, 0[ \;\cap\; ]0, \infty[$
+        \\
+        On cherche maintenant une solution particulière de l'équation complète:
+        \[y' + \frac{-2}{x}y = x^3 + 1\]
+        On utilise la méthode de la variation des constantes:
+        \begin{align*}
+            \int f(x)e^{P(x)} dx &= \int (x^3 + 1)e^{-\ln x^2}dx \\
+            &= \int \frac{x^3 + 1}{x^2} dx \\
+            &= \int (x + \frac{1}{x^2})dx \\
+            &= \frac{1}{2}x^2 - \frac{1}{x} \; \; \text{pas de constante}
+        \end{align*}
+        Ce qui implique donc que:
+        \begin{align*}
+            y_{part}(x) = (\frac{1}{2}x^2 - \frac{1}{x})e^{-(-\ln x^2)} = (\frac{1}{2}x^2 - \frac{1}{x})x^2 = \frac{1}{2}x^4 - x
+        \end{align*}
+        \textbf{Verification:}
+        \\
+        \begin{align*}
+            y_{part}'(x) - \frac{2}{x}y_{part} &= 2x^3 - 1 - \frac{2}{x}(\frac{1}{2}x^4 - x) \\
+            &= 2x^3 - 1 -x^3 + 2 =x^3 + 1
+        \end{align*}
+        Solution générale de l'équation originale:
+        \begin{align*}
+            y(x) = Cx^2 + \frac{1}{2}x^4 - x
+        \end{align*}
+        Sur $]-\infty, 0[$ et sur $]0, \infty[$
+    \end{subparag}
+    \begin{framedremark}
+        Si on mulitplie par $x$ l'équation de base: 
+        \[xy' - 2y = x^4 + x\]
+        Alors, la solution va sur $\R$
+        \\
+        $\implies y(x) = Cx^2 + \frac{1}{2}x^4 - x$ sur $\R$
+    \end{framedremark}
+    \begin{subparag}{Ex2}
+        $y' - (\tan x)y = \cos x$ $\tan (x)$ n'est pas continue en $x = (2k + 1)\frac{\pi}{2}, k \in \mathbb{Z}$. Puisque $0 \in ]-\frac{\pi}{2}, \frac{\pi}{2}[ \implies$ on considère l'équation sur $]-\frac{\pi}{2}, \frac{\pi}{2}[$, $p, f: ]-\frac{\pi}{2}, \frac{\pi}{2}[ \to \R$ continues.
+        \\
+        \begin{enumerate}
+            \item Solution générale de l'équation homogène associée.
+            \begin{align*}
+                y' + (-\tan x)y &= 0 \\
+                P(x) = \int (-\tan x)dx &= - \int \frac{\sin x}{\cos x} \\
+                &\underbrace{=}_{\int \frac{du}{u}} \int \frac{d(\cos x)}{\cos x} = \ln |\cos x| \\
+                &\implies P(x) = \ln (\cos x) \text{ sur } ]-\frac{\pi}{2}, \frac{\pi}{2}[
+            \end{align*}
+            On a donc:
+            \[y_{hom}(x) = Ce^{-P(x)} = Ce^{-\ln \cos x} = \frac{C}{\cos x}, x \in ]-\frac{\pi}{2}, \frac{\pi}{2}[, C \in \R\]
+            \\
+            \textbf{Vérification:}
+            \begin{align*}
+                -\frac{C}{\cos^2x}\cdot (-\sin x) - \tan x \cdot \frac{C}{\cos x} = C\frac{\sin x}{\cos^2 x} - C\frac{\sin x}{\cos^2 x} = 0
+            \end{align*}
+            \item Solution particulière de l'équation complète:
+            \[y' - \tan x y = \cos x\]
+            Selon la même méthode:
+            \begin{align*}
+                \int f(x) e^{P(x)}dx = \int \cos x e^{\ln \cos x} dx &= \int \cos^2 x \;dx \\
+                &= \int \frac{1}{2}(1 + \cos 2x) dx \\
+                &= \frac{1}{2}x + \frac{1}{4}\sin 2x
+            \end{align*}
+            On a donc:
+            \begin{align*}
+            y_{part}(x)& = (\frac{1}{2}x + \frac{1}{4}\sin 2x)\cdot e^{-P(x)} \\&=
+            (\frac{1}{2}x + \frac{1}{4}\sin 2x)\frac{1}{\cos x}\\
+            &= \frac{1}{2}\frac{x}{\cos x} + \frac{1}{4}\frac{2\sin x \cos x}{\cos x} \\
+            y_{part}(x) &= \frac{1}{2}\frac{x}{\cos x} + \frac{1}{2}\sin x, \; x \in ]-\frac{\pi}{2}, \frac{\pi}{2}[
+            \end{align*}
+            
+        \end{enumerate}
+    \end{subparag}
 \end{parag}
 
 \subsection{Application de EDVS (EDL1): Croissance et decroissance exponentielle}
@@ -41,9 +117,39 @@
     \begin{subparag}{Ex1}
         Pour tout $x, y \in \R$ on a:
         \[||x| - |y| | \leq ||x - |\]
+        \begin{enumerate}
+            \item $|x| \geq |y| \implies$
+            \begin{align*}
+            ||x| - |y|| &= |x| - |y|\\
+            &= |x- y + y| - |y|\\
+            &\overbrace{\leq}^{\Delta} |x-y| + |y| - |y| = |x-y|  
+            \end{align*}
+            \item $|x| < |y| \implies$
+            \begin{align*}
+                ||x| - |y|| &= -|x| + |y|\\
+                &= -|x| + |y -x + x|\\
+                &\overbrace{\leq}^{\Delta} -|x| + |y-x| + |x| = |y-x|\\ &= |x-y|
+            \end{align*}
+        \end{enumerate}
     \end{subparag}
     \begin{subparag}{Ex2}
-        Pour tout $n \in \mathbb{Z}$, $2n^2 + n + 1$ n'est pas divisible par $3$.
+        Pour tout $n \in \mathbb{Z}$, $2n^2 + n + 1$ n'est pas divisible par $3$. 3 Cas:
+        \begin{enumerate}
+            \item $n \equiv 0 \mod 3 \iff n = 3k, \; k \in \mathbb{Z}$
+            \\
+            \begin{align*}
+                2n^2 + n + 1 = 2(3k)^2 + (3k) + 1 \equiv 1 \mod 3
+            \end{align*}
+            \item $n \equiv 1 \mod 3 \iff n = 3k + 1, \; k \in \mathbb{Z}$
+            \begin{align*}
+                \implies 2n^2 + n + 1 = 2(3k + 1) ^2 + (3k + 1) + 1 \equiv 2 + 1 + 1 \equiv 1 \mod 3
+            \end{align*}
+            \item $n \equiv 2 \mod 3, n = 3k + 2, k \in \mathbb{Z}$
+            \begin{align*}
+                2n^2 + n + 1 = 2(3k + 2)^2 + (3k + 2) + 1\equiv  8 + 2 + 1 \equiv 2 \mod3
+            \end{align*}
+        \end{enumerate}
+        Finalement, $2n^2 + n + 1$ n'est pas divisible par $3 \; \forall n  \in \mathbb{Z}$.
     \end{subparag}
 \end{parag}
 \begin{parag}{Méthode 4: Comment démontrer les propositions de la forme $P \iff Q$}
@@ -60,12 +166,46 @@
         \begin{itemize}
             \item $P : \{ ab + 1 = c^2$ pour un nombre naturel $c \}$
             \item $Q: \{a = b \pm 2\}$
+            
         \end{itemize}
+        \textbf{Proposition} $P \iff Q$
+        \\
+        \textbf{Démonstration}
+        \begin{align*}
+            \underbrace{ab + 1 = c^2}_P \iff ab = c^2 - 1 \iff ab\\
+            = (c+1)(c-1) \underbrace{\iff}_{\text{Faux}} \begin{cases}
+                \begin{cases}
+                    a = c-1 \\
+                    b = c + 1 
+                \end{cases}\\
+                \begin{cases}
+                    a = c+1 \\
+                    b = c-1
+                \end{cases}
+            \end{cases}
+        \end{align*}
+        Néanmoins, Contre exemple:
+        $a = 3, b=8$ on a que $24 + 1 = 25  = 5^2 = c^2$, $P$ est vrai, $Q$ est faux\\
+        Proposition qui est vraie: $Q \implies P$ Soient $a, b \in \mathbb{N} : a = b \pm 2$, Alors $ab + 1 = c^2, c \in \mathbb{N}$
+        \\
+        \textbf{Démonstration}
+        \begin{align*}
+            a = b \pm 2 \implies ab + 1 &= b(b\pm 2) + 1\\ &= b^2 \pm 2b + 1 \\&= (b \pm 1)^2 = c^2
+        \end{align*}
     \end{subparag}
 
     \begin{subparag}{Ex4}
         Soient $z = \rho \underbrace{e^{i\varphi}}_{\rho > 0} \in \mathbb{C}^*$, $P :\{z^2 \in \R^*\}$, $Q: \{\varphi = \frac{\pi k}{2}, k \in \mathbb{Z}\}$
         \\
         On cherche ici à savoir la relation entre $P\; \, ??\;  \,Q$
+        \\
+        \textbf{Démonstration} $Q \implies P$:
+        \\
+        Soit $z = \rho e^{i\varphi}, \varphi = \frac{\pi}{2}k \implies z^2 = \rho^2 e^{2i\varphi} = \rho^2(-1)^k \in \R^*$.
+        \\
+    \textbf{Démonstration} $P \implies Q$
+    \\
+    Soit $z = \rho e^{i\varphi}, \rho > 0 \implies z^2 = \rho^2e^{2i\varphi}$
     \end{subparag}
+    
 \end{parag}
