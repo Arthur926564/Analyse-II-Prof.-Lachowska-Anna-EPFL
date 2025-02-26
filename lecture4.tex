@@ -1,0 +1,218 @@
+\lecture{4}{2025-02-26}{EDL2}{}
+
+    \section{Equation différentielle du second ordre}
+   
+    \begin{parag}{Définition}
+        \begin{definition}
+            Soit $I$ un intervalle ouvert. On appelle \important{équation différentielle linéaire de second ordre} une équation de la forme:
+            \begin{align*}
+                y''(x) + p(x)y'(x) + q(x)y(x) = f(x) 
+            \end{align*}
+            où $p, q, f: I \to \mathbb{R}$ sont des fonctions continues
+            
+        \end{definition}
+       
+        \begin{definition}
+            Une équation de la forme
+            \begin{align*}
+                y''(x) + p(x)y'(x) + q(x)y(x) = 0
+            \end{align*}
+            est dire EDL2 homogène.
+ 
+        \end{definition}
+        
+        On cherche une solution de cette équation de classe $C^2$
+        \begin{subparag}{Ex1}
+            $y'' = 5 \implies y' = 5x + C, x \in \mathbb{R}, \forall C, \in \mathbb{R} $
+
+           \\
+           Ce qui implique
+           \begin{align*}
+               y(x) = \frac{5}{2}x^2 + C_1x + C_2 \; \; \forall x \in \mathbb{R}, \; \forall C_1, C_2, \in \mathbb{R}
+           \end{align*}
+           
+        \end{subparag}
+    
+    \end{parag}
+
+    \begin{parag}{EDL2 homogène à coefficients constants}
+        \begin{align*}
+            y''(x) + py'(x) + qy(x) = 0, \; \; p, q \in  \mathbb{R} \\
+            y''(x) - (a + b)y'(x) + aby(x) = 0, \; \text{ où a, b sont des racines de l'équation } \lambda^2 + p \lambda + q = 0
+        \end{align*}
+        
+        Par un changement de variables:
+        \begin{align*}
+            ( \underbrace{(y'(x) - ay(x))}_{z(x)})' - b( \underbrace{y'(x) - ay(x)}_{z(x)}) = 0 \\
+            z'(x) - bz(x) = 0 \implies \text{ EDVS pour } z \\
+            \implies z(x) = C_1 e^{bx} \\
+            \implies z(x) = y'(x) - ay(x) = C_1 e^{bx}
+        \end{align*}
+        Ce qui est une EDL1.
+        \begin{align*}
+            &=y'(x) - ay(x) = C_1e^{bx}, \; \;  p(x) = -a, \; f(x) = C_1 e^{bx} \\
+            &\implies P(x) = \int -adx = -ax, \\
+           &=y_{hom}(x) = C_2e^{ax} \; \; \text{ solution générale de l'équation homogène}
+        \end{align*}
+        On a alors pour $C(x)$:
+        \begin{align*}
+            C(x) = \int C_1e^{bx} e^{-ax} dx = C_1 \int e^{(b-a)x}dx = \begin{cases} \frac{1}{b-a}C_1 e^{(b-a)x}, \text{ si } b \neq a \\ C_2 e^{ax} + C_1 xe^{ax} \text{ si } a = b \end{cases}
+            
+        \end{align*}
+
+    
+        Si $a \neq b$ sont des racines complexes, $a, b \notin \mathbb{R} \implies a = \hat{b}$
+        Ce qui implique que: $y(x) = Ce^{ax} + \hat{C} e^{\hat{a}x}$ pour avoir une solution réelle, $a = \alpha + i \beta , \alpha, \beta \in \mathbb{R}, \beta \neq 0$
+        \\        Soit $C = \frac{1}{2}(C_2 - iC_4) \implies \hat{C} = \frac{1}{2} (C_3 + iC_4), C_3, C_4 \in \mathbb{R} $ \\
+        Alors on a que:
+
+        \begin{align*}
+                  y(x) = Ce^{ax} + \hat{C}e^{\hat{a}x} &= \frac{1}{2}(C_3 -  iC_4)e^{ \alpha x}e^{i \beta x} + \frac{1}{2}(C_3 + iC_4)e^{ \alpha x} e^{-i \beta x}\\
+                                                       &= C_3 e^{ \alpha x} \frac{e^{i \beta x } + e^{-i \beta x}}{2} + C_4 e^{ \alpha x} \frac{e^{i \beta x} - e^{- i \beta x}}{2i}
+          \end{align*} 
+    
+    \end{parag}
+    
+    \begin{parag}{Résumé}
+        \begin{align*}
+            y''(x) + py'(x) + q y(x) = 0
+        \end{align*}
+        Soient $a, b \in \mathbb{C}$ les racines de l'équation $ \lambda^2 + p \lambda + q = 0$
+    \\
+    Alors la solution générale est : 
+    \begin{align*}
+        y(x) = \begin{cases}
+                C_1 e^{ax} + C_2 e^{bx} \text{ , si } a \neq b, a, b \in \mathbb{R} \; \; \forall C_1, C_2, \in \mathbb{R} \\
+                C_1e^{ax} + C_2xe^{bx} \text{ , si } a = b \\
+                C_1e^{ \alpha x} \cos \beta x + C_2 e^{ \alpha x} \sin \beta x \text{ , si } a = \alpha + i \beta = \hat{b} \notin \mathbb{R} \; \; \forall x \in \mathbb{R}
+                            
+        \end{cases}
+    \end{align*}
+    
+    \begin{subparag}{Exemple 2}
+       \begin{align*}
+           y'' + 9y = 0
+       \end{align*}
+       Equation caractéristique : $ \lambda^2 + 9 = 0 \implies a = 3i, b = -3i$ Ce qui donne : $a = 3i = \alpha + \beta i$
+       \\
+       Ce qui donne comme solution générale:
+       \begin{align*}
+           y(x) = C_1 \cos 3x + C_2 \sin 3x
+       \end{align*}
+       
+    \important{Vérification:} $y'(x) = -3C_1\sin 3x + 3C_2\cos 3x \implies y'' = -9C_1 \cos 3x - 0 C_2 \sin 3x \implies y'' + 9y = 0$
+    \end{subparag}
+    \begin{subparag}{Exemple 3}
+        
+        \begin{align*}
+            y'' -6y' + 9y = 0
+        \end{align*}
+        Même procédé avec l'équation caractéristique:
+        \begin{align*}
+            \lambda^2 - 6 \lambda + 9 = 0 \implies \lambda = 3
+        \end{align*}
+        
+        Ce qui donne comme solution:
+        \begin{align*}
+            y(x) = C_1 e^{ ax} + C_2 e^{ax}
+        \end{align*}
+        
+                
+    \end{subparag}
+    \end{parag}
+    
+    
+    \subsection{Unicité d'un EDL2}
+    Considérons l'équation $y''(x) + p(x)y'(x) + q(x)y(x) = 0$
+    \begin{parag}{Théorème}
+        \begin{theoreme}
+        Une EDL2 homogène admet une seule solution $y(x) : I \to \mathbb{R}$ de classe $C^2$ satisfaisant $y(x_0) = t$ et $y'(x_0) = s$ pour un $x_0 \in I$ et les nombres arbitraires $s, t \in \mathbb{R}$.
+        \end{theoreme}
+        \begin{framedremark}
+            La démonstration n'est pas vu dans ce cours car trop fastidieuse
+        \end{framedremark}
+       \begin{subparag}{Remarque}
+           (1) \important{Superposition des solutions} Si $y_1(x)$ et $y_2(x)$ sont $2$ solutions de EDL2 \important{homogènes} alors
+           \begin{align*}
+               y(x) = Ay_1(x) + By_2(x)
+           \end{align*}
+         Est aussi une solution, où $A, B \in \mathbb{R}$
+           
+       \end{subparag}
+        
+        
+
+    
+    \end{parag}
+    
+    
+    \begin{parag}{Dépendance linéaire de fonctions}
+
+    
+        \begin{definition}
+            Deux solutions $y_1(x), y_2(x) : I \to \mathbb{R}$ sont linéairement indépendants s'il n'existe pas de constante $c \in \mathbb{R}$ \text{ tel que } $y_2(x) = c y_1(x)$
+            
+        \end{definition}
+        \begin{subparag}{Remarque}
+            Cela implique, en particulier, que $y_1(x)$ et $y_2(x)$ ne sont pas triviallement $= 0$ sur $I$
+            
+        \end{subparag}
+        
+    \end{parag}
+    
+    \begin{parag}{Comment résoudre}
+        Comment résoudre $y''(x) + p(x)y'(x) + q(x)y(x) = 0$? \\
+        Supposons que $v_1(x)$ est une solution de cette équation, telle que On sait trouver une autre solution linéairement dépendante.
+        \begin{subparag}{Ansatz}
+            $v_2(x) = c(x)v_1(x)$
+            \\
+            Telle que $c(x) \neq const$. Alors : 
+            \begin{align*}
+                v_2'(x) = c'(x)v_1(x) + c(x)v_1'(x) \\
+                c''(x)v_1(x) + c'(x)v_1'(x) + c'(x)v_1'(x) + c(x)v_1''(x)\\
+          \implies c''(x)v_1(x) + 2c'(x)v_1'(x) + c(x)v_1''(x) + p(x)c'(x)v_1(x) + p(x)c(x)v_1'(x) + q(x)c(x)v_1(x) = 0 \\
+            \end{align*}
+            
+            On peut trouver vu que $v_1(x)$ est solution que:
+            \begin{align*}
+          c(x)(v_1''(x) + p(x)v_1'(x) + q(x)v_1(x)) = 0
+            \end{align*}
+           Ce qui revient pour notre équation:
+           \begin{align*}
+               c''(x)v_1(x) + 2c'(x)v_1'(x) + p(x)c'(x)v_1(x) = 0
+           \end{align*}
+           On suppose que $v_1(x) \neq 0$ sur $I$ et $c'(x) \neq 0$ sur $I$. (Une condition en plus, de toute façon, si $c'(x) = 0$ on peut juste enlever le $0$ de l'intervalle et ensuite peut être le rajouter après). On peut donc diviser ce qui donne:
+           \begin{align*}
+               \frac{c''(x)}{c'(x)} = -p(x) - 2 \frac{v_1'(x)}{v_1(x)} \implies \text{ EDVS  pour } c'(x)
+           \end{align*}
+           Ce qui revient:
+           \begin{align*}
+               \ln c'(x) = \underbrace{-P(x)}_{\ln e^{-P(x)}} - 2\ln v_1(x) + \ln C, \; \; C \in \mathbb{R}_+^* \\
+               = \ln \frac{C e^{-P(x)}}{v_1^2(x)}
+           \end{align*} 
+           On cherche la dérivée de $c(x)$ : 
+           \begin{align*}
+               c'(x) &= \pm \frac{e^{-P(x)}}{v_1^2(x)} \\
+                     &= C_1 \frac{e^{-P(x)}}{v_1^2(x)} \; \; $C_1 \in \mathbb{R}^*, C_1 = \pm C \\
+                   c(x) &= \int C_1 \frac{e'{-P(x)}}{v_1^2(x)}dx + C_2
+                   \\
+                        &\implies v(x) = c(x)v_1(x) \text{ est une solution.}
+
+           \end{align*}
+           Si on prend $C_1 = 1$ et $C_2 = 0$ on obtient $v_2(x)$ linéairement dépendante de $v_1(x)$ : 
+           \begin{theoreme}
+               \begin{align*}
+                   v_2(x) = c(x)v_1(x) = v_1(x) \int \frac{e^{-P(x)}}{v_1^2(x)} dx
+               \end{align*}
+               
+           \end{theoreme}
+           
+           
+           
+           
+           
+        \end{subparag}
+    
+    \end{parag}
+    
+
