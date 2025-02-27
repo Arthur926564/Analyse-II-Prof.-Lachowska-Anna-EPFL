@@ -57,7 +57,6 @@
         On a alors pour $C(x)$:
         \begin{align*}
             C(x) = \int C_1e^{bx} e^{-ax} dx = C_1 \int e^{(b-a)x}dx = \begin{cases} \frac{1}{b-a}C_1 e^{(b-a)x}, \text{ si } b \neq a \\ C_2 e^{ax} + C_1 xe^{ax} \text{ si } a = b \end{cases}
-            
         \end{align*}
 
     
@@ -116,8 +115,6 @@
         \begin{align*}
             y(x) = C_1 e^{ ax} + C_2 e^{ax}
         \end{align*}
-        
-                
     \end{subparag}
     \end{parag}
     
@@ -168,9 +165,15 @@
             \\
             Telle que $c(x) \neq const$. Alors : 
             \begin{align*}
-                v_2'(x) = c'(x)v_1(x) + c(x)v_1'(x) \\
-                c''(x)v_1(x) + c'(x)v_1'(x) + c'(x)v_1'(x) + c(x)v_1''(x)\\
-          \implies c''(x)v_1(x) + 2c'(x)v_1'(x) + c(x)v_1''(x) + p(x)c'(x)v_1(x) + p(x)c(x)v_1'(x) + q(x)c(x)v_1(x) = 0 \\
+                v_2'(x) &= c'(x)v_1(x) + c(x)v_1'(x) 
+            \end{align*}
+            Si on cherche la seconde dérivée de $v_2$:
+            \begin{align*}
+                  v_2''(x) =  c''(x)v_1(x) + c'(x)v_1'(x) + c'(x)v_1'(x) + c(x)v_1''(x)
+              \end{align*}
+              Si on simplifie l'expression:
+              \begin{align*}
+          \implies c''(x)v_1(x) + 2c'(x)v_1'(x) + c(x)v_1''(x) + p(x)c'(x)v_1(x) \\ + p(x)c(x)v_1'(x) + q(x)c(x)v_1(x) = 0 
             \end{align*}
             
             On peut trouver vu que $v_1(x)$ est solution que:
@@ -191,28 +194,23 @@
                = \ln \frac{C e^{-P(x)}}{v_1^2(x)}
            \end{align*} 
            On cherche la dérivée de $c(x)$ : 
+           
            \begin{align*}
                c'(x) &= \pm \frac{e^{-P(x)}}{v_1^2(x)} \\
-                     &= C_1 \frac{e^{-P(x)}}{v_1^2(x)} \; \; $C_1 \in \mathbb{R}^*, C_1 = \pm C \\
+                     &= C_1 \frac{e^{-P(x)}}{v_1^2(x)} \; \; C_1 \in \mathbb{R}^*, C_1 = \pm C \\ 
                    c(x) &= \int C_1 \frac{e'{-P(x)}}{v_1^2(x)}dx + C_2
                    \\
-                        &\implies v(x) = c(x)v_1(x) \text{ est une solution.}
-
+                        \implies v(x) = c(x)v_1(x) \text{ est une solution.}
            \end{align*}
            Si on prend $C_1 = 1$ et $C_2 = 0$ on obtient $v_2(x)$ linéairement dépendante de $v_1(x)$ : 
            \begin{theoreme}
                \begin{align*}
                    v_2(x) = c(x)v_1(x) = v_1(x) \int \frac{e^{-P(x)}}{v_1^2(x)} dx
                \end{align*}
-               
            \end{theoreme}
-           
-           
-           
-           
-           
-        \end{subparag}
-    
-    \end{parag}
-    
+
+       \end{subparag}
+
+   \end{parag}
+
 
