@@ -1,0 +1,350 @@
+
+% !TeX program = lualatex
+\lecture{5}{2025-03-03}{Equation différentielle}{}
+
+
+\subsection{Rappel: Equation différentielle linéaires du second ordre (EDL2)}
+\begin{parag}{EDL2 homogène}
+    \begin{align*}
+        y''(x) + p(x)y'(X) + q(x) y(x)
+    \end{align*}
+    
+    avec, $p, q : I \to \mathbb{R}$ des fonctions continues
+
+\end{parag}
+\begin{parag}{EDL2 à coefficient constants}
+    \begin{align*}
+        y''(x) + py'(x) + qy(x) = f(x)
+    \end{align*}
+    avec $p, q \in \mathbb{R}, f: I \to \mathbb{R}$ des fonctions continues    
+
+\end{parag}
+
+\begin{parag}{EDL2 homogène a coefficient constant}
+
+    \begin{align*}
+        y''(X) + py'(x) + qy(x) = 0
+    \end{align*}
+    avec $p, q \in \mathbb{R}$
+    \\
+    La solution générale de cette dernière: $ \lambda^2 + p \lambda + q = 0 \implies a, b \implies$ 3 cas qui sont solution générale Pour un EDL2 homogène, si $v_1(x)$ est une solution et $v_1(x) \neq 0$ sur $I \to v_2(x) = v_1(x) \int \frac{e^{-P(x)}}{v_1^2(x)} dx$ est une solution linéairement indépendante, où $P(x) = \int p(x)dx$ est une primitive.
+
+\end{parag}
+
+\subsection{Caractérisation des 2 solutions de EDL2 linéairement indépendante}
+\begin{definition}
+    Si $v_1, v_2 : I \to \mathbb{R}$ deux fonctions dérivables sur $I \subset \mathbb{R}$ alors la fonction $W[v_1, v_2], I \to \mathbb{R}$ définie par 
+    \begin{align*}
+        W[v_1, v_2] = \det \begin{pmatrix}
+            v_1(x) &v_2(x) \\
+            v_1'(x) & v_2'(x)
+        \end{pmatrix}
+        = v_1(x)v_2'(x) - v_2(x)v_1'(x)
+    \end{align*}
+    est appelée le \important{Wronskien} de $v_1$ et $v_2$
+    
+\end{definition}
+\begin{parag}{Exemple}
+    \begin{align*}
+        y'' - 6y' + 9y = 0 \implies \lambda^2 - 6 \lambda + 9 = 0
+    \end{align*}
+    qui donne comme solution $ \lambda_{1, 2} = 3$ qui nous donne:
+    \begin{align*}
+        v(x) = C_1 e^{3x} + C_2xe^{2x}, \text{ avec } x \in \mathbb{R}
+    \end{align*}
+
+    On calcule le wronskien:
+    \begin{align*}
+        W[e^{3x}, xe^{3x}] = \det \begin{pmatrix}
+            e^{3x} & xe^{3x} \\
+            3e^{3x} & e^{3x} + 3xe^{3x}
+        \end{pmatrix}
+        u
+        = e^{6x} + 3xe^{6x} - 3x^{6x} = e^{6x}
+    \end{align*}
+    On a donc:
+   \begin{align*}
+    e^{6x} = W[e^{3x}, xe^{3x}] \neq 0 \text{ sur } \mathbb{R}
+   \end{align*}
+    
+    
+    
+
+\end{parag}
+
+\subsection{Démonstration à savoir}
+\begin{parag}{Proposition}
+
+    \begin{theoreme}
+        Soient $v_1, v_2: I \to \mathbb{R}$ deux solutions de l'équation $y''(x) + p(x)y'(x) + q(x)y(x) = 0$, Alors $v_1(x)$ et $v_2(x)$ sont linéairement indépendantes si et seulement si $W[v_1, v_2] \neq 0 \; \forall x \in I$
+    \end{theoreme}
+Nous allons le prouver par contraposée:
+\begin{align*}
+    \neg P \implies \neg Q \wedge \neg Q \implies \neg P
+\end{align*}
+\begin{subparag}{(1)$ \neg P \implies \neg Q$}
+    $\neg P \implies \neg Q$ les solutions sont linéairement indépendante $ \implies $ sans perte de généralité, il existe $c \in \mathbb{R} \text{ tel que } v_2(x) = cv_1(x) \; \forall x \in I$
+    Alors on a:
+    \begin{align*}
+        W[v_1, v_2] (x) = \det \begin{pmatrix}
+            v_1(x) & cv_1(x)  \\
+            v_1'(x) & cv_1'(x)
+        \end{pmatrix} = cv_1(x)v_1'(x) - cv_1(x)v_1'(x) = 0 \; \forall x \in I
+    \end{align*}
+    Et donc:
+    \begin{align*}
+        W[v_1, v_2] (x) = 0 \; \; \forall x \in I
+    \end{align*}
+\end{subparag}
+\begin{subparag}{(2) $\neg Q \implies \neg P$}
+    Supposons qu'il existe $x_0 \in I: W[v_1, v_2](x_0) = 0$. Alors cela implique que:
+    \begin{align*}
+        \det \begin{pmatrix}
+            v_1(x_0) & v_2(x_0) \\
+            v_1'(x_0) & v_2'(x_0)
+        \end{pmatrix} = 0 
+    \end{align*}
+    Cela implique qu'il existe un vecteur non nul $ \begin{pmatrix}
+        a \\b
+    \end{pmatrix}\in \mathbb{R}^2$
+    \begin{align*}
+        \begin{pmatrix}
+            v_1(x_0) & v_2(x_0) \\
+            v_1'(x_0) & v_2'(x_0)
+        \end{pmatrix} \begin{pmatrix}
+            a\\ b
+        \end{pmatrix} = \begin{pmatrix}
+            0\\ 0
+        \end{pmatrix}
+    \end{align*}
+    Soit $v(x) = av_1(x) + bv_2(x)$ Alors $v(x)$ est une solution de l'EDL2 homogène et de plus $v(x_0) = 0$ et $v'(x_0) = 0$. Par le théorème de l'existence et unicité d'une solution de l'EDL2 homogène satisfaisant les conditions initiales. $y(x_0) = 0$ et $y'(x_0) = 0$, puisque la solution triviale $y(x) = 0 \; \forall x \in I$ satisfait l'équation et les mêmes conditions initiales $ \implies v(x) = av_1(x) + bv_2(x) = 0$ et cela pour tout $x$ dans $I$.
+    \\
+    Puisque $a$ et $b$ ne sont pas tous les deux nuls:
+    \begin{align*}
+        \begin{cases}
+            v_1(x) &= - \frac{b}{a}v_2(x) \; \; \forall x \in I \\
+            v_2(x) &= - \frac{a}{b} v_1(x) \; \; \forall x \in I
+        \end{cases}
+        \implies v_1(x) \text{ et } v_2(x) \text{ sont linéairement indépendantes}
+    \end{align*}
+\end{subparag}
+
+\begin{subparag}{Exemple}
+    EDL2 homogène a coefficient constants $y''(x) + py'(x) + qy(x) = 0 \implies \lambda^2 + p \lambda + q = 0$ telle que les racines sont $a = \overline{b} =  \alpha + \beta i \notin \mathbb{R}$ \\
+    Montrer que $W[e^{ \alpha y} \cos \beta x, e^{ \alpha x} \sin \beta x] \neq 0 \; \; \forall x \in \mathbb{R}$
+    
+\end{subparag}
+\end{parag}
+
+\subsection{Théorème aussi à savoir}
+\begin{parag}{Théorème}
+    \begin{theoreme}
+        Soit $v_1, v_2: I \to \mathbb{R}$ deux solution linéairement indépendantes de l'équation $y''(x) + p(x) y'(x) + q(x)y(x) = 0$ alors la solution générale de cette équation est de la forme:
+        \begin{align*}
+            v(x) = C_1v_1(x) + C_2v_2(x), \; \; C_1, C_2 \in \mathbb{R}, x \in I
+        \end{align*}
+
+        
+    \end{theoreme}
+    \textbf{Démonstration}
+    \\
+    Soit $ \tilde{v}(x)$ une solution de l'équation donnée (arbitraire), soit $x_0 \in I$ alors $\tidle{v}(x_0) = a_0 \in \mathbb{R}$, et $\tilde{v}'(x_0) = b_0 \in \mathbb{R}$
+    \\
+    On a deux solution linéairement indépendantes $v_1, v_2 : I \to \mathbb{R}$ Alors par la proposition précédente on sait que $W[v_1, v_2] \neq 0, \forall x \in I \implies W[v_1, v_2](x_0) \neq 0$ implique que $ \exists $ unique constantes $c_1, c_2$ tel que le noyau de la matrice est donne par le "point" $ \begin{pmatrix}
+        a_0\\ b_0
+    \end{pmatrix}$ 
+    \\
+    Considérons la fonction $v(x) = c_1v_1(x) + c_2v_2(x)$
+    
+\end{subparag}
+\end{parag}
+
+\begin{parag}{Superposition des solutions}
+    Si $v(x)$ est une solution de des EDL2, et $u(x)$ une solution de l'équation homogène associée: $y''(x) + p(x)y'(x) + q(x)y(x) = 0$, alors $v(x) + u(x)$ est une solution de l'équation (1) (exercice)
+\end{parag}
+
+\begin{parag}{Méthode de la variation de constante}
+    On cherche une solution particulière de $(1)$ supposant qu'on connait deux solutions linéairement indépendantes de l'équation homogène associée: $v_1, v_2: I \to \mathbb{R}$ ( ce qui implique $W[v_1, v_2] (x) \neq 0 \; \; \forall x \in I$)
+
+    \begin{subparag}{Ansatz}
+        posons:
+        \begin{align*}
+            v_0(x) = c_1(x)v_1(x) + c_2(x)v_2(x) 
+        \end{align*}
+        Où $c_1(x)$ et $c_2(x)$sont des fonctions de classe $C^2$ sur $I$ \\
+        Condition sur $c_1(x)$ et $c_2(x)$?
+        \\
+        $v_0'(x) = \underbrace{c_1'(x)v_1(x) + c_2'(x) + v_2(x)}_{ \text{ Supposons } =  0} + c_1(x)v_1'(x) + c_2(x)v_2'(x)$
+        
+        On cherche la dérivé seconde:
+        \begin{align*}
+            v_0''(x) = c_1'(x)v_1'(x) + c_2'(x)v_2'(x) + c_1v_1''(x) + c_2(x)v_2''(x)
+        \end{align*}
+       \begin{align*}
+           v_0''(x) + p(x)v_0'(x) + q(x)v_0(x) = f(x) 
+       \end{align*}
+       \begin{align*}
+           c_1'(x)v_1'(x) + c_2'(x)v_2'(x) + c_1(x)v_1''(x) + c_2(x)v_2''(x) \\
+           + p(x)c_1(x)v_1'(x) + p(x)c_2(x)v_2(x) + q(x)c_1(x)v_1(x) \\
+           +q(x)c_2(x)v_2(x) = f(x) \\
+           \implies c_1'(x)v_1'(x) + c_2'(x)v_2'(x) = f(x) \\
+           \begin{cases}
+               c_1'(x) v_1(x) + c_2'(x)v_2'(x) = f(x) \\
+               c_1'(x)v_1'(x) + c_2'(x)v_2'(x) = f(x)
+           \end{cases} \; \; \forall x \in I
+       \end{align*}
+       Qui est un système pour $c_1'(x)$ et $c_2'(x)$ , On sait que $W[v_1, v_2] (x) \neq 0$ sur $I$, $\det \begin{pmatrix}
+           v_1 & v_2 \\
+           v_1' & v_2'
+       \end{pmatrix}(x) \neq 0$ $ \forall x \in I$
+       \\
+       On écrit ce qu'on cherche:
+
+       \begin{align*}
+           \begin{pmatrix}
+               v_1(x) &v_2(x)  \\
+               v_1'(x) & v_2'(x)
+           \end{pmatrix} \begin{pmatrix}
+               c_1'(x)\\ c_2'(x)
+           \end{pmatrix} = \begin{pmatrix}
+               0\\ f(x)
+           \end{pmatrix}
+       \end{align*}
+      Implique qu'il existe une unique solution $ \forall x \in I$
+       \\
+       En faisant l'inverse de la matrice de gauche:
+       \begin{align*}
+           \begin{pmatrix}
+               c_1(x) \\ c_2'(x)
+           \end{pmatrix} = \frac{1}{W[v_1, v_2]} \begin{pmatrix}
+               v_2' &-v_2  \\
+               -v_1' & v_1
+           \end{pmatrix} \begin{pmatrix}
+               0\\ f
+           \end{pmatrix} = \frac{1}{W[v_1, v_2]} \begin{pmatrix}
+               -v_2f \\ v_1f
+           \end{pmatrix}\\
+           \implies \begin{pmatrix}
+               c_1'(x)\\ c_2'(x)
+           \end{pmatrix} = \begin{pmatrix}
+               -v_2(x)f(x)\\ v_1(x)f(x)
+           \end{pmatrix} \frac{1}{W[v_1, v_2]x}
+       \end{align*}
+       Ce qui implique:
+       \begin{formule}
+           \begin{align*}
+               c_1(x) = - \int \frac{f(x)v_2(x)}{W[v_1, v_2]}dx
+           \end{align*}
+           \begin{align*}
+               c_2(x) = \int \frac{f(x)v_1(x)}{W[v_1, v_2]}dx
+           \end{align*}
+       \end{formule}
+       On a donc que $v_0(x) = c_1(x)v_1(x) + c_2(x)v_2(x)$ est une solution de $(1)$, la solution générale de $(1)$ est:
+       \begin{align*}
+           v(x) = v_0(x) + c_1v_1(x) + c_2v_2(x) \text{ où } C_1, C_2 \in \mathbb{R}, x \in I
+       \end{align*}
+       
+       
+       
+    \end{subparag}
+
+\end{parag}
+\begin{parag}{Exemple}
+    Trouver la solution générale de l'équation:
+    \begin{align*}
+        y''(x) - \frac{1}{x(\ln x - 1)}y'(x) + \frac{1}{x^2(\ln x - 1)}y(x) = \ln x -1
+    \end{align*}
+    sur $] e, \infty[$
+    \begin{subparag}{(1)}
+        Essayons de trouver une solution non nulle de l'équation  homogène associée:
+        \begin{align*}
+            y''(x) - \frac{1}{x\ln x - 1)} y'(x) + \frac{1}{x^2(\ln x - 1)}y(x) = 0
+        \end{align*}
+        Essayons avec $y = x$:
+        \begin{align*}
+            y = x \implies y' = 1, y'' = 0 = - \frac{1}{x(\ln x - 1)} + \frac{x}{x^2(\ln x - 1)} = 0 \; \; \forall x \in ] e, \infty[
+        \end{align*}
+    \end{subparag}
+    \begin{subparag}{(2)}
+        Trouver une autre solution de l'équation, linéairement indépendante
+        \begin{align*}
+            v_2(x) = c(x) v_1(x) \text{ où } c(x) = \int \frac{e^{-P(x)}}{v_1^2(x)}dx, P(x) = \int p(x)dx 
+        \end{align*}
+        On cherche $P(x)$:
+        \begin{align*}
+            p(x) &= - \frac{1}{x(\ln x - 1)} \implies P(x) = - \int \frac{dx}{x(\ln x- 1)}  \\
+            &= - \int \frac{d(\ln x - 1)}{\ln x - 1}\\
+            &= -\ln(\ln x -1)
+        \end{align*}
+        On cherche donc maintenant $c(x)$:
+        \begin{align*}
+            c(x) &= \int \frac{e^{-P(x)}}{v_1^2(x)}dx = \int \frac{e^{+\ln(\ln x - 1)}}{x^2}dx = \int \frac{\ln x - 1}{x^2} dx \\ 
+                 &= - \int (\ln x - 1) d \frac{1}{x} = - \frac{\ln x - 1}{x} + \int \frac{1}{x} \frac{1}{x}dx = - \frac{\ln x- 1}{x} - \frac{1}{x} = - \frac{\ln x}{x}
+        \end{align*}
+    \end{subparag}
+    On a donc que
+    \begin{align*}
+        v(x) = C_1v_1(x) + C_2v_2(x) = C_1 x + C_2 \ln x
+    \end{align*}
+    avec $C_1, C_2 \in \mathbb{R}, x\in ] e, \infty[$\\
+    Est la solution générale de l'équation homogène.
+    
+   \begin{subparag}{(3)}
+       On cherche maintenant une solution particulière de l'équation complète:
+       \begin{align*}
+           y''(x) - \frac{1}{x(\ln x - 1)}y'(x) + \frac{1}{x^2(\ln x -1)} y(x) = \ln x - 1
+       \end{align*}
+       On prends:
+       \begin{align*}
+           v_0 ( x) = c_1(x)v_1(x) + c_2(x)v_2(x) 
+       \end{align*}
+       où:
+       \begin{align*}
+           c_1(x) &= -\int \frac{f(x)v_2(x)}{W[v_1, v_2]}dx \\
+           c_2(x) &= +\int \frac{f(x) v_1(x)}{W[v_1, v_2]}dx
+       \end{align*}
+       On cherche le Wronskein:
+       \begin{align*}
+           W[v_1, v_2] = \det \begin{pmatrix}
+               x & - \ln x \\
+               1 & - \frac{1}{x}
+           \end{pmatrix} = -1 + \ln x = \ln x - 1 \neq 0 \text{ sur } ]e, \infty[
+       \end{align*}
+       Ensuite:
+       \begin{align*}
+           c_1(x) &= -\int \frac{(\ln x - 1)(-\ln x)}{\ln x - 1}dx = + \int \ln x dx\\ &= x \ln x - \int x \frac{1}{x} dx = x \ln x - x
+       \end{align*}
+       Pour $c_2(x)$:
+       \begin{align*}
+           c_2(x) &= \int \frac{(\ln x -1) \cdot x}{\ln x - 1} dx = \int x dx = \frac{1}{2}x^2
+       \end{align*}
+       On trouve finalement:
+       \begin{align*}
+           v_0(x) &= c_1(x)v_1(x) + c_2(x)v_2(x)\\ &= x(\ln x - 1)x + \frac{1}{2}x^2 (-\ln x)\\ &= \frac{1}{2}x^2 \ln x - x^2
+       \end{align*}
+   \end{subparag} 
+   \begin{subparag}{(4)}
+       On cherche finalement la solution générale de l'équation complète
+       \begin{align*}
+           v(x) = C_1x + C_2 \ln x + \frac{1}{2}x^2 \ln x - x^2
+       \end{align*}
+       où $C_1, C_2 \in \mathbb{R}, x \in ] e, \infty[
+       
+       
+   \end{subparag}
+
+\end{parag}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

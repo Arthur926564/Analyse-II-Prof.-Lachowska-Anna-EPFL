@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.6) (format=lualatex 2025.2.24)  27 FEB 2025 11:30
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.6) (format=lualatex 2025.2.24)  3 MAR 2025 11:51
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -3108,24 +3108,12 @@ Things are pretty mixed up, but I think the worst is over.
 Package mdframed Info: mdframed works in twoside mode on input line 125.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 127.
-
-LaTeX Warning: Reference `mdf@pagelabel-21' on page 18 undefined on input line 
-127.
-
 Package mdframed Info: mdframed works in twoside mode on input line 128.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 130.
-
-LaTeX Warning: Reference `mdf@pagelabel-22' on page 18 undefined on input line 
-130.
-
 Package mdframed Info: mdframed works in twoside mode on input line 149.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 152.
-
-LaTeX Warning: Reference `mdf@pagelabel-23' on page 18 undefined on input line 
-152.
-
 
 Overfull \hbox (49.27771pt too wide) detected at line 204
 []
@@ -3135,54 +3123,183 @@ Package mdframed Info: mdframed works in twoside mode on input line 206.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 210.
 
-LaTeX Warning: Reference `mdf@pagelabel-24' on page 18 undefined on input line 
-210.
-
-
 Overfull \hbox (1.85783pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10.95 18 \TU/lmr/m/sl/10.95 CHA-PITRE 3.  MÉ-THODE DE DÉ-MONS-TRA-
 TION, RAI-SON-NE-MENT MA-THÉ-MA-TIQUE
  []
 
-[18]) [19]
+[18]) (./lecture5.tex
+
+LaTeX Warning: Hyper reference `lecturesummary5' on page 19 undefined on input 
+line 3.
+
+[19]
+Package mdframed Info: mdframed works in twoside mode on input line 35.
+Package mdframed Info: mdframed works in twoside mode on input line 78.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 80.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 85.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 85.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <9> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 85.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 85.
+
+
+Overfull \hbox (66.33163pt too wide) detected at line 93
+[]
+ []
+
+
 Overfull \hbox (1.85783pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10.95 20 \TU/lmr/m/sl/10.95 CHA-PITRE 3.  MÉ-THODE DE DÉ-MONS-TRA-
 TION, RAI-SON-NE-MENT MA-THÉ-MA-TIQUE
  []
 
-[20] (./main.aux)
+[20]
+Overfull \hbox (95.16426pt too wide) detected at line 129
+[]
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 141.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 148.
+./lecture5.tex:151: Undefined control sequence.
+<recently read> \tidle 
+       
+l.151 ...arbitraire), soit $x_0 \in I$ alors $\tidle
+                                                  {v}(x_0) = a_0 \in \mathbb...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[21]
+
+./lecture5.tex:159: LaTeX Error: \begin{paragbox} on input line 140 ended by \e
+nd{subparagbox}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.159 \end{subparag}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./lecture5.tex:159: LaTeX Error: \begin{parag} on input line 140 ended by \end{
+subparag}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.159 \end{subparag}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./lecture5.tex:160: LaTeX Error: \begin{document} ended by \end{parag}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 \end{parag}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./lecture5.tex:160: Extra \endgroup.
+<recently read> \endgroup 
+          
+l.160 \end{parag}
+               
+Things are pretty mixed up, but I think the worst is over.
+
+Package mdframed Info: mdframed works in twoside mode on input line 234.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 241.
+
+Overfull \hbox (1.85783pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10.95 22 \TU/lmr/m/sl/10.95 CHA-PITRE 3.  MÉ-THODE DE DÉ-MONS-TRA-
+TION, RAI-SON-NE-MENT MA-THÉ-MA-TIQUE
+ []
+
+[22]
+Overfull \hbox (51.89194pt too wide) detected at line 266
+[]
+ []
+
+
+Overfull \hbox (65.24895pt too wide) detected at line 283
+[]
+ []
+
+[23]
+Overfull \hbox (18.85672pt too wide) detected at line 312
+[]
+ []
+
+
+Overfull \hbox (1.85783pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10.95 24 \TU/lmr/m/sl/10.95 CHA-PITRE 3.  MÉ-THODE DE DÉ-MONS-TRA-
+TION, RAI-SON-NE-MENT MA-THÉ-MA-TIQUE
+ []
+
+[24]
+./lecture5.tex:332: Missing $ inserted.
+<inserted text> 
+$
+l.332 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+) [25]
+Overfull \hbox (1.85783pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10.95 26 \TU/lmr/m/sl/10.95 CHA-PITRE 3.  MÉ-THODE DE DÉ-MONS-TRA-
+TION, RAI-SON-NE-MENT MA-THÉ-MA-TIQUE
+ []
+
+[26] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: A44BB05592397281E18384B8F0896F74;3903
-(rerunfilecheck)             After:  C5F0FCD242B90053DA673E1B34BD45B7;4059.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 934A03C98F664D62D41274EDDA4AABEF;5270.
 )
 
 Here is how much of LuaTeX's memory you used:
- 60767 strings out of 478081
+ 60889 strings out of 478081
  125189,2373549 words of node,token memory allocated
- 3641 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 104 glue, 4 kern, 1 penalty, 2 glyph, 838 attribute
-, 155 glue_spec, 121 attribute_list, 2 shape, 2 write nodes
-   avail lists: 1:4,2:14379,3:1542,4:277,5:461,6:85,7:6177,8:65,9:1630,10:14,11:
+ 4576 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 140 glue, 4 kern, 2 penalty, 1 margin_
+kern, 5 glyph, 1118 attribute, 155 glue_spec, 161 attribute_list, 2 shape, 2 wri
+te nodes
+   avail lists: 1:4,2:14059,3:1541,4:276,5:461,6:84,7:6138,8:68,9:1629,10:14,11:
 223
- 78780 multiletter control sequences out of 65536+600000
- 86 fonts using 7872623 bytes
- 109i,24n,109p,1951b,1199s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
-athsy.enc}{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/lm/lm-mathit.enc}<<C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\fonts/pk/lj
-four/public/esint/dpi480\esint10.pk>>{C:/Users/Maintenant Prêt/AppData/Local/Pr
-ograms/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<//?/c:/users/maintenant prêt/appdat
+ 78874 multiletter control sequences out of 65536+600000
+ 108 fonts using 9292991 bytes
+ 109i,24n,109p,1951b,1219s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-r
+m.enc}{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-mathit.enc}{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/e
+nc/dvips/lm/lm-mathsy.enc}<<C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\fonts
+/pk/ljfour/public/esint/dpi480\esint10.pk>><//?/c:/users/maintenant prêt/appdat
 a/local/programs/miktex/fonts/opentype/public/lm/lmroman8-regular.otf>{C:/Users/
 Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}
 <<C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\fonts/pk/ljfour/public/esint/dp
@@ -3205,18 +3322,21 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Maintenant
  Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/M
 aintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C
 :/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmm
-ib10.pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/lm/lmr10.pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/lm/lmr6.pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Maintenant Prêt/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Maintenant Prêt/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Maintenant Prêt/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Maintena
-nt Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb>
-Output written on main.pdf (22 pages, 285302 bytes).
+i9.pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmmib10.pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/lm/lmr10.pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Maintenant Prêt/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Maintenant Prêt/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Maintenant Prêt/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Maintenan
+t Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/
+Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><
+C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+sy9.pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (28 pages, 352556 bytes).
 
-PDF statistics: 365 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 131072)
- 136 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 433 PDF objects out of 1000 (max. 8388607)
+ 123 named destinations out of 1000 (max. 131072)
+ 176 words of extra memory for PDF output out of 10000 (max. 100000000)
 
