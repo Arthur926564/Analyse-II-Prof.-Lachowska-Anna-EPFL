@@ -19,7 +19,7 @@ OUTPUT C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\m_t_x_t_e_s_t.tmp
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-parsers.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-configuration.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-status.lua
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\fontloader-2023-08-19.lua
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\fontloader-2023-12-28.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-fallback.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-multiscript.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-scripts.lua
@@ -36,11 +36,13 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\unicod
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\lua-uni-algos\lua-uni-case.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\lua-uni-algos\lua-uni-parse.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\unicode-data\CaseFolding.txt
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-realpath.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-colors.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-resolvers.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-features.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\lua-uni-algos\lua-uni-normalize.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\unicode-data\UnicodeData.txt
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-arabic.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-harf-define.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-harf-var-cff2.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\luatex\luaotfload\luaotfload-harf-var-t2-writer.lua
@@ -161,27 +163,25 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\url\url.
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.lua
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\letltxmacro\letltxmacro.sty
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\letltxmacro\letltxmacro.sty
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\auxhook\auxhook.sty
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\auxhook\auxhook.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
@@ -196,8 +196,6 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\base\atb
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\base\atbegshi-ltx.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hluatex.def
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hluatex.def
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\base\atveryend-ltx.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\base\atveryend-ltx.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
@@ -266,6 +264,8 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\transpar
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\transparent\transparent.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\transparent\transparent-nometadata.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\transparent\transparent-nometadata.sty
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\auxhook\auxhook.sty
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\auxhook\auxhook.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
@@ -699,6 +699,8 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\multirow
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstpatch.sty
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstpatch.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
@@ -859,8 +861,6 @@ INPUT .\main.aux
 INPUT .\main.aux
 OUTPUT main.aux
 OUTPUT main.aux
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmr.fd
-INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmr.fd
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-LatinModernRoman.cfg
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-LatinModernRoman.cfg
 INPUT .\main.out
@@ -881,8 +881,7 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\00miktex
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\translations\dicts\translations-basic-dictionary-french.trsl
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\translations\dicts\translations-basic-dictionary-french.trsl
 INPUT C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\luatex-cache\generic\names\luaotfload-lookup-cache.luc
-OUTPUT C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\luatex-cache\generic\names\luaotfload-lookup-cache.lua
-OUTPUT C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\luatex-cache\generic\names\luaotfload-lookup-cache.luc
+INPUT C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\luatex-cache\generic\fonts\hb\578dcdfe164e2fbf804dcb00bd3dae5bc014810ea15f4f5b70a73cd0385298ac.luc
 INPUT C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\luatex-cache\generic\fonts\otl\lmromanslant10-regular.luc
 INPUT C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\Maintenant Prêt\AppData\Local\MiKTeX\luatex-cache\generic\fonts\otl\lmroman17-regular.luc
@@ -1001,6 +1000,84 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\w
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy5.tfm
 INPUT .\lecture6.tex
 INPUT .\lecture6.tex
+INPUT .\lecture7.tex
+INPUT .\lecture7.tex
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasyb10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasyb10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasyb10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasyb10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasyb10.tfm
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasyb10.tfm
+INPUT .\intervalleBoule.png
+INPUT .\intervalleBoule.png
+INPUT .\intervalleBoule.png
+INPUT .\intervalleBoule.png
+INPUT .\intervalleBoule.png
+INPUT .\tanBoule.png
+INPUT .\tanBoule.png
+INPUT .\tanBoule.png
+INPUT .\tanBoule.png
+INPUT .\tanBoule.png
 INPUT .\main.aux
 INPUT .\main.aux
 INPUT .\main.out
@@ -1016,6 +1093,8 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
+INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb

@@ -2,7 +2,7 @@
 \subsection{Méthode de résolution de EDL2}
 
 \begin{parag}{Rappel (Méthode de la variation des constantes)}
-    En premier lieu on calcule le Wronkien de $v_1(x)$ et $v_2(x)$, 
+    En premier lieu on calcule le Wronskien de $v_1(x)$ et $v_2(x)$, 
     \begin{align*}
         W[v_1, v_2] = \det \begin{pmatrix}
             v_1  & v_2 \\
@@ -14,10 +14,6 @@
         c_1(x) = -\int \frac{f(x)v_2(x)}{W[v_1, v_2]}dx \\
         c_2(x) = \int \frac{f(x)v_1(x)}{W[v_1, v_2]}dx
     \end{align*}
-
-    
-    
-
 \end{parag}
 
 \begin{parag}{Méthode de calcul}
@@ -65,7 +61,7 @@
         \end{align*}
         \textbf{Coefficient indeterminé}
         \\
-        $f(x) = 40 \cdot e^x \sin(3x)$, on cherche doncune fonction qui rempli ce critère:
+        $f(x) = 40 \cdot e^x \sin(3x)$, on cherche donc une fonction qui rempli ce critère:
         \begin{align*}
            f(x)e^{ \alpha x}(\cos( \beta x) \underbrace{P_k(x)}_{=A} + \sin( \beta x) \underbrace{Q_m(x)}_{=B})
         \end{align*}
@@ -183,18 +179,16 @@
         \\
         Supposons $\neg Q$ tel qu'il existe $x, y$ tel que:
         \begin{align*}
-            18x - 54 y = 21 \\
-            \underbrace{2x - 6y}_{ \in \mathbb{Z} = \frac{21}{9} = \underbrace{ \frac{7}{3}}_{ \notin \mathbb{Z}}
+            18x - 54 y = 21 
         \end{align*}
         Comme cela est impossible, alors la il ne peux exister de $x, y \in \mathbb{Z}$ tel que la relation tienne:
         \begin{align*}
             \neg Q \implies \neg P
         \end{align*}
     \end{subparag}
-    
 \end{parag}
 
-      \begin{parag}{Euclide}
+\begin{parag}{Euclide}
         \begin{theoreme}
            soit $ \mathbb{P}$ l'ensemble des nombres premiers alors:
            \begin{align*}
@@ -204,7 +198,7 @@
         \textbf{Démonstration} \\
         Supposons $ \exists n \in \mathbb{N} \text{ tel que } \mid \mathbb{P} \mid = n < \infty$ 
         \begin{align*}
-        \mathbb{P} = \à p_1, \dots, p_n\}
+        \mathbb{P} = \{ p_1, \dots, p_n\}
         \end{align*}
         Soit $k = p_1  \cdot p_2 \cdot\dots \cdot p_{n} + 1$,  alors, $k \notin \mathbb{P}$ car $k > p_i \forall i = i \dots n$ (Il ne peux pas être dans $ \mathbb{P}$ car il est plus grand que tout les éléments de $ \mathbb{P}$) \\
         Et donc, il existe un éléments dans $ \mathbb{P}$ tel qu'il divise $k$:
@@ -219,10 +213,7 @@
        \begin{framedremark}
            la partie $k - p_1p_2 \dots p_n$ est divisible par $p_j$ car de $(1)$ on n'a dit que $k$ l'était ( juste au dessus) et le produit de tout les $p_n$ est forcement divisible par $p_j$ vu que $p_j \in \mathbb{P}$. L'addition de deux nombre divisible par un nombre est forcement divisible par ce dernier.
        \end{framedremark}
-       
-        
-        
-      \end{parag}
+\end{parag}
       
 
 
