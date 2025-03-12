@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.2) (format=lualatex 2025.3.6)  10 MAR 2025 14:27
+This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.2) (format=lualatex 2025.3.6)  12 MAR 2025 13:07
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -2090,6 +2090,8 @@ File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodepartsixbox=\box130
 \pgfnodepartfivebox=\box131
 )))
+Package hyperref Info: Option `colorlinks' set `true' on input line 87.
+
 ("C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/tex/latex/algorithms/
 algorithm.sty"
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
@@ -2183,14 +2185,14 @@ Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 \c@definition1=\count464
 
 
-./style.sty:150: LaTeX Error: Command \R already defined.
+./style.sty:158: LaTeX Error: Command \R already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.150 \newcommand{\R}[0]{$\mathbb{R}$}
+l.158 \newcommand{\R}[0]{$\mathbb{R}$}
                                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2211,13 +2213,13 @@ or  <return>  to continue without it.
 \subparagtitlebox=\box135
 \subparagtitleheight=\skip266
 
-./style.sty:679: LaTeX Error: Missing \begin{document}.
+./style.sty:687: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.679 a
+l.687 a
        
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2226,7 +2228,7 @@ If that doesn't work, type  X <return>  to quit.
 Package datetime2 Warning: Region `en-GB' has ignored 
 (datetime2)                the following settings:
 (datetime2)                ord=raise
- on input line 712.
+ on input line 720.
 
 \c@CurrentSlide=\count469
 \slideheight=\skip267
@@ -2320,7 +2322,7 @@ t-LatinModernRoman.cfg"
 File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
 ern Roman (RS)
 )
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring ON on input line 11.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 
@@ -3031,7 +3033,7 @@ l.104 ...includegraphics[0.5]{intervalleBoule.png}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<intervalleBoule.png, id=365, 305.34074pt x 39.7485pt>
+<intervalleBoule.png, id=381, 305.34074pt x 39.7485pt>
 File: intervalleBoule.png Graphic file (type png)
 <use intervalleBoule.png>
 Package luatex.def Info: intervalleBoule.png  used on input line 104.
@@ -3089,7 +3091,7 @@ l.233        \includegraphics[0.6]{tanBoule.png}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<tanBoule.png, id=393, 205.36725pt x 164.41425pt>
+<tanBoule.png, id=409, 205.36725pt x 164.41425pt>
 File: tanBoule.png Graphic file (type png)
 <use tanBoule.png>
 Package luatex.def Info: tanBoule.png  used on input line 233.
@@ -3151,13 +3153,157 @@ Package mdframed Info: mdframed inside a box
 Package mdframed Info: mdframed works in twoside mode on input line 258.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 260.
+) (./lecture8.tex
 
-LaTeX Warning: Reference `mdf@pagelabel-42' on page 35 undefined on input line 
-260.
+[35<./tanBoule.png>]
 
+LaTeX Warning: Hyper reference `lecturesummary8' on page 36 undefined on input 
+line 1.
+
+Package mdframed Info: mdframed works in twoside mode on input line 4.
+
+Overfull \hbox (61.31206pt too wide) detected at line 11
+[]
+ []
+
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 13.
+Package mdframed Info: mdframed works in twoside mode on input line 14.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 16.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 19.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 19.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 19.
+
+Package mdframed Info: mdframed works in twoside mode on input line 21.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 23.
+Package mdframed Info: mdframed works in twoside mode on input line 26.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 32.
+Package mdframed Info: mdframed works in twoside mode on input line 35.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 37.
+
+Overfull \hbox (22.67455pt too wide) detected at line 46
+[]
+ []
+
+
+
+[36]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 59.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 59.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 59.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 59.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 59.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 59.
+
+Package mdframed Info: mdframed works in twoside mode on input line 60.
+Package mdframed Info: mdframed works in twoside mode on input line 71.
+Package mdframed Info: mdframed works in twoside mode on input line 101.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 103.
+Package mdframed Info: mdframed works in twoside mode on input line 108.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 110.
+
+
+[37]
+Package mdframed Info: mdframed works in twoside mode on input line 134.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 136.
+Package mdframed Info: mdframed works in twoside mode on input line 137.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 139.
+Package mdframed Info: mdframed works in twoside mode on input line 156.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 165.
+
+
+[38]
+Package mdframed Info: mdframed works in twoside mode on input line 176.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 178.
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
+ []
+
+<12025-03-12.png, id=465, 208.98074pt x 127.677pt>
+File: 12025-03-12.png Graphic file (type png)
+<use 12025-03-12.png>
+Package luatex.def Info: 12025-03-12.png  used on input line 219.
+(luatex.def)             Requested size: 271.67493pt x 165.98007pt.
+
+Overfull \hbox (7.8902pt too wide) in paragraph at lines 219--220
+ [] 
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 222.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 224.
+
+
+[39]
+
+[40<./12025-03-12.png>]
+Chapitre 5.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 230.
+
+Package mdframed Info: mdframed works in twoside mode on input line 231.
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
+
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 266.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 268.
+
+
+[41
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 275.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 281.
 )
 
-[35<./tanBoule.png>] (./main.aux)
+
+Overfull \hbox (77.57098pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10.95 42 \TU/lmr/m/sl/10.95 CHA-PITRE 5.  FONC-TION RÉELLES DE PLU-
+SIEURS VA-RIABLES RÉELLES LI-MITE ET CONTI-NUITÉ
+ []
+
+[42] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -3166,23 +3312,20 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CBD3CE36124E0A485E874276B426193E;6812.
+(rerunfilecheck)             Checksum: 0FC645D1A110F25F9E6317DAF6CE157D;8114.
 )
 
 Here is how much of LuaTeX's memory you used:
- 66372 strings out of 475506
+ 66498 strings out of 475506
  125002,2373549 words of node,token memory allocated
- 5986 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 199 glue, 4 kern, 2 penalty, 1 margin_
-kern, 5 glyph, 1552 attribute, 156 glue_spec, 223 attribute_list, 2 shape, 2 wri
+ 6577 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 224 glue, 4 kern, 2 penalty, 1 margin_
+kern, 5 glyph, 1734 attribute, 156 glue_spec, 249 attribute_list, 2 shape, 2 wri
 te nodes
-   avail lists: 1:11,2:16202,3:1993,4:334,5:539,6:94,7:5887,8:68,9:1814,10:16,11
+   avail lists: 1:11,2:15994,3:1993,4:334,5:543,6:94,7:5862,8:75,9:1814,10:16,11
 :245
- 87533 multiletter control sequences out of 65536+600000
+ 87604 multiletter control sequences out of 65536+600000
  136 fonts using 40328959 bytes
  110i,24n,120p,1951b,1423s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
@@ -3226,9 +3369,9 @@ aintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C
 :/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lms
 y9.pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (37 pages, 431601 bytes).
+Output written on main.pdf (44 pages, 511192 bytes).
 
-PDF statistics: 555 PDF objects out of 1000 (max. 8388607)
- 184 named destinations out of 1000 (max. 131072)
- 224 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 643 PDF objects out of 1000 (max. 8388607)
+ 232 named destinations out of 1000 (max. 131072)
+ 256 words of extra memory for PDF output out of 10000 (max. 100000000)
 
