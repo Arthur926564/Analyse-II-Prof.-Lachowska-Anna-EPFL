@@ -1,0 +1,56 @@
+\lecture{10}{2025-03-19}{Limites de fonctions}{}
+\begin{parag}{Rappel}
+    Voici un petit tappel sur les méthodes de calcul des limites de fonction $f: E_{ \subset \mathbb{R}^2} \to \mathbb{R}$
+    \begin{enumerate}
+        \item s'il existent $2$ suites $ \overline{a_k}$ et $ \overline{b}_k \subset E \setminus\{ \overline{x_0}\}: \lim_{ k \to \infty} \overline{a_k} = \overline{x_0}, \lim_{k \to \infty} \overline{a_k} = \overline{x_0}$ et que, $\lim_{k \to \infty}f( \overline{a_k}) \neq \lim_{k \to \infty} f( \overline{b_k})$ Alors la limite
+            \begin{align*}
+                \lim_{ \overline{x} \to \overline{x_0}} f( \overline{x})
+            \end{align*}
+            n'existe pas
+        \item S'il existent $2$ courbe $ \gamma_1, \gamma_2: [a, b] \to E \setminus \{ \overline{x_0}\}$ tel que:
+            \begin{align*}
+                \lim_{t \to a^+} \gamma_1(t) = \lim_{ t \to a^+} \gamma_2(t) = \overline{x_0}
+            \end{align*}
+            Et que:
+            \begin{align*}
+               \lim_{t \to a^+}f( \gamma_1(t)) \neq \lim_{t \to a^+} f( \gamma_2(t))
+            \end{align*}
+            Alors, la limite $ \lim_{ \overline{x} \to \overline{x_0}}f( \overline{x})$ n'existe pas. 
+        \item Deux gendarmes: soit $f, g, h: E \to \mathbb{R}$ telles que 
+            \begin{align*}
+                    \lim_{ \overline{x} \to \overline{x}_0} f( \overline{x}) = \lim_{ \overline{x} \to \overline{x}_0} g( \overline{x})= l
+            \end{align*}
+            Et que $ \exists \alpha > 0:\; \forall x \in \{x \in E: 0 < \mid \mid \overline{x}- \overline{x_0} \mid \mid < \alpha\}$ on a
+            \begin{align*}
+                f( \overline{x}) \leq h( \overline{x}) \leq g( \overline{x})
+            \end{align*}
+            Alors, $h( \overline{x}) = l$
+        \item Coordonnées polaires: $f: E \to \mathbb{R}$. Alors $ \lim_{r \to o} f( r\cos\phi, r\sin\phi) = 0 \iff \lim_{(x, y) \to (0, 0)} f(x, y) = 0$ 
+            \important{Ici $\phi = \phi(r)$ est une fonction inconnue de $r$}
+        \item Deux gendarmes en coordonnées polaires: $f: E \to \mathbb{R}$\\
+           \begin{align*}
+               \lim_{(x, y) \to (0, 0)} f(x, y) = l \iff \exists \delta > 0 \text{ et } \Phi : ]0, \delta[ \to \mathbb{R}\\
+               \forall \phi \in [0, 2\pi], \; \; \forall r \in ]0, \delta [ \text{ on a } \mid f(r\cos\phi, r\sin\phi) - l \mid \leq \Phi(r) \\
+               \text{ et } \lim_{r \to o^+} \Phi(r) = 0
+           \end{align*}
+    \end{enumerate}
+    
+
+\end{parag}
+
+\begin{parag}{Développement limité}
+
+    Pour calculer des limites, on peut aussi utiliser les DL connus pour les fonctions d'une seule variables pour trouver des estimations pour les deux gendarme.\\
+    Notemment, dans les limites lorsque $ \mid \mid (x, y) - (0, 0) \mid \mid \to 0$ on peut remplacer des expression $\Phi(x)$, $\phi(x)$ par leur DL autour de $x = 0$ ou $y = 0$:
+    \begin{align*}
+        \Phi(t) = \sum_{k= 0}^n a_\alpha x^k + x^n \cdot \epsilon(x) \text{ 1 seule variable}\\
+        x(y) = \sum_{k=0}^n b_k y^k + y^n \cdot \epsilon(y), \dots
+    \end{align*}
+   On peut composer une fonction d'une seule variable 
+   \begin{subparag}{Proposition}
+       oit $D \subset \mathbb{R}^2, \: (x_0, y_0) \in D, g:D \to \mathbb{R}$ définie au voisinage de $(x_0, y_0)$, telle que 
+       
+   \end{subparag}
+\end{parag}
+
+
