@@ -1,0 +1,132 @@
+\lecture{11}{2025-03-24}{Differentiable}{}
+
+\begin{parag}{Méthode $7$ Récurrence}
+    \begin{subparag}{Le principe fondamental de récurrence}
+        Soit $S \subset \mathbb{N}$ sous-ensemble : $ 0 \in S$ et pour tout $n \in S$ on a $(n+1) \in S$. Alors $S = \mathbb{N}$
+    \end{subparag}
+    \begin{subparag}{Méthode de récurrence}
+        Soit $P(n)$ une proposition qui dépend de $n \in \mathbb{N}$, $n \geq n_0$\\
+Supposons que
+        \begin{itemize}
+            \item $P(n_0)$ est vraie
+            \item $P(n)$ implique $P(n+1)$ pour tout $n \geq n_0$ naturel
+        \end{itemize}
+        Alors $P(n)$ est vraie pour tout $n \geq n_0$
+    \end{subparag}
+On regroupe quatre étapes pour une preuve par récurrence:
+\begin{ennumerate}
+\item La proposition ( Soit $P(n)$ la proposition pour $x$)
+\item L'initialisation $P(0)$
+\item L'hérédité: Supposons que $P(n)$ est vrai, alors il faut en déduire $P(n+1)$
+\item Conclusion: Puisque $P(x_0)$ est vraie et que pour tout $x \geq x_0$, $P(n) \implies P(n+1)$, par récurrence $P(n)$ est vraie $ \forall n \geq x_0$. 
+    
+\end{ennumerate}
+\begin{framedremark}
+    Attention a ne pas mélanger ce qu'on veut et ce qu'on a.
+\end{framedremark}
+
+\end{parag}
+\begin{parag}{Récurrence généralisée}
+    Soit $P(n)$ une proposition qui dépend de $n \in \mathbb{N}, n \geq n_0$.\\
+    Supposons que $(1) P(n_0), \dots P(n_0 + k)$ sont vraie pour un $k \in \mathbb{N}$\\
+    En deuxième $\{ P(n), P(n+1), \dots, P(n+k)\}$ impliquent $P(n +k+1) \forall n \geq n_0$, $n \in , \mathbb{N}$.\\
+    Alors, $P(n)$ est vraie $ \forall n \geq n_0$, $ n \in \mathbb{N}$
+\end{parag}
+
+\chapter{Calcul différentielle des fonctions de plusieurs variables}
+
+    \section{Dérivées parielles, le gradient}
+    \begin{parag}{Dérivée partielle}
+        \begin{definition}
+            Soit $f : E \to \mathbb{R}$ une fonction, $E \subset \mathbb{R}$ sous-ensemble ouvert. \\
+        Soit $g(s) = f(a_1, a_2, \dots, \overbrace{s}^{k}, a_{k+1}, \dots, a_n)$ où $ \overline{a} = (a_1, \dots, a_n) \in E$.
+        \begin{align*}
+            g: D = \{ s \in \mathbb{R} : (a_1, a_2, \dots, s, a_{k+1}, \dots, a_n) \in E\} \to R
+        \end{align*}
+        Alors si $g$ est dérivable en $a_k \in D$, on dit que la \important{k-ième dérivée partielle} de $f$ en $ \overline{a} \in E$ existe et est égale à $g'(a_k)$
+        \begin{framedremark}
+            Notation: $ \frac{ \partial f}{ \partial x_k}( \overline{a}) \equiv D_k f( \overline{a})$
+        \end{framedremark}
+        \end{definition}
+        
+       On a:
+        \begin{align*}
+            \frac{ \partial f}{ \partial x_k} ( \overline{a}) = \lim_{ t \to 0} \frac{g(a_k + t) - g(a_k)}{t} = \lim_{t \to 0} \frac{f( \overline{a} + t \overline{e_k}) - f( \overline{a})}{t}
+        \end{align*}
+      
+    \end{parag}
+    
+   \begin{parag}{Gradient}
+       \begin{definition}
+           Si toutes les dérivées partielles existent en $ \overline{a} \in E$: $ \frac{ \partial f}{ \partial x}( \overline{a})  \dots \frac{ \partial f}{ \partial x_n}( \overline{a})$, alors on définit le \important{gradient} de $f$ en $ \overline{a}$ comme:
+           \begin{align*}
+             \nabla  f( \overline{a}) = \left( \frac{ \partial f}{ \partial x}( \overline{a}), \dots \frac{ \partial f}{ \partial x_2}( \overline{a}) , \dots\frac{ \partial f}{ \partial x_n}( \overline{a}) \right) 
+           \end{align*}
+           
+       \end{definition}
+   
+   \end{parag}
+    
+       \section{Dérivée directionnelle}
+       \begin{parag}{Définition}
+           Soit $E \subset \mathbb{R}^n $ sous-ensemble ouvert, $ \overline{a} \in E$, $\overline{v} \in \mathbb{R}^n , \overline{v} \neq 0$ La droite passant par $ \overline{a}$ en direction $ \overline{v}$ admet la paramétrisation $ \overline{e}(t) = \overline{a}  + t \overline{v}$ et cela $ \forall t \in \mathbb{R}$.\\
+           Considérons la fonction $ f : E \to \mathbb{R}$\\
+           et soit $g(t) = f( \overline{a} + t + \overline{v})$ la fonction d'une seule variable $t \in \mathbb{R}$:
+           \begin{align*}
+               g: D = \{t \in \mathbb{R}: \overline{a} + t \overline{v} \in E\} \to R
+           \end{align*}
+           \begin{definition}
+               Si $g$ est dérivable en $t = 0$ on dit qu'il existe \important{la dérivée directionnelle} de $f$ en $ \overline{a}$ suivant le vecteur $ \overline{v}$ (en direction de $\overline{v}$)\\
+               La dérivée directionnelle de $f$ en $ \overline{a}$ en direction de $ \overline{v}$ est:
+               \begin{align*}
+                   Df( \overline{a}, \overline{v}) = \frac{\partial f}{\partial \overline{v}}( \overline{a}) = \lim_{t \to 0} \frac{g(t) - g(0)}{t} = \lim_{t \to 0} \frac{f( \overline{a} + t \overline{v}- f( \overline{a}}{t}
+               \end{align*}
+               
+           \end{definition}
+           
+       \begin{framedremark}
+           Si $ \overline{v} = \overline{e}_i$ ou $ \overline{e_i}$ est un vecteur unitaire, Alors \begin{align*}
+              Df( \overline{a}, \overline{e}_i) = \frac{\partial f}{\partial x_i}( \overline{a})
+           \end{align*}
+           Si toutes les dérivées directionnelles existent en $ \overline{a}$ (pour tout $ \overline{v} \neq \overline{0}$), alors toutes les dérivées partielles existent en $ \overline{a}$. La réciproque est fausse en générale
+       \end{framedremark}
+         \begin{framedremark}
+             \begin{align*}
+                 Df( \overline{a}, \lambda \overline{v}) = \lambda \cdot Df( \overline{a}, \overline{v}) \;\; \forall \lambda \in \mathbb{R}: \; \lambda \neq 0
+             \end{align*}
+             
+         \end{framedremark}
+           
+       
+       \end{parag}
+       
+       
+           \section{Dérivabillité et la différentielle}
+           \begin{definition}
+               Soit $f: E \to \mathbb{R}$, $E \subset \mathbb{R}^n $ ouvert, $ \overline{a} \in E$\\
+               On dit que $f$ est \important{dérivable} au point $ \overline{a}$ s'il existe une transformation linéaire:
+               \begin{align*}
+                   L_{ \overline{a}}: \mathbb{R}^n  \to \mathbb{R}
+               \end{align*}
+               et une fonction $ r: E \to \mathbb{R}$ telle que:
+               \begin{align*}
+                   f(x) = f( \overline{a}) + L_{ \overline{a}}( \overline{x} - \overline{a}) + r ( \overline{x}) \; \; \forall \overline{x} \in E\\
+                   \lim_{ \overline{x} \to \overline{a}} \frac{r( \overline{x})}{ \mid \mid \overline{x} - \overline{a} \mid \mid}
+               \end{align*}
+           \end{definition}
+           \begin{definition}
+               $L_{ \overline{a}}$ s'appelle \important{la différentielle} de $f$ au point $ \overline{a} \in E$\\
+Notation:
+\begin{align*}
+    L_{ \overline{a}} = df( \overline{a})
+\end{align*}
+
+           \end{definition}
+           \begin{framedremark}
+               Une transformation linéaire $ T: \mathbb{R}^n  \to \mathbb{R}$ est une fonction telle que $\tau ( \alpha \overline{x}_1 + \beta \overline{x}_2) = \alpha T( \overline{x}_1) + \beta T( \overline{x}_2)$ pour tout $ \overline{x}_1, \overline{x}_2 \in \mathbb{R}^n $
+Par example $x + 3y$ est une transformation linéaire tandis que $ x + 2y + 2$ n'en est pas une.
+               
+           \end{framedremark}
+           
+           
+           
