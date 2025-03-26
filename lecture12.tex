@@ -1,0 +1,114 @@
+\lecture{12}{2025-03-26}{Tangente de la surface}{}
+\begin{parag}{Rappel}
+    \begin{definition}
+        Soit $f: E \to \mathbb{R} , \; E \subset \mathbb{R}^n $ ouvert, $a \in E$.\\
+        On dit que $f$ est dérivable au point $ \overline{a}$ s'il existe une transformation linéaire $L_{ \overline{a}}: \mathbb{R}^n  \to \mathbb{R}$ et une fonction $r: E \to \mathbb{R}$ telles que:
+        \begin{align*}
+            f( \overline{x}) = f( \overline{a}) + L_{ \overline{a}}( \overline{x} - \overline{a}) + r( \overline{x}) \; \forall \overline{x} \in E\\
+            \lim_{ \overline{x} \to \overline{a}} = \frac{r( \overline{x})}{ \mid \mid \overline{x} - \overline{a}\mid \mid} = 0
+        \end{align*}
+        
+    \end{definition}
+    
+
+\end{parag}
+
+\begin{parag}{Théorème $1$}
+
+    \begin{theoreme}
+        Soit $f: E \to \mathbb{R}$, $ \overline{a} \in E$ tel que $f$ est dérivable en $ \overline{a}$ de différentielle $L_{ \overline{a}}: \mathbb{R}^n \to \mathbb{R}$. Alors:
+        \begin{itemize}
+            \item $f$ est continue en  $\overline{a} \in E$
+            \item Pour tout $\overline{v} \in \mathbb{R}^n , \overline{v} \neq \overline{0}$, la dérivée directionnelle $Df( \overline{a}, \overline{v})$ existe et 
+                \begin{align*}
+                    Df( \overline{a}, \overline{v}) = L_{ \overline{a}}( \overline{v})
+               \end{align*}
+           \item Toutes les dérivées partielles existent de $f$ en $\overline{a}$ et
+               \begin{align*}
+                   \frac{\partial f}{\partial x_k}( \overline{a}) = L_{ \overline{a}}( \overline{e}_k)
+               \end{align*}
+               Le gradient de $f$ existent en $ \overline{a}$ et:
+               \begin{align*}
+                   \nabla f( \overline{a}) = \left( L_{ \overline{a}}( \overline{e_1}),  L_{ \overline{a}}( \overline{e_2}), \dots,  L_{ \overline{a}}( \overline{e_n}) \right)
+               \end{align*}
+           \item Pour tout $\overline{v} \in \mathbb{R}^n $, $ \overline{v} \neq \overline{0}$
+               \begin{align*}
+                   Df( \overline{a}, \overline{v}) = L_{ \overline{a}}( \overline{v}) = < \nabla f( \overline{a}), \overline{v}>
+               \end{align*}
+           \item Pour tout $ \overline{v} \in \mathbb{R}^n $, $ \mid \mid \overline{v} \mid \mid = 1$, on a que:
+               \begin{align*}
+                   Df( \overline{a}, \overline{v}) \leq \mid \mid \nabla f( \overline{a}) \mid \mid
+               \end{align*}
+               Et que si:
+               \begin{align*}
+                   Df \left( \overline{a}, \frac{\nabla f( \overline{a})}{ \mid \mid \nabla f( \overline{a}) \mid \mid} \right)= \mid \mid \nabla f( \overline{a}) \mid \mid
+               \end{align*}
+              Alors le gradient donne la direction de la plus grande croissance de $f$ en $\overline{a}$ 
+        \end{itemize}
+
+    \end{theoreme}
+    
+\end{parag}
+
+\subsubsection{Equation du plan tangent de la surface}
+\begin{definition}
+    Soit $\overline{a}$: $F( \overline{a}) = 0$, $F: \mathbb{R}^n  \to \mathbb{R}$ dérivable en $\overline{x} = \overline{a}$ et $ \nabla F( \overline{a}) \neq 0$:\\
+   L'équation de l'hyperplan tangent à $F( \overline{x}) = 0$ au point $\overline{a}$ est:
+   \begin{align*}
+       < \nabla F( \overline{a}),  ( \overline{x} - \overline{a}) > = 0
+   \end{align*}
+   Et si $F(a, b, c) = 0$ et $ \nabla F(a, b, c) \neq 0$ Alors:
+   \begin{align*}
+       < \nabla F(a, b, c), (x-a, y-b, z-c) >\; = 0
+   \end{align*}
+   
+  
+   
+\end{definition}
+\begin{framedremark}
+    Ce qu'on fait en \textit{gros}" c'est de prendre le gradient qui donne le vecteur normal au plan tangent qui a donc dans ces coordonnées les valeur pour l'équation cartésienne du plan, et on fait comme un changement de référentiel pour pouvoir avoir le $0$ du plan à l'endroit ou il touche le point, c'est de là que provient le $x - x_0, y - y_0, z - z_0$.
+\end{framedremark}
+
+
+
+
+
+\begin{parag}{Résumé}
+\begin{subparag}{Dérivée partielles}
+   \begin{align*}
+       \frac{\partial f}{\partial x_k}( \overline{a}) = \lim_{t \to 0} \frac{f( \overline{a} + t \overline{e_k})- f( \overline{a}) }{t}
+   \end{align*}
+   si la limite existe, $ \overline{e_k} = (0, \dots, \overbrace{1}^{k}, \dots, 0)$.\\
+   Le gradient:
+   \begin{align*}
+       \nabla f( \overline{a}) = \left( \frac{\partial f}{\partial x_1}( \overline{a}), \frac{\partial f}{\partial x_2}( \overline{a}), \dots, \frac{\partial f}{\partial x_n}( \overline{a}) \right)
+   \end{align*}
+\end{subparag}
+
+\begin{subparag}{Dérivée directionnelles}
+    \begin{itemize}
+        \item \begin{align*}
+        Df( \overline{a}, \overline{v}) = \lim_{t \to 0} \frac{f( \overline{a} + t \overline{v}) - f( \overline{a})}{t}
+    \end{align*}
+    Si la limite existe, $ \overline{v} \in \mathbb{R}^n , \overline{v} \neq \overline{0}$.
+\item $Df( \overline{a}, \overline{e}_k) = \frac{\partial f}{\partial x_k}( \overline{a})$ si $Df( \overline{a}, \overline{v})$ existent pour tout $ \overline{v} \in \mathbb{R}^n $
+    \item Si $f$ est dérivable en $\overline{a}$, alors par le théorème $1$, $f$ est continue en $\overline{a}$, $Df( \overline{a}, \overline{v})$ existe, et on a:
+\begin{align*}
+    L_{ \overline{a}} ( \overline{v}) = Df( \overline{a}, \overline{v}) = < \nabla f( \overline{a}), \overline{v}>
+\end{align*}
+
+    
+    
+    \end{itemize}
+\end{subparag}
+\end{parag}
+
+\begin{parag}{Théorème deux}
+    \begin{theoreme}
+        Soit $E \subset \mathbb{R}^n $ ouvert,  $f: E \to \mathbb{R}$, $\overline{a} \in E$. Supposons qu'il existe $ \delta > 0$ tel que toutes les dérivées partielles $ \frac{\partial f}{\partial x_k}( \overline{x})$ existent sur $B( \overline{a}, \delta)$ et sont continues en $\overline{a}$.\\
+        Alors $f$ est dérivable en $\overline{a} \in E$
+    \end{theoreme}
+    
+
+\end{parag}
+
