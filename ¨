@@ -1,0 +1,64 @@
+\lecture{17}{2025-04-14}{Jacob}{}
+\begin{parag}{Rappel}
+    Pour rappel des semaine précédentes
+    \begin{align*}
+       \mathbb{R}^n  \to \mathbb{R}^p \to \mathbb{R}^q \\
+       \implies J_{ \overline{f} \cdot \overline{g}( \overline{a})} = J_{ \overline{f} ( \overline{g} ( \overline{a}))} \cdot J_{ \overline{g} ( \overline{a})}
+    \end{align*}
+alors:
+\begin{align*}
+    F'(t) = f(g(t), t) \cdot g'(t) - f(h(t), t) \cdot h'(t) + \int_{h(t)}^{g(t)} \frac{\partial f}{\partial t}( x, t)dx
+\end{align*}
+
+\begin{subparag}{Exemple}
+    Si nous prenons une fonctions qui ne s'exprime en fonctions élémentaires:
+    \begin{align*}
+        \int_0^1 \frac{x - 1}{ \ln x} dx
+    \end{align*}
+    On a que:
+    \begin{align*}
+        I( \alpha) &= \int_0^1 \frac{x^\alpha - 1}{\ln x} dx \implies I'( \alpha) = \int_0^1 \frac{\partial}{\partial \alpha} ( \frac{x^{ \alpha} - 1}{ \ln x}) dx \\
+                   &= \int_0^1 \frac{x^\alpha \cdot \ln x}{\ln x} dx \\
+                   &= \int_0^1 x^{ \alpha} dx = \frac{1}{ \alpha + 1}
+    \end{align*}
+    Et ensuite on peut résoudre tout cela\\
+    Tout cela ne se retrouve pas a l'examen
+\end{subparag}
+
+\end{parag}
+
+\subsection{Formule de taylor}
+\begin{parag}{Théorème}
+    \begin{theoreme}
+        Soit $f: E \to \mathbb{R}$ de classe $C^{p+1}$ au voisinage de $ \overline{a} \in E$. Alors il existe $ \delta > 0$ tel que pour tout $x \in B( \overline{a}, \delta) \cap E$ il existe $0 < \theta < 1$ tel que:
+        \begin{align*}
+            f( \overline{x}) = F(0) + F'(0) + \frac{1}{2} F''(0) + \cdots  + \frac{1}{p!}F^{(p)}(0) + \frac{1}{(p+1)!}F^{(p+1)}(\theta)
+        \end{align*}
+    \end{theoreme}
+   \begin{subparag}{Explication}
+       $f( \overline{x}) = F(1), f( \overline{a}) = F(0)$
+      Depuis analyse I on sait que, la forumle de Taylor pour $F(t)$, fonction d'une seule variable
+      \begin{align*}
+          F(t) = F(0) + F'(0) \cdot t + \frac{1}{2}F''(0) \cdot t^2 + \cdots  + \frac{1}{p!} F^{(p)}(0) \cdot t^p + \frac{1}{(1+p)!}F^{(p+1)}( \theta)\\
+          \implies f( \overline{x}) = F(0) + F'(0) + \frac{1}{2}F''(0) + ...    \text{ Même chose}
+      \end{align*}
+      \begin{framedremark}
+          On a donc ici:
+          \begin{align*}
+              F'(0) = \lim_{t \to 0} \frac{f( \overline{a} + t( \overline{x} - \overline{a})) - f( \overline{a})}{t} = Df( \overline{a}, ( \overline{x} - \overline{a}))
+          \end{align*}
+          
+      \end{framedremark}
+      
+      
+   \end{subparag} 
+
+\end{parag}
+
+
+\begin{parag}{Cas $n = 2$}
+    Soit $ \overline{a} = (a, b)$, $ \overline{x} = (x, y)$, $f$ de classe $C^{p+1}$\\
+    Soit $f(x, y) : E \to \mathbb{R}$, on cherche le polynôme de Taylor d'ordre $p$ autour de $(a, b)$.
+
+\end{parag}
+

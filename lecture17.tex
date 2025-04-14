@@ -1,0 +1,124 @@
+\lecture{17}{2025-04-14}{Jacob}{}
+\begin{parag}{Rappel}
+    Pour rappel des semaine précédentes
+    \begin{align*}
+       \mathbb{R}^n  \to \mathbb{R}^p \to \mathbb{R}^q \\
+       \implies J_{ \overline{f} \cdot \overline{g}( \overline{a})} = J_{ \overline{f} ( \overline{g} ( \overline{a}))} \cdot J_{ \overline{g} ( \overline{a})}
+    \end{align*}
+alors:
+\begin{align*}
+    F'(t) = f(g(t), t) \cdot g'(t) - f(h(t), t) \cdot h'(t) + \int_{h(t)}^{g(t)} \frac{\partial f}{\partial t}( x, t)dx
+\end{align*}
+
+\begin{subparag}{Exemple}
+    Si nous prenons une fonctions qui ne s'exprime en fonctions élémentaires:
+    \begin{align*}
+        \int_0^1 \frac{x - 1}{ \ln x} dx
+    \end{align*}
+    On a que:
+    \begin{align*}
+        I( \alpha) = \int_0^1 \frac{x^\alpha - 1}{\ln x} dx \implies I'( \alpha) &= \int_0^1 \frac{\partial}{\partial \alpha} ( \frac{x^{ \alpha} - 1}{ \ln x}) dx \\
+                   &= \int_0^1 \frac{x^\alpha \cdot \ln x}{\ln x} dx \\
+                   &= \int_0^1 x^{ \alpha} dx = \frac{1}{ \alpha + 1}
+    \end{align*}
+    Et ensuite on peut résoudre tout cela\\
+    Tout cela ne se retrouve pas a l'examen
+\end{subparag}
+
+\end{parag}
+
+\subsection{Formule de taylor}
+\begin{parag}{Théorème}
+    \begin{theoreme}
+        Soit $f: E \to \mathbb{R}$ de classe $C^{p+1}$ au voisinage de $ \overline{a} \in E$. Alors il existe $ \delta > 0$ tel que pour tout $x \in B( \overline{a}, \delta) \cap E$ il existe $0 < \theta < 1$ tel que:
+        \begin{align*}
+            f( \overline{x}) = F(0) + F'(0) + \frac{1}{2} F''(0) + \cdots  + \frac{1}{p!}F^{(p)}(0) + \frac{1}{(p+1)!}F^{(p+1)}(\theta)
+        \end{align*}
+    \end{theoreme}
+   \begin{subparag}{Explication}
+       $f( \overline{x}) = F(1), f( \overline{a}) = F(0)$
+      Depuis analyse I on sait que, la formule de Taylor pour $F(t)$, fonction d'une seule variable
+      \begin{align*}
+          F(t) = F(0) + F'(0) \cdot t + \frac{1}{2}F''(0) \cdot t^2 + \cdots  + \frac{1}{p!} F^{(p)}(0) \cdot t^p + \frac{1}{(1+p)!}F^{(p+1)}( \theta)\\
+          \implies f( \overline{x}) = F(0) + F'(0) + \frac{1}{2}F''(0) + ...    \text{ Même chose}
+      \end{align*}
+      \begin{framedremark}
+          On a donc ici:
+          \begin{align*}
+              F'(0) = \lim_{t \to 0} \frac{f( \overline{a} + t( \overline{x} - \overline{a})) - f( \overline{a})}{t} = Df( \overline{a}, ( \overline{x} - \overline{a}))
+          \end{align*}
+          
+      \end{framedremark}
+      
+      
+   \end{subparag} 
+
+\end{parag}
+
+
+\begin{parag}{Cas $n = 2$}
+    Soit $ \overline{a} = (a, b)$, $ \overline{x} = (x, y)$, $f$ de classe $C^{p+1}$\\
+    Soit $f(x, y) : E \to \mathbb{R}$, on cherche le polynôme de Taylor d'ordre $p$ autour de $(a, b)$.\\
+    Par le changement de variable: $F(t) = f(a + t(x-a), b+t(y-b))$. Trouver $F'(t), F''(t)$ en termes de $f$.
+    \begin{align*}
+        F(t) = f \circ g(t), f_ \mathbb{R}^2 \to \mathbb{R}, \; g: \mathbb{R} \to \mathbb{R}^2, g(t) = (a + t(x - a) b+ t(y -b))^T \\
+        \implies F'(t) = J
+    \end{align*}
+    
+
+
+\end{parag}
+
+\begin{parag}{Question 15}
+    soit $f(x, y) = \frac{1}{\sin(x + y)}$ Et le coefficient de $(x - \frac{\pi}{2})^2y^2$ dans le polynôme de taylor d'ordre $4$ autour de $(x, y) = ( \frac{\pi}{2}, 0)$ est:
+    \begin{itemize}
+        \item $ \frac{1}{24}$
+        \item $ \frac{5}{4}$
+        \item $ \frac{5}{24}$ 
+        \item $ \frac{5}{6}$
+    \end{itemize}
+
+    donc si on a $(x, y) = ( \frac{\pi}{2}, 0)$ si on regarde $\sin( \frac{\pi}{2} + 0) = 1$ et donc on ne peut pas faire un développement limité. On prends donc $s = ( x - \frac{\pi}{2}, y)$ afin de pouvoir utiliser les développement limité:
+    \begin{align*}
+        \sin(x) = x - \frac{1}{6}x^3 + \epsilon (x^4)
+    \end{align*}
+    Pour un développement d'ordre $4$. On pose:
+    \begin{align*}
+        \sin( \frac{\pi}{2} + s) = \frac{1}{\sin \frac{\pi}{2}\cos s + \cos \frac{\pi}{2}\sin s} = \frac{1}{\cos s} = \frac{1}{1 - \frac{s^2}{2} + \frac{s^4}{4!} \epsilon(s^4)}\\
+        = \frac{1}{1 - ( \frac{s^2}{2} - \frac{s^4}{4!} + \epsilon(s^4)}
+    \end{align*}
+    On obtient donc pour le polynôme:
+    \begin{align*}
+        P_4 = 1 + ( \frac{s^2}{2} - \frac{s^4}{4!}) + ( \frac{s^2}{2} - \frac{s^4}{4!})^2
+    \end{align*}
+    
+   On pose donc pour $ \frac{1}{\sin(s)}$:
+   \begin{align*}
+       f(x, y) = \frac{1}{(x - \frac{\pi}{2} + y - \frac{1}{6}(x - \frac{\pi}{2} + y)^3}
+   \end{align*}
+
+   
+
+\end{parag}
+\subsubsection{Le laplacien d'une fonction de classe $C^2$}
+
+\begin{parag}{Le Laplacien}
+    \begin{definition}
+        Soit $f: E \to R $ de classe $C^2$ sur $E$. La fonction $ \delta f: E \to \mathbb{R}$:
+        \begin{align*}
+            \delta f(x_1, \dots, x_n) = \frac{\partial^2 f}{\partial x_1^2} + \frac{\partial^2 f}{\partial x_2^2} + \cdots  + \frac{\partial^2 f}{\partial x_n^2}
+        \end{align*}
+        Est le laplacien de $f$.
+    \end{definition}
+\end{parag}
+\begin{parag}{Harmonique}
+    \begin{definition}
+    Une fonction telle que $ \delta f = 0$ sur $E \subset \mathbb{R}^2$ s'appelle \important{harmonique}
+    \end{definition}
+    
+    Une fonction harmonique sur un domaine compact atteint son min et son max \important{sur la frontière} du domaine (Sans démonstration).\\
+    On peut prendre par exemple la fonction $f(x, y) = x^2 - y^2$ qui si l'on calcule $ \delta f(x, y) = 2 -2 = 0$ Et l'on voit sur un graphe que si l'on prends une ensemble compact ses max, min se trouvent toujours sur la frontière, ce qui n'est pas le cas par exemple pour $f(x, y) = x^2 + y^2$.
+\end{parag}
+
+
+
