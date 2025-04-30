@@ -1,0 +1,58 @@
+\lecture{19}{2025-04-28}{Test blanc}{}
+\subsection{Corrigé du test blanc}
+Ici ce n'est pas le corrigé de la professeur mais moi directement lorsque je fais mes exercices donc il se peut que l'approche ne soit pas rigoureuse peut être même éronnée en quelque sorte:
+\begin{parag}{Question 1}
+   La solution $y\left(x\right)$ de l'équation différentielle:
+   \begin{align*} y'\left(x\right) = \frac{x}{x^2 + 9}\left(y\left(x\right) - 1\right) \end{align*}
+   qui satisfait la condition initiale $y\left(0\right) = 7$ vérifie aussi pour $y\left(4\right) = \ldots$.\\
+   \begin{subparag}{Corrigé}
+       Donc on voit ici en premier lieu que l'équation est une EDVS, on arrive à séparer les $y$ des $x$:
+       \begin{align*} y'\left(x\right) = \frac{x}{x^2 + 9}\left(y - 1\right) \\
+       \frac{y'}{y - 1} = \frac{x}{x^2 + 9}
+    \end{align*}
+       A partir de là, il faut alors intégrer des deux côtés et on trouvera la solution:
+       \begin{align*} 
+            \int \frac{1}{y - 1} dy = \int \frac{x}{x^2 + 0} dx\\
+           \ln \left|y - 1\right| + C' = \frac{1}{2}\ln \overbrace{\left|x^2 + 9\right|}^{\geq 0} + C\\
+       \left|y - 1 \right| =  \ln C\overbrace{\sqrt{x^2 + 9}}^{\geq 0} \\
+       y - 1 = C\sqrt{x^2 + 9}\\
+       y = 1 + C \sqrt{x^2 + 9}
+   \end{align*}
+   Ensuite on va donc trouver la valeur pour $y\left(0\right)$:\\
+   On évalue $y\left(0\right) = 1 + C \cdot \sqrt{9} = 1 + 3C \implies C = 2$. Et donc On évalue notre fonction en $y\left(4\right) = 1 + 2\sqrt{16 + 9} = 11$
+   \end{subparag}
+
+    
+\end{parag}
+
+\begin{parag}{Question 4}
+    Le sous ensemble:
+    \begin{align*} E = \{ \left(x, y\right) \in \mathbb{R}^2: x > 1 \text{ et } -1 < xy < 1\} \subset \mathbb{R}^2 \end{align*}
+    Est 
+    \begin{itemize}
+        \item ouvert et borné
+        \item fermé et non borné
+        \item fermé et borné
+        \item ouvert et non borné
+    \end{itemize}
+    Ici déja on peut voir en quelque sorte a l'oeil nu si le sous-ensemble est ouvert ou fermé. Si l'on le regard comme un ensemble dans $\mathbb{R}$ on voit que tout les $<$ ou $>$ donne des ensemble ouvert (de ce type ] [) ce qui est ``l'équivalent'' de ouvert. et donc peut deviner ici que l'ensemble est ouvert et non fermé.\\
+    Pour ce qui est de borné, prenons la deuxième condition, pour montrer qu'un ensemble n'est pas borné il faut montrer qu'il y a une de ces variables qui peut s'étendre jusqu'à l'infini (c'est une sorte d'esquisse de preuve mais ca permet de se répérer lors de qcm).\\
+    Donc on prend la deuxième condition: $-1 < xy < 1$ si on prends par exemple: $y = \frac{1}{k + 1}$ et $x = k$ et que nous faisons la limite du produit:
+    \begin{align*} \lim_{k \to \infty} \frac{k}{k+1} \end{align*}
+    On voit que cette limite est bornée par $1$: soit $k \in \mathbb{R}$prenons:
+    \begin{align*} 0 < 1\\
+k < k + 1\\
+\frac{k}{k+1} < 1
+    \end{align*}
+
+    On voit ici donc que $x$ peut tendre vers l'infini et fera toujours parti de l'ensemble, donc l'ensemble n'est pas bornée.
+
+    
+    
+\end{parag}
+\begin{parag}{Question 5}
+    Soit $\{\overline{x}_n\}$ la suite d'éléments de $\mathbb{R}^2$ définie par
+\end{parag}
+
+
+
