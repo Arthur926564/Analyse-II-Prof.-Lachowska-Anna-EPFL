@@ -25,6 +25,84 @@ Ici ce n'est pas le corrigé de la professeur mais moi directement lorsque je fa
     
 \end{parag}
 
+\begin{parag}{Question 2}
+    La solution $y\left(x\right)$ de l'équation différentielle:
+    \begin{align*} y' + \frac{1}{x}y = \frac{2}{\left(1 + x^2\right)^2} \end{align*}
+    sur l'intervalle $] 0, + \infty [$ qui satisfait la condition initiale $y\left(1\right) = 0$...\\
+    Pour cette question soit on apprends par coeur la formule soit on la construit.\\
+    On a une équation du type $y' + p\left(x\right)y = f\left(x\right)$. On sait que la solution générale est donné par:
+    \begin{align*} y\left(x\right) = y_{hom}\left(x\right) + y_{part}\left(x\right) \end{align*}
+    Commençons par la solution homogène:
+    \begin{align*} y' + \frac{y}{x} = 0 \end{align*}
+    On arrive assez aisément à la séparer:
+    \begin{align*} y' &= -\frac{y}{x}\\
+    \frac{y'}{y} &= -\frac{1}{x}\end{align*}
+    Ensuite on intègre des deux côtés:
+    \begin{align*} \int \frac{1}{y} dy = - \int \frac{1}{x}\\
+        \ln \left|y\right| = - \ln \left|x\right| + C''
+    \end{align*}
+    Et à partir d'ici (je vais le faire très proprement un peu overkill)
+    \begin{align*} e^{\ln \left|y\right|} = e^{ \ln \left|\frac{1}{x}\right| + C''}\\
+        y = e^{C''}e^{\ln \left|\frac{1}{x}\right|}\\
+        y = C'''\frac{1}{x}
+    \end{align*}
+    Après avoir trouver la solution homogène associé $y_{hom} = C\frac{1}{x}$, On utilise la méthode de la variation de la constante pour trouver la solution particulière:
+\begin{align*} y_{part}\left(x\right) = c\left(x\right)y_{hom}\left(x\right) \end{align*}
+Et par le cours (section \ref{subsec:variationconstante}) on cherchera donc la fonction $c\left(x\right)$:
+\begin{align*}c\left(x\right) = \int f\left(x\right) e^{P\left(x\right)}  \end{align*}
+On voit ici qu'il faudra faire attention au signe qu'on avait enlevé dans le $\ln$.
+Donc on avait trouver pour $P\left(x\right) = \ln \left|Cx\right| $ (on peut mettre le C dedans si on fait une manip avec l'exponentielle).
+        \begin{align*} c\left(x\right) &= \int \frac{2x}{\left(1 + x^2\right)^2} dx
+        \end{align*}
+        Ici j'ai essayé avec les éléments simples mais j'ai rien trouvé donc je vais essayé avec un changement de variable:\\
+        Soit $u = 1 + x^2$, on prends $\frac{du}{dx} = 2x$ si on remplace:
+            \begin{align*} c\left(x\right) &= \int \frac{2x}{u^2}\frac{du}{2x}\\
+            &= \int \frac{1}{u^2}du\\
+            &= -\frac{1}{u} + C = -\frac{1}{\left(1 + x^2\right)}
+        \end{align*}
+        On obtient donc pour la solution particulière:
+
+        \begin{align*} y_{part}\left(x\right) = -\frac{1}{1+x^2}\cdot \frac{1}{x} \end{align*}
+On a donc la solution générale:
+\begin{align*} y\left(x\right) = \frac{1}{x\left(1+x^2\right)} + \frac{C}{x} \end{align*}
+avec $C = \frac{1}{2}$ 
+
+\end{parag}
+\begin{parag}{Question 3}
+    La solution de $y\left(x\right)$:
+    \begin{align*} y'' - y' - 6y = 4e^{-x}
+    \end{align*}
+    On trouve d'abord la solution homogène:
+    \begin{align*} \lambda^2 - \lambda - 6 = 0 \end{align*}
+    Qui a pour racine $3$ et $-2$:
+    \begin{align*} y_{hom} = C_1e^{3x} + C_2e^{-2x} \end{align*}
+    Pour la solution particulière, on pose $y = Ae^{-x}$ avec:\\
+    \begin{align*} y' = -Ae^{-x}\;\;\; y'' = Ae^{-x} \end{align*} 
+    Si on rempli l'équation on obtient:
+    \begin{align*} Ae^{-x} + Ae^{-x} -6Ae^{-x} = 4e^{-x}\\
+    2A - 6A = 4\\
+    A = -1
+\end{align*}
+Et donc on trouve que:
+\begin{align*} y\left(x\right) = -e^{-x} + C_1e^{3x} + C_2e^{-2x} \end{align*}
+Et donc on posera pour les deux conditions tel que:
+\begin{align*} 
+    \begin{cases}
+        -2 = -1 + C_1 + C_2\\
+        3 = 1 + 3C_1 - 2C_2
+    \end{cases}
+   \\
+   \begin{cases}
+       C_1 = 0\\
+       C_2 = -1
+   \end{cases}
+\end{align*}
+Ce qui donne comme sollution final:
+\begin{align*} y\left(x\right) = -e^{-x} - e^{-2x} \end{align*}
+\end{parag}
+
+
+
 \begin{parag}{Question 4}
     Le sous ensemble:
     \begin{align*} E = \{ \left(x, y\right) \in \mathbb{R}^2: x > 1 \text{ et } -1 < xy < 1\} \subset \mathbb{R}^2 \end{align*}
@@ -52,7 +130,67 @@ k < k + 1\\
 \end{parag}
 \begin{parag}{Question 5}
     Soit $\{\overline{x}_n\}$ la suite d'éléments de $\mathbb{R}^2$ définie par
+    \begin{align*} \overline{x_n} = \left(n\sin\left(\frac{\left(-1\right)^n}{n}\right), \frac{\left(-1\right)^n}{n}\sin\left(n\right)\right)^T \end{align*}
+    Et on demande la convergence de la suite et/ou elle est bornée.\\
+    Pour rappel lorsqu'on traite de suite dans $\mathbb{R}^n$ c'est comme si on traite de suite individuelle donc prenons la première:
+    On reconnaît ici bien le schéma de la suite:
+    \begin{align*} \lim_{x \to 0} \frac{\sin\left(x\right)}{x} = 1 \end{align*}
+    Si on prends la premiere suite on voit que cela ressemble dangereusement comme ceci:
+    \begin{align*} \frac{\sin\left(\frac{\left(-1\right)^n}{n}\right)}{\frac{1}{n}} \end{align*}
+    Néanmoins à cause du $\left(-1\right)^n$ la suite converge \important{absolument} vers 1 mais oscille entre -1 et 1, donc la suite est bornée mais pas convergente.\\
+    Pour l'autre On peut aussi utilise le même arguement mais dans ``l'autre sens'' car on a $\frac{\left(-1\right)^n}{n}$ qui tends vers 0 mais $\sin\left(n\right)$ quant a lui va juste oscillé à l'infini, donc la suite ne pourra jamais converger vers une valeur.\\
+    \begin{align*} \left|\frac{1}{n}\sin\left(n\right)\right| \leq \frac{n}{n} \end{align*}
+    Et on arrive pas a montrer que la limite tends vers 0 (le sinus se ``comporte'' comme la variable a l'intérieur lorsque celle ci s'approche de 0).
+    Et donc la suite est bornée mais pas convergente
+
+
 \end{parag}
+
+
+\begin{parag}{Question 6}
+    Soit la fonction $f: \mathbb{R}^2 \to \mathbb{R}$ définie par:
+    \begin{align*} 
+\begin{cases}
+    \frac{x^3y + y^3x}{x^2 + y^2} \; \; \text{ si } \left(x, y\right) \neq \left(0, 0\right)\\
+    0  \; \; \text{ si } \left(x, y\right) = \left(0, 0\right)
+\end{cases}
+    \end{align*}
+    Comme je soupçonne grandement que la fonction soit dérivable je vais commencer par ça:\\
+ Soit $r\left(\overline{x}\right) = f\left(\overline{x}\right) - f\left(\overline{a}\right) - < \nabla f\left(\overline{a}\right), \overline{x}- \overline{a}>$.\\
+ Pour ce qui est du gradient, on peut le faire de tête car il y a une puissance de 3 en haut et une puissance de 2 en bas. donc quand tu feras la limite tu tomberas sur 0 des deux côtés. donc $r\left(\overline{x}\right) =  f\left(\overline{x}\right)$
+    
+ \begin{align*} \lim_{\left(x, y\right) \to \left(0, 0\right)} f\left(x, y\right) = \lim_{r \to 0} \frac{r^4\cos^3\psi\sin\psi + r^4\sin^3\psi\cos\psi}{r^2}\\
+     = \lim_{r \to 0} r^2\left(blabla\right) = 0
+\end{align*}
+Donc la fonction est dérivable.
+\end{parag}
+\begin{parag}{Question 7}
+    Soit la fonction
+    \begin{align*} f\left(x, y\right) = \sin\left(\pi x^2 y\right) \end{align*}
+    On demande la dérivée directionnelle $D_{\overline{v}}f\left(1, 1\right)$ en suivent le vecteur $\overline{v} = \left(-\frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}}\right)^T$\\
+    Par la definition:
+    \begin{align*} \lim_{h \to 0}\frac{ f\left(\overline{e} + h \overline{v}\right)}{h} \end{align*}
+    Ce qui nous donne:
+    \begin{align*} \lim_{h \to 0} \frac{\sin\left(\pi\left(1-\frac{h}{\sqrt{5}}\right)^2\left(1 + \frac{2h}{\sqrt{5}}\right)\right)}{h}  \end{align*}
+
+    Ce qui après des simplifications:
+    \begin{align*}\lim_{h \to 0} \frac{\sin\left(\pi + \frac{-3h^2}{5} + \frac{2h^3}{5\sqrt{5}}\right)}{h}  \end{align*}
+    qui nous donne avec les identités trigonométrique:
+    \begin{align*} \lim_{t \to 0} \frac{\cos \pi \sin\left(-\frac{3}{h^2} + \frac{2h^3}{5\sqrt{5}}}{h} = 0 \end{align*}
+On sait que c'est $0$ parce qu'il y a une puissance $3$ dans le sinus qui va dépasser la puissance $1$ qui est en bas.
+\end{parag}
+\begin{parag}{Question 8}
+    Donc ici il suffit de trouver la jacobienne de $\overline{f}\left(x, y\right)$:
+    On calcule donc directement:
+    \begin{align*} \nabla f_1\left(x, y\right) = \left(x, y\right)\\
+    \nabla f_2\left(x, y\right) = \left(2x, 2y\right)\end{align*}
+    Ce qui donne lorsqu'on met en matrice et qu'on évalue en $\left(1, 1\right)$:
+    \begin{align*} J_{\overline{f}\left(1, 1\right)} = \begin{pmatrix} 1 & 1 \\ 2 & 2 \end{pmatrix}  \end{align*}
+    Et comme on demande directement le gradient de la fonction composée de matrice qui font $1 \times 2 $ avec $2 \times 2$ on a juste besoin de faire le produit matriciel de nos deux jacobienne:
+    \begin{align*} \nabla h\left(1, 1\right) = \begin{pmatrix} 1 & -\frac{1}{4} \end{pmatrix} \times\begin{pmatrix} 1 & 1 \\ 2 & 2 \end{pmatrix} = \begin{pmatrix} \frac{1}{2} & \frac{1}{2} \end{pmatrix}  \end{align*}
+    Je note juste ici qu'on a pas eu besoin de faire d'autre calcul car aussi $f\left(1, 1\right) = \left(1, 2\right)$ qui était exactement le point du gradient de $f\left(x, y\right)$.
+\end{parag}
+
 
 
 
