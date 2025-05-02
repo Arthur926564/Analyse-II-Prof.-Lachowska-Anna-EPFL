@@ -1,0 +1,52 @@
+\lecture{14}{2025-04-2}{Ca dérive}{}
+\subsection{Méthode de démonstration: Méthode 7: Récurrence}
+\begin{parag}{Récurrence forte}
+    Soit $n_0 \in \mathbb{N}$, et $P\left(n\right)$ une proposition qui dépend de $n \in \mathbb{N}: n \geq n_0$.\\
+    Supposons que:
+    \begin{enumerate}
+        \item $P\left(n_0\right)$ est vrai
+        \item $\{P\left(n_0\right), P\left(n_0 + 1\right), \ldots P\left(n\right)\}$ impliquent $P\left(n+1\right)$
+    \end{enumerate}
+    Alors $P\left(n\right)$ est vrai pour tout $n \geq n_0$, $n \in \mathbb{N}$.
+\end{parag}
+\begin{parag}{Exemple}
+    Graphe à $n \geq 2$ sommets tels que tous les 2 sommets sont connectés par exactement une arête. Démontrer qu'il existe un chemin suivant les arêtes qui passe par tous les sommets.
+    \begin{subparag}{Démonstrations}
+        On a donc $P\left(n\right)$ est la proposition donnée.\\
+        La base avec $n = 2$ qui nous donne que $P\left(s\right)$ est vraie.\\
+        Hérédité: On suppose que $P\left(k\right)$ est vrai $\forall k: 2 \leq k \leq n$. Il faut en déduire $P\left(n+1\right)$\\
+        Soit $X$ un sommet dans l'ensemble de $\left(n+1\right)$ sommets.\\
+        Alors $X$ est connecté avec chacun des $n$ sommets qui restent.\\
+        Soit :
+        \begin{equation*} A = \{ \text{ sommets } v: v \to X\} \exists \text{ une arrête de v vers } X \end{equation*}
+    \begin{equation*} B = \{ \text{ sommets } u: X \to u\} \exists \text{ une arrête de } X \text{ vers } u \end{equation*}
+    Cela implique donc que $A \cap U = \emptyset$ et $\left| A \cup B\right| = n$ ce que cela implique est que donc forcément: $\left|A\right| \leq n$ et aussi que $\left|B\right| \leq n$. Ce qui par la supposition de récurrence de récurrence, dans $A$ il existe un chemin $C_A$ suivant les arrêtes qui relie tous les sommets de $A$; de même dans $B$ il existe un chemin $C_B$ qui relie tous les sommets de $B$ (c'est vrai aussi trivialement dans le cas où $\left|A\right| = 1$ ou $\left|B\right| = 0$ (respectivement aussi pour $B$).\\
+    Soit $v_A$ le dernier sommet du $C_A$ et $u_B$ le premier sommet de $c_B$. Alors $C_A \to v_A \to X \to u_A \to c_B$ est un chemin qui relis tous les $\left(n+1\right)$ sommets.\\
+    Ce qui implique que $P\left(n+1\right)$ est vrai.\\
+    Conclusion: Par récurrence forte, $P\left(n\right)$ est vrai $\forall n \geq 2$.
+
+        
+    \end{subparag}
+    
+\end{parag}
+
+\begin{parag}{Résumé Récurrence}
+    \begin{subparag}{Récurrence simple}
+        $P\left(n_0\right)$ est vrai, $P\left(n\right) \implies P\left(n+1\right)$, $\forall n \geq n_0$ $ \implies P\left(n\right)$ est vrai $\forall n \geq n_0$.
+    \end{subparag}
+    \begin{subparag}{Récurrence généralisée}
+        $P\left(n_0\right), P\left(n_0 + 1\right), \ldots P\left(n_0 + k\right)$ est vraies.\\
+        \begin{equation*} \{ P\left(n_0\right), P\left(n_0 + 1\right), \ldots P\left(n_0 + k\right)\} \implies P\left(n+k+1\right)\end{equation*}
+        Et cela implique que $P\left(n\right)$ vrai $\forall n \geq n_0$.
+    \end{subparag}
+    \begin{subparag}{Récurrence forte}
+        $P\left(n_0\right)$ est vrai; 
+        
+        \begin{equation*} \{ P\left(n_0\right), P\left(n_0 + 1\right), \ldots P\left(n\right)\} \implies P\left(n+1\right)\end{equation*}
+        Et cela implique que $P\left(n\right)$ est vrai $\forall n \geq n_0$.
+        
+    \end{subparag}
+    
+\end{parag}
+
+
