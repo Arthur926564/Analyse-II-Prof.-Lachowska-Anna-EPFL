@@ -1,0 +1,210 @@
+\lecture{21}{2025-05-05}{TFI}{}
+\begin{parag}{Rappel TFI}
+    \begin{subparag}{TFI en $2$ variables}
+        \begin{theoreme}
+            Soit $F\left(x, y\right) : E^{\subset \mathbb{R}^2} \to \mathbb{R}$ de classe $C^1$ telle que $F\left(a, b\right) = 0$ et $\frac{\partial F}{\partial y}\right)a, b\right) \neq 0 $ Alors l'équation $F\left(x, y\right) = 0$ définit localement autour de $\left(a, b\right)$ une fonction $y =  f\left(x\right)$ telle que:
+            \begin{itemize}
+                \item $f\left(a\right) = b$
+                \item $F\left(x, f\left(x\right)\right) = 0$pour tout $x$ dans un voisinage de $x = a$
+                \item $f'\left(x\right) = - \frac{\frac{\partial F}{\partial x}\left(x, y\right)}{\frac{\partial F}{\partial y}\left(x, y\right)}_{\left(x, f\left(x\right)\right)}$
+            \end{itemize}
+        \end{theoreme}
+    \end{subparag}
+    
+    \begin{subparag}{TFI en 3 variables}
+        Soit $F\left(x, y, z\right): E \to \mathbb{R}$ de classe $C^1$, tel que $F\left(a, b, c\right) = 0$ et $\frac{\partial F}{\partial z}\left(a, b, c\right) \neq 0$.\\
+       Alors il existe localement une fonction $z =  f\left(x, y\right)$ telle que:
+       
+       \begin{enumerate}
+           \item j'ai pas eu le temps parce que vim compuile pas
+       \end{enumerate}
+       
+    \end{subparag}
+\end{parag}
+\begin{parag}{Exemple 4}
+    Soit $F\left(x, y, z\right) = x\cos y + y \cos z + z \cos x -1$\\
+    En premier lieu on vérifie les conditions, $F\left(0, 0, 1\right) = 0$ et que $F\left(x, y, z\right) = 0$ definit autour de $\left(0, 0, 1\right)$ une fonction $z = f\left(x, y\right)$ telle que $F\left(x, y, f\left(x, y\right)\right) = 0$. On cherche ensuite $\frac{\partial f}{\partial x} \left(0, 0\right)$ et $\frac{\partial f}{\partial y} \left(0, 0\right)$\\
+   \begin{enumerate}
+       \item $F\left(0, 0, 1\right) = 0 \cos 0 + 0 \cos 1 + 1 \cos 0  1 = 1  1 = 0$
+       \item $\frac{\partial F}{\partial z}\left(0, 0, 1\right) = -y\sin z + \cos x$ en $\left(0, 0, 1\right)$ ce qui implique:
+           \begin{align*} -0 \sin 1  + \cos 0 =  1 \neq 0 \implies \text{ TFI est applicable} \end{align*}
+           Ce qui implique que $\exists z = f\left(x, y\right)$ la solution de $F\left(x, y, z\right) = 0$ autout de $\left(0, 0, 1\right)$
+       \item 
+       \begin{align*} \frac{\partial f}{\partial x} \left(0, 0\right) = - \frac{\frac{\partial F}{\partial x}\left(x, y, z\right)}{\frac{\partial F}{\partial z}\left(x, y, z\right)} = - \frac{\cos y - z \sin x}{- y\sin z + \cos x} =  -\frac{1}{1} = -1 \end{align*}
+   \item 
+   \begin{align*} \frac{\partial f}{\partial y}\left(0, 0\right) =  - \frac{\frac{\partial F}{\partial y}\left(x, y, z\right)}{\frac{\partial F}{\partial z}\left(x, y, z\right)} = - \frac{-x\sin y + \cos z}{-y \sin z + \cos x} = -\cos 1 = -\cos 1\end{align*}
+   \end{enumerate}
+   Donc ici lorsqu'on a une question de ce type lors de l'examen on voit que ces une question  qui est censée être facile vu que sa résolution est très algorithmique.
+\end{parag}
+\begin{parag}{Plan tangent}
+   Des lors grâce à ce qu'on a trouvé et aussi comme on à trouvé que l'équation du plan tangent est:
+   \begin{align*} z = f\left(a, b\right) + <\nabla f\left(a, b\right), \left(x - a, y -b\right)> \end{align*}
+   Comme on a déjà trouvé les dérivée partielles grâce à notre petit exemple on a:
+   \begin{align*} z = 1 + <\left(-1, -\cos 1\right), \left(x-0, y-0\right) > = 1 + \left(-x\right) + \left(-\cos 1\right) \cdot y = 1 -x - \left(\cos 1\right) \cdot  y\\
+    \implies z = 1 - x - \left(\cos 1\right) \cdot  y \text{ est l'équation du plan tangent à la surface}
+   \end{align*}
+   (Surface qui est celle de $z = f\left(0, 0, 1\right)$
+
+
+\end{parag}
+\subsection{Application de TFI Equation d'un (hyper plan tangent à la surface définie par une équation}
+
+\begin{parag}{Application de TFI:}
+        Soit $F\left(x_1, \ldots, x_n\right)$ de classe $C'$ sur $E \subset \mathbb{R}^n$ et $\exists i: i \leq i \leq n$ tel que:
+        \begin{align*} p\frac{\partial F}{\partial x_i}\left(\overline{a}\right) \neq 0\text{ pou un } \overline{a} \in E \text{ où } F\left(\overline{a}\right) = 0 \end{align*}
+        Alors le TFI implique que l'équation $F\left(x_1, \ldots, x_n\right) = 0$ définit une (hyper) surface $x_i = f\left(x_1, \ldots , x_n \right)$ (où on a enlevé le i)
+\end{parag}
+\begin{parag}{Equation du plan tangent  }
+    Si $\nerline{a}\right) \neq 0$, alors $DF\left(\overline{a}, \overline{v}\right) = 0 \iff \overline{v}$ est tangent à la hyper surface de niveau.
+    \begin{align*} DF\left(\overline{a}, \overline{v}\right) = <\nabla F\left(\overline{a}\right), \overline{v}> = 0 \text{ pour tout vecteur } \overline{v}\text{ dans l'hyperplan tangent à } F\left(\overline{x}\right) \end{align*}
+    Et tout cela au point $\overline{x} =  \overline{a}$
+    Ce qui implique et se fait implique (ssi):
+    \begin{align*} \overline{v} =  \left(\overline{x} - \overline{a}\right) \perp \nabla F\left(\overline{a}\right) \end{align*}
+    \begin{theoreme}
+    L'équation de l'hyperplan tangent à $F\left(\overline{x}\right) = 0$ au point $\overline{a}$ : $F\left(\overline{a}\right) = 0$ est:
+        \begin{formule}
+            \begin{align*} 
+            <F(a, b, c), (x-a, y-b, z-c)> = 0
+            \end{align*}
+        \end{formule}
+        
+    \end{theoreme}
+\end{parag}
+
+
+
+
+
+
+
+\begin{parag}{Exemple 4}
+    soit donc la même fonction $F\left(x, y, z\right) = x\cos y + y \cos z + y \cos z + z \cos x - 1 = 0$ et on a aussi que $\overline{a} = \left(0, 0, 1\right)$\\
+\begin{align*} \nabla F\left(0, 0, 1\right) = \left(1, \cos 1, 1\right) \neq \overline{0} \\
+\implies <\left(1, \cos 1, 1\right), \left(x-0, y-0, z-1\right)> = 0\\
+\implies x + y \cos 1 + z-1 = 0\\
+\implies z =  1 - x - \left(\cos 1\right)y
+\end{align*}
+Ce qui nous donne bien l'équation du plan tangent\\
+Ce qui pourrait donner comme exercice: $y =  g\left(x, z\right)$ tel que:
+\begin{align*} F\left(x, g\left(x, z\right), z\right) = 0 \text{au voisinnage de } \left(0, 0, 1\right) \end{align*}
+\end{parag}
+\begin{parag}{Exemple 5}
+    Soit l'ellipsoïde $F\left(x, y, z\right) =  x^2 + 2y^2 + 3z^2 - 6 = 0$\\
+    Soit $\left(a, b, c\right) \in \mathbb{R}^3$: $a^2 + 2b^2 + 3c^2 = 6 $ Trouver une équation du plan tangent à la surface au point $\left(a, b, c\right)$.\\
+    \begin{align*} 
+        \nabla F\left(x, y, z\right) = \left(2x, 4y, 6z\right)_{\left(a, b, c\right)} = \left(2a, 4b, 6c\right) \neq \overline{0} \;\; \forall \left(a, b, c\right) \in \text{l'ellipsoide}\\
+        <\nabla F\left(a, b, c\right), \left(x-a, y-b, z-x\right) > = 0
+    \end{align*}
+    Ce qui nous donne l'équation du plan tangent en $\left(a, b, c\right)$:
+    \begin{align*}
+        <\left(2a, 4b, 6c\right), \left(x-a, y-b, z-c\right)> = 2ax -2a^2 + 4by - 4b^2 + 6cz - 6c^2 = 0 \\ 
+    ax + 2by + 3cz - a^2 2b^2 - 3c^2 = 0\\
+ax + 2by + 3cz = 6
+\end{align*}
+    \end{parag}
+
+
+
+
+\begin{parag}{Lien avec le plan tangent au graphique d'une fonction $z = f\left(x, y\right)$}
+    
+    Si $F\left(x, y, z\right) = z-f\left(x, y\right) \implies \frac{\partial F}{\partial z} = 1 \neq 0 $ Ce qui implique que $\nabla F\left(x, y, z\right) \neq \overline{0}$. Alors:
+    \begin{align*} 
+    \forall \left(x,y, z\right) \text{ où } z = f\left(x, y\right)\end{align*}
+    Si $c = f\left(a, b\right) \iff \left(a, b, c\right) \in $ surface de niveau $F\left(x, y, z\right) = 0$\\
+    Et donc par le TFI l'équation du plan tangent au point $\left(a, b, c\right)$ est:
+    \begin{align*} \nabla F\left(a, b, c\right), \left(x-a, y-b, z-c\right) > = 0 \end{align*}
+
+
+    \begin{subparag}{Développement}
+        Donc is on développe notre équation:
+        \begin{align*} 
+            \frac{\partial F}{\partial x} \left(a, b, c\right)\cdot \left(x-a\right) + \frac{\partial F}{\partial y} \left(a, b, c\right) \cdot  \left(y - b\right) + \frac{\partial F}{\partial z} \left(a, b, c\right)\cdot  \left(z-x\right) = 0\\
+                - \frac{\partial f}{\partial x} \left(a, b\right) - \frac{\partial f}{\partial y} \left(a, b\right) + z - f\left(a, b\right) = 0\\
+                z = f\left(a, b\right) + <\nabla f\left(a, b\right), \left(x-a, y-b\right)>
+        \end{align*}
+    \end{subparag}
+\end{parag}
+
+\begin{parag}{Example: droite tangent à la fonction définie implicitement:}
+    \begin{subparag}{Exemple 6}
+        Soit la surface tel que: $F\left(x, y\right) = x^{\frac{2}{3}} + y^{\frac{2}{3}} - 4 = 0$ Alors, le but est de trouver l'équation de la tangente au point $\left(a, b\right) = \left(2^{\frac{3}{2}}, 2^{\frac{3}{2}}\right)$
+
+        Donc on met nos valeurs dedans: $2^{\frac{2}{3}}^{\frac{2}{3}} + 2^{\frac{2}{3}}^{\frac{2}{3}} - 4 = 0 $ ce qui implique que $F\left(a, b\right) = 0$\\
+On calcule ensuite le gradient:
+\begin{align*} \nabla F\left(x, y\right) = \left(\frac{2}{3}x^{-\frac{1}{3}}, \frac{2}{3}y^{-\frac{1}{3}}\right)_{\left(2^{\frac{3}{2}}, 2^{\frac{3}{2}}\right)} = \left(\frac{\sqrt{2}}{3}, \frac{\sqrt{2}}{3}\right) \neq \overline{0} \end{align*}
+On a donc que l'équation de la tangente est $< \nabla F\left(a, b\right), \left(x-a, y-b\right)> = 0$\\
+On va donc développer et simplifier:
+\begin{align*} 
+    <\left(\frac{\sqrt{2}}{3},\frac{\sqrt{2}}{3}\right) , \left(x - 2^{\frac{3}{2}}, y - 2^{\frac{3}{2}}\right)> = \frac{\sqrt{2}}{3} \left(x-2^{\frac{3}{2}}\right) + \frac{\sqrt{2}}{3}\left(y - 2^{\frac{3}{2}}\right) =  0\\
+        x + y - 2\cdot 2^{\frac{3}{2}} = 0\\
+        x + y - 2 ^{\frac{5}{2}} =  0
+\end{align*}
+    \end{subparag}
+    
+\end{parag}
+
+
+\begin{parag}{Question 17}
+   Soit la fonction $f\left(x, y\right) = \ln\left(x + y^2\right) - y^2 - x^2$ 
+   Alors sur son domaine de définition la fonction $f$ on demande un peu tout ce qui se passe avec les points stationnaires etc..\\
+   On commence par calculer le gradient:
+   \begin{align*} 
+        \nabla f\left(x, y\right) = \frac{1}{x + y^2} - 2x, \frac{2y}{x + y^2}- 2y
+   \end{align*}
+   On chercher donc comment on peut arriver a trouver les 0 tel que:
+   \begin{align*} 
+        \nabla f\left(x, y\right) =  \overline{0}\\
+        \begin{cases}
+            \frac{1}{x + y^2} -2x = 0\\
+            \frac{2y}{x+y^2} - 2y = 0
+        \end{cases} \implies 1 = 1\frac{1}{x + y^2}
+   \end{align*}
+   et ce qui si on simplifie grâce a notre premiere équation:
+    \begin{align*} 
+        2x = \frac{1}{x + y^2} = 1 \implies x = \frac{1}{2}
+    \end{align*}
+    On obtient donc $y = \pm \sqrt{\frac{1}{2}}$ ce qui nous donne donc 2 points stationnaires, on peut aussi poser $y = 0$ ce qui nous donne bien $0$ pour la dérivée partielle de $y$ et pour celle de $x$:
+    \begin{align*} \frac{1}{x + y^2} = 2x\\
+        \frac{1}{x} = 2x \implies x^2 = \frac{1}{2}\\
+        x = \pm \sqrt{\frac{1}{2}}
+    \end{align*}
+    et il faut faire attention au domaine de définition qui ne prends par en compte le point $\left(-\sqrt{\frac{1}{2}}, 0\right)$ caril n'est pas définit pour le $\ln$ et donc on obtient $3$ point stationnaire.\\
+    On va maintenant calculer la hessienne avec ces quatre valeurs  propres:
+\end{parag}
+
+
+
+\subsection{Extrema liés. Méthode des multiplicateurs de Lagrange}
+
+\begin{parag}{Théorème cas $n = 2$}
+    \begin{theoreme}
+    Condition nécessaire pour un extremum sans contrainte.\\
+    Soient les fonctions $f, g: E \to \mathbb{R}$ de classe $C^1$.\\
+    Supposons que $f\left(x, y\right)$ admet un extremum en $\left(a, b\right) \in E$ sous la contrainte $g\left(x, y\right) = 0$:
+    \begin{align*} \text{min}, \text{max}\left\{f\left(x, y\right): \left(x, y\right) \in E \text{ et } g\left(x, y\right) = 0\right\} \end{align*}
+    et que $\nabla g\left(x, y\right) \neq \overline{0}$ pour $g\left(x, y\right) = 0$ Alors il existe $\lambda \in \mathbb{R}$ tel que:
+    \begin{formule}
+        \begin{align*} \nabla f\left(a, b\right) = \lambda \nabla g\left(a, b\right) \end{align*}
+    \end{formule}
+    
+    \end{theoreme}
+    
+\end{parag}
+
+
+\begin{parag}{Extrema liés interpretation géométrique}
+    Soit $g\left(x, y\right) = 0$ la contrainte $\implies$ c'est une courbe d niveau:
+    \begin{align*} \implies \nabla g\left(x, y\right) \perp \text{ a la courbe}, \nabla g\left(x, y\right) \neq 0 \end{align*}
+    Si $\left(a, b\right)$ est un extremum local de $f\left(x, y\right)$ sur la courbe. Alors: 
+    \begin{align*} Df\left(a, b\right) \left(\overline{v} \text{tangent à } g\left(x, y\right) = 0\right) =  <\nabla f\left(a, b\right), \overline{v}_{tang}> = 0 \end{align*}
+    On obtient donc que:
+    \begin{align*} \nabla f\left(a, b\right) =  \overline{0} \implies \nabla f\left(a, b\right) = 0 \cdot  \nabla g\left(\overline{a}, b\right) \cdot  \lambda = 0\\
+        \nabla f\left(\overline{a}, b\right) \perp \text{ à la courbe} \iff \nabla f\left(a, b\right) = \lambda \nabla g\left(a, b\right), \lambda \neq 0
+    \end{align*}
+    Ce qui implique finalement:
+    \begin{align*} \exists \lambda \in \mathbb{R}: \nabla f\left(a, b\right) = \lambda \cdot  \nabla g\left(a, b\right) \end{align*}
+    Qui est le théorème de Lagrange.
+    
+\end{parag}
+
