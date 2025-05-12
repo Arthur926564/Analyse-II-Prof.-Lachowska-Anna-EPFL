@@ -1,0 +1,95 @@
+\chapter{Calcul d'intégrale des fonctions de plusieurs variables}
+\lecture{23}{2025-05-12}{Intégrale à plusieurs variables}{}
+
+\section{Intégrale sur un pavé fermé}
+\begin{definition}
+    Un \important{pavé fermé} est un sous-ensemble de $\mathbb{R}^{n}$ qui est le produit cartésien de $n$ intervalles fermés bornés:
+    \begin{align*} P =  \left[a_1, b_1\right] \times \ldots \times \left[a_n b_n\right] \; \; a_i < b_i \forall i = 1, \ldots, n\end{align*}
+    On note le pavé ouvert $\mathring{P} =  ] a_1, b_1 [ \times \ldots \times ] a_n b_n [$
+\end{definition}
+
+\begin{parag}{Exemple}
+    Pour un pavé de dimension $1$ , $P_1 =  \left[a, b\right]$ qui est juste un intervalle fermé.\\
+    Pour un pavé de dimension $2$ $\implies P_2 = \left[a_1, b_1\right] \times \left[a_2, b_2\right]$
+\end{parag}
+\begin{parag}{Volume d'un pavé fermé}
+    \begin{definition}
+        Le volume d'un pavé fermé set défini par:
+        \begin{align*} \left|P\right| =  \left(b_1 - a_1\right)\left(b_2 - a_2\right) \cdot  \ldots \cdot  \left(b_n - a_n\right) \end{align*}
+    \end{definition}
+    
+    \begin{definition}
+        Soit $G_j$ une \important{sbdivision} de $\left[a_j, b_j\right]; a_j < b_j$ tel que
+        \begin{align*} G_j =  \left\{a_j =  x_0^i < x_1^j < \ldots < x_{n_j}^j < b_j\right\} \end{align*}
+        Alors $G = \left(G_1, \ldots, G_n\right)$ est appelée une \important{subdivision de $P$}
+    \end{definition}
+
+\end{parag}
+\begin{parag}{Somme de Darboux}
+    \begin{definition}
+        Soit $f: P \to \mathbb{R}$ \important{bornée sur $P$} Alors on définit \important{les sommes de Darboux} de $f$ sur $P$.\\
+        Soit $D\left(\sigma\right)$ une collection des pavées fermés engendrée par la subdivision $\sigma$.\\
+        Alors $S_{\sigma}\left(f\right) =  \sum_{Q \subset D\left(\sigma\right)}m\left(Q\right)\left|Q\right| $ où $m\left(Q\right) =  \text{inf}_{\overline{x}\in Q}f\left(\overline{x}\right)$\\
+        $\overline{S}_{\sigma} =  \sum_{Q \subset D\left(\sigma\right)} M\left(Q\right) \left|Q\right| $ où $M\left(Q\right) =  \text{sup}_{\overline{x}\in Q}f\left(\overline{x}\right)$\\
+        Alors $S\left(f\right) = \text{sup}\{S_{\sigma}\left(f\right)$, $\sigma$ est une subdivision de $P \}$ est la somme de Darboux.\\
+
+    \end{definition}
+\end{parag}
+\begin{parag}{Integrabilité}
+    \begin{definition}
+        Soit $P \subset \mathbb{R}^{n}$ une pavé fermé et $f: P \to \mathbb{R}$ une fonction bornée. Alors,  $f$ est \important{intégrable sur $P$} si et seulement si:
+        \begin{align*} S\left(f\right) =  \overline{S}\left(f\right)  \end{align*}
+        Pour lesquels on a toujours $S\left(f\right) \leq \overline{S} \left(f\right)$\\
+        Dans ce cas, \important{l'integrale de $f$ sur $P$} est définie par:
+        \begin{align*} \int \int \int \int_P f\left(\overline{x}\right) d\overline{x} =  \int_P \int\ldot\s\int f\left(x_1, \ldots, x_n\right) dx_1 \ldots dx_n =  S\left(f\right) =  \overline{S}\left(f\right) \end{align*}
+    \end{definition}
+\end{parag}
+\begin{parag}{Exemple $3$}
+    Soit $P \subset \mathbb{R}^{n}$ un pavé fermé: $f: P \to \mathbb{R}$, $f\left(\overline{x}\right) =  C \in \mathbb{R}$ constante.\\
+    Soit $\sigma$ une subdivision de $P$. $S_{\sigma}\left(f\right) =  \sum_{Q \in D\left(\sigma\right)} \text{inf}_Q\left(f\right)\left|Q\right| =  C \sum_{Q}\left|Q\right|= C \left|P\right| $
+\end{parag}
+
+\begin{parag}{Quelque exemple}
+    Soit $f\left(\overline{x}\right) =  1$ Alors:
+    \begin{align*} \int_P d\overline{x} =  \int\int\ldot\s\intdx_1, \ldots dx_n \end{align*}
+\end{parag}
+
+\begin{parag}{Théorème}
+    \begin{theoreme}
+        Toute fonction \important{continue} est \important{intégrable} sur \important{un pavé fermé}.
+    \end{theoreme}
+    \begin{subparag}{Idée de la preuve}
+        Soit $f : P \to \mathbb{R}$ une fonction continue.\\
+        En premier lieu, $f$ est bornée sur $P$. Puisque $P$ est un sous-ensemble compact. Alors cette fonction atteint son minimum et maximum sur $P \implies f$ est bornée sur $P$.\\
+        Soit $\epsilon > 0$ si $f$ est continue en chaque point de $P$. Cela implique que:
+        \begin{align*} \forall \overline{x}_0 \in P\;\; \exists \delta_{\overline{x}_0}  : \left|\left|\overline{x}_0 - \overline{x}\right|\right|< \delta_{\overline{x}_0} \implies \left|f\left(\overline{x}\right) - f\left(\overline{x}_0\right)\right| \leq \frac{\epsilon}{2}\end{align*}
+        On considère le recouvrement de $P$ pour des boules ouvertes $B\left(\overline{x}_0, \sigma_{\overline{x}_0}\right)$ Ce qui implique par le théorème de Heine-Borel_Lebesgue que parce que c'est un recouvrement fini, on a une subdivision fini $\sigma$ ce qui implique que $\overline{S}_{\sigma} - S_{\sigma} \leq \epsilon\left|P\right| \implies \overline{S} - S \leq \epsilon \left| P\right|$ Ce qui implique finalement que $f$ est intégrable sur $P$.
+    \end{subparag}
+\end{parag}
+\begin{parag}{Propriétés de l'intégrale}
+    \begin{enumerate}
+        \item \textbf{Additivité}: Soit $P$ un pavé fermé et $\left\{P_i\right\}_{i \in I}$ une famille finie (dénombrable) des pavés fermés tels que $P =  \bigcup_{i \in I}P_i$ \\
+            Alors pour toute fonction continue $f: P \to \mathbb{R}$ on a:
+            \begin{align*} \int_P \end{align*}
+
+    \end{enumerate}
+    
+\end{parag}
+\subsection{Théorème de Fubini sur un pavé fermé}
+\begin{theoreme}
+    Soit $f: P \to \mathbb{R}$ continue, $P =  \left[a_1, b_i\right] \times \ldots \times \left[a_n, b_n\right]$\\
+    Alors $f$ est intégrable sur $P$ et on a:
+    \begin{align*} \int_P f\left(\overline{x}\right)d\overline{x} = \int_{a_n}^{b_n}\left(\int_{a_{n-1}}^{b_{n-1}}\ldots \left(\int_{a_1}^{b_1} f\left(x_1, \ldots, x_n\right)dx_1\right)dx_2\ldots dx_{n-1}\right)dx_n \end{align*}
+\end{theoreme}
+\begin{parag}{Explication}
+    Donc en fait on intègre une variable à la fois avec les autres $x_j$ comme paramètre.  On commence de l'intérieur  jusqu'à l'extérieur (Cela est fait pour le théorème de Fubini, néanmoins on peut quand même échanger l'ordre des variables dans l'intégrale). \important{Attention},  cela ne fonction seulement sur un pavé fermé.\\
+
+\end{parag}
+
+
+
+
+
+
+
+
