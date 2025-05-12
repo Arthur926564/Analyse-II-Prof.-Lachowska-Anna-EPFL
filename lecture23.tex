@@ -19,7 +19,7 @@
     \end{definition}
     
     \begin{definition}
-        Soit $G_j$ une \important{sbdivision} de $\left[a_j, b_j\right]; a_j < b_j$ tel que
+        Soit $G_j$ une \important{subdivision} de $\left[a_j, b_j\right]; a_j < b_j$ tel que
         \begin{align*} G_j =  \left\{a_j =  x_0^i < x_1^j < \ldots < x_{n_j}^j < b_j\right\} \end{align*}
         Alors $G = \left(G_1, \ldots, G_n\right)$ est appelée une \important{subdivision de $P$}
     \end{definition}
@@ -85,6 +85,38 @@
     Donc en fait on intègre une variable à la fois avec les autres $x_j$ comme paramètre.  On commence de l'intérieur  jusqu'à l'extérieur (Cela est fait pour le théorème de Fubini, néanmoins on peut quand même échanger l'ordre des variables dans l'intégrale). \important{Attention},  cela ne fonction seulement sur un pavé fermé.\\
 
 \end{parag}
+\begin{parag}{Exemple 1}
+    Calculer $\int\int_P xe^{xy}dxdy, \; \; P =  \left[0, 1\right] \times \left[0, 1\right]$.\\
+    Par le théorème de Fubini,  c'est plus simple donc de commencer par $y$:
+    \begin{align*} 
+        \int_0^1dx\left(\int_0^1xe^{xy} dy\right) =  \int_0^1dx \int_0^1e^{xy}d\left(xy\right) =  \int_0^1dx \left(e^{xy}_{0 \to 1}\right) =  \int_0^1 dx \left(e^x - 1\right)\\
+        = \int_0^1 \left(e^x - 1\right)dx =  e^x - x_{0 \to 1} =  e  -2
+    \end{align*}
+    Autrement on peut le faire par partie avec:
+    \begin{align*} 
+        \int_0^1 xe^{xy}dx =  \int_0^1 \frac{1}{y}d\left(e^{xy}\right) =  \frac{x}{y}e^{xy}_{0 \to 1} - \int_0^1 e^{xy} \frac{1}{y}dx \\
+        =  \frac{1}{y}e^y - \frac{1}{y^2}\left(e^y - 1\right)
+    \end{align*}
+    \begin{framedremark}
+        Ici on a mit $d\left(xy\right)$ car du point de vue de $y$, $x$ est seulement un paramètre, qui peut donc sortir de l'intégrale\\
+        L'écriture avec le $dx$ a gauche de la parenthèse est souvent préféré
+    \end{framedremark}
+\end{parag}
+\begin{parag}{Exemple 2}
+    on a $I =  \int_D\int x^2 e^y dxdy$, où $D =  \left[0, 1\right] \times \left[0, 2\right]$:
+    \begin{align*} 
+        \int_D\intx^2e^y dxdy &= \int_0^2 dy\left(\int_0^1 x^2e^ydx\right) = \int_0^2e^ydy\left(\int_0^1x^2dx\right)\\
+                              &= \int_{0}^2e^ydy\left(\frac{1}{3}x^3_{0 \to 1}\right) =  \int_0^2 e^y\frac{1}{3}dy = \frac{1}{3}\int_0^2e^ydy\\
+                              &= \frac{1}{3} \left(e^2-1\right)
+    \end{align*}
+    \begin{framedremark}
+        Si $f\left(x, y\right) =  f_1\left(x\right)f_2\left(y\right)$ sur $P =  \left[a, b\right] \times \left[c, d\right]$. Alors:
+        \begin{align*} \int_\P\intf_1\left(x\right)f_2\left(y\right)dxdy =  \int_c^ddy\left(\int_a^bf_1\left(x\right)f_2\left(y\right)dx\right) =  \int_c^df_2\left(y\right)\left(\int_a^bf_1\left(x\right)dx\right)dy\\
+        = \int_a^bf_1\left(x\right)dx \cdot  \int_c^d f_2\left(y\right)dy\end{align*}
+    \end{framedremark}
+\end{parag}
+
+
 
 
 
