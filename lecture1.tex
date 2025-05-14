@@ -1,10 +1,10 @@
 
 \chapter{Equations différentielles ordinaires}
 \lecture{1}{2025-02-17}{Equa Diff}{}
-\section{definition} 
+\section{Introduction aux équation différentielles} 
 \begin{definition}
     \important{Une équation différentielle ordinaire} est une expression \[E(x, y, y', \dots, y^{(n)}) = 0 \]
-    où $E$ est une expression fonctionnelle, $n \in \mathbb{N}_0$, et $y = y (x)$ est une fonction inconnue de $x$ \\
+    où $E$ est une expression fonctionnelle, $n \in \mathbb{N}_0$, et $y = y (x)$ est une fonction inconnue de $x$ .\\
     On cherche un intervalle ouvert $I \subset \mathbb{R}$ et une fonction $y : I \to \mathbb{R}$ de classe $C^n$ telle que l'équation donnée est satisfaite $\forall x \in I$.
 \end{definition}
 \begin{parag}{Equation à variable séparées} 
@@ -16,7 +16,7 @@
  Une fonction $y: J' \subset J \to \mathbb{R}$ de classe $C'$ satisfaisant l'équation $f(y)\cdot y' = g(x)$ est une solution
  \begin{subparag}{Remarque personnelle}
      \begin{framedremark}
-         Ce type d'équation se résoudre très rapidement car on peut transformer le $y'$ en $\frac{dy}{dx}$ et "mettre le $dx$ de l'autre côté" : 
+         Ce type d'équation se résoudre relativement ``rapidement'' car on peut transformer le $y'$ en $\frac{dy}{dx}$ et ``mettre le $dx$ de l'autre côté'' : 
          \[f(y)\cdot\frac{dy}{dx} = g(x) \implies \int f(y)dy = \int g(x) dx\] 
          Et il suffit donc t'intégrer les deux côtés et le tour est joué.
      \end{framedremark}
@@ -24,33 +24,35 @@
 \end{parag}
 
 \begin{parag}{Terminologie}
+    \begin{definition}
     Soit $E(x, y, \dots, y^{(n)}) = 0$ \textcolor{red}{(*)} une équation différentielle (ED):
     \begin{itemize}
-        \item \textbf{Def:} un nombre naturel $n \in \mathbb{N}_+$ est \important{l'ordre} de l'équation $(*)$ si $n$ est l'ordre maximal de dérivée de $y(x)$ dans l'équation.
-        \item \textbf{Def:} Si (*) est de la forme $\alpha_0(x)y + \alpha_1(x)y' + \alpha_2(x)y'' + \cdots + \alpha_n(x)y^{(n)} = b(x)$ alors l'équation est dire \important{linéaire} où $\alpha_i(x)$, $b(x)$ dont des fonctions continues
-        \item \textbf{Def} Si l'expression (*) ne contient pas de $x$ l'équation (*) est dire \important{autonome}
+        \item  un nombre naturel $n \in \mathbb{N}_+$ est \important{l'ordre} de l'équation $(*)$ si $n$ est l'ordre maximal de dérivée de $y(x)$ dans l'équation.
+        \item  Si (*) est de la forme $\alpha_0(x)y + \alpha_1(x)y' + \alpha_2(x)y'' + \cdots + \alpha_n(x)y^{(n)} = b(x)$ alors l'équation est dire \important{linéaire} où $\alpha_i(x)$, $b(x)$ dont des fonctions continues
+        \item  Si l'expression (*) ne contient pas de $x$ l'équation (*) est dire \important{autonome}
     \end{itemize}
+    \end{definition}
 \end{parag}
 \begin{parag}{Problème de Cauchy}
     \begin{definition}
-        Résoude \important{Le problème de Vauchy (ED avec des conditions initiales)} pour l'équation $E(x, y, y', \dots, y^{(n)}) = 0$ c'est de trouver l'intervalle ouvert $I \subset \mathbb{R}$ et une fonction $y : I \to \mathbb{R}$ de classe $C^n (I)$, telle que $E(x, y, \dots, y^{(n)}) = 0$ sur $I$ et $y(x_0) = b_0$, $y_(x) = B, \dots, y'(x_2) = \dots$
+        Résoudre \important{Le problème de Cauchy (ED avec des conditions initiales)} pour l'équation $E(x, y, y', \dots, y^{(n)}) = 0$ c'est de trouver l'intervalle ouvert $I \subset \mathbb{R}$ et une fonction $y : I \to \mathbb{R}$ de classe $C^n (I)$, telle que $E(x, y, \dots, y^{(n)}) = 0$ sur $I$ et $y(x_0) = b_0$, $y(x_1) = b, \dots, y'(x_2) = \dots$
     \end{definition}
     Le nombre des conditions initiales depend du type de l'ED
     \begin{framedremark}
-        C'est ce qui se passe en physique lorsqu'on a une forme et que l'on chercher la position au court du temps:
+        C'est ce qui se passe en physique lorsqu'on parle de mécanique et que l'on chercher la position au court du temps (à partir du principe fondamental de la dynamique):
         \begin{align*}
             ma &= F\\
             a &= \frac{F}{m}\\
             \frac{d^2x}{dt^2} &= \frac{F}{m}\\
             x = \frac{1}{2}\frac{F}{m}t^2 + c_1 t + c_0
         \end{align*}
-        Et le but est de trouver ses constantes qui sont les conditions initiales.
+        Et le but est de trouver ces constantes qui sont les conditions initiales.
     \end{framedremark}
     \begin{definition}
         Une solution d'un problème de Cauchy est \important{maximale} si elle est définie sur le plus grand intervalle possible.
     \end{definition}
 \end{parag}
-\section{Existence et unicit d'une solution de EDVS}
+\section{Existence et unicité d'une solution de EDVS}
 \begin{parag}{Théorème}
     \begin{theoreme}
         Soit \begin{itemize}
@@ -62,7 +64,21 @@
         (Demonstration la prochaine fois
         
     \end{theoreme}
+    \begin{framedremark}
+        Ce que dit ce théorème en français est:\\
+        Si on a une équation différentielle séparable alors:\\
+        \begin{itemize}
+            \item Tu peux toujours séparer et intégrer localement si:
+                \begin{itemize}
+                    \item $f\left(y\right)$  ne s'annule pas
+                    \item $g\left(x\right)$ est continue
+                \end{itemize}
+            \item Il y a une \important{unique courbe (solution)} qui passe par le point $\left(x_0, b_0\right)$.
+        \end{itemize}
+        
+    \end{framedremark}
 \end{parag}
+section{Méthode de démonstration}
 \begin{parag}{Introduction}
     \begin{definition}
         Une \important{proposition} est un énoncé qui peut être vrai ou faux.
@@ -71,7 +87,7 @@
         Une \important{démonstration} est une suite d'implication logique qui sert à dériver la proposition en question à partir des axiomes (propositions admises comme vraies) et des propositions préalablement obtenue
     \end{definition}
 \end{parag}
-\section{Méthode de démonstration}
+\
 \begin{parag}{Méthode 1}
     Démonstration direct:\\ $\underbrace{P}_{\text{condition donnée}}$ $\implies$ implications logiques/axiomes/propositions connues $\implies \underbrace{Q}_{\text{proposition désirée}}$
     \begin{subparag}{Remarque personnelle}

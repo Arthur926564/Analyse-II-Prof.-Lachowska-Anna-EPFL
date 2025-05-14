@@ -102,20 +102,32 @@
     \[y(x) = Ce^{-P(x)}\]
     où $C \in \R$, $x \in I$ est la solution générale de l'équation homogène associée $y' + py = 0$ sur $I$
 \end{parag}
-\subsection{Principe de superposition de solutions}
-\label{subsec:variationconstante}
+\subsection{Principe de superposition de solutions}\label{subsec:variationconstante}
 
 \begin{parag}{Principe}
     Soit $I \subset \R$ ouvert, $p, f_1, f_2 : I \to \R$ fonctions continues
     \\
     Supposons que $v_1: I \to \R$ de classe $C^'$ est une solution 
-    \[y' + p(x)y(x) = 0\]
+    \[y' + p(x)y(x) = f_1\left(x\right)\]
+    Et $v_2: I \to \mathbb{R}$ de classe $C'$ est une solution de l'équation 
+    \begin{align*} y' + p\left(x\right) =  f_2\left(x\right) \end{align*}
+    Alors \important{pour tout couple} $c_1, c_2 \in \mathbb{R}$, la fonction $v\left(x\right) =  c_1v_1\left(x\right) + c_2v_2\left(x\right)$ est une solution de l'équation:
+    \begin{align*} 
+        y' + p\left(x\right)y = c_1f_1\left(x\right) + c_2f_2\left(x\right)
+    \end{align*}
+    \begin{subparag}{Vérification}
+        Si juste on pose tout ça on obtient:
+        \begin{align*} 
+            v'\left(x\right) + p\left(x\right)v\left(x\right) &=  c_1v_1'\left(x\right) + c_2v_2'\left(x\right) + p_2\left(x\right)\left(c_1v_1\left(x\right) + c_2v_2\left(x\right)\right)\\
+            &= c_1\underbrace{\left(v_1'\left(x\right) + p\left(x\right)v_1\left(x\right)}_{f_1\left(x\right)} + c_2 \underbrace{\left(v_2'\left(x\right) + p\left(x\right)v_2\left(x\right)\right)}_{f_2\left(x\right)} =  c_1f_1\left(x\right) + c_2f_2\left(x\right)
+        \end{align*}
+    \end{subparag}
 \end{parag}
 \begin{parag}{Méthode de la variation de constante}
-    On cherche une solution particulière de $y'(x) + p(x) y(x) = f(x) : p, f :I\underbrace{ \to \R}_{\text{continue}}$ sout la forme : 
+    On cherche une solution particulière de $y'(x) + p(x) y(x) = f(x) : p, f :I\underbrace{ \to \R}_{\text{continue}}$ sous la forme : 
     \\
     \textbf{Ansatz:}
-    \[v(x) = \textcolor{red}{C(x)}e^{-P(x)}\] 
+    \[v(x) = \textcolor{red}{c(x)}e^{-P(x)}\] 
     où $P(x)$ est une primitive de $p(x)$ sur $I$
     \\
     Si $v(x)$ est une solution $\implies v'(x) + p(x)v(x) = f(x)$
@@ -128,10 +140,13 @@
 \end{parag}
 \subsection{Théorème à savoir pour l'examen}
 \begin{parag}{Proposition}
-    Soit $p_1, f : I \to \R$ fonctions continues. Supposons que $v_0 : I \to \R$ est une solution partiulière de l'équation $y'(x) + p(x)y(x) = f(x)$
+    \begin{theoreme}
+    
+    Soit $p, f : I \to \R$ fonctions continues. Supposons que $v_0 : I \to \R$ est une solution partiulière de l'équation $y'(x) + p(x)y(x) = f(x)$
     \\
     Alors la solution générale de cette équation est:
     \[v(x) = v_0(x) + Ce^{-P(x)}, \text{ pour tout } C \in \R, \text{ où } P(x) \text{ est une primitive de p(x) sur } I\]
+    \end{theoreme}
 \end{parag}
 \begin{parag}{Démonstration}
     \textbf{(1)} \\

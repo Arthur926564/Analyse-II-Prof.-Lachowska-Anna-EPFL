@@ -1,9 +1,11 @@
 \lecture{3}{2025-02-24}{EDL1 Et Méthode de démonstration}{}
-\subsection{Rappel: Equation différentielles linéaires du premier ordre (EDL1)}
+\subsubsection{Rappel: Equation différentielles linéaires du premier ordre (EDL1)}
 \begin{parag}{Rappel}
     \[y' + p(x)y = f(x)\]
     Où $p, f: I \to \R$ fonctions continues. Alors la solution générale est donnée par la formule:
+    \begin{formule}
     \[y(x) = y_{hom}(x) + y_{part}(x)\]
+    \end{formule}
     Où $y_{hom}(x)$ est la solution générale de l'équation générale de l'équation homogène associée: $y' + p(x)y = 0$ et $y_{part}(x)$ est une solution particulière de l'équation donnée : $y' + p(x)y = f(x)$.
     \begin{itemize}
         \item $y_{hom}(x) = Ce^{-P(x)}$, où $P(x) = \int p(x)dx$ est une primitive (sans constante), $C \in \R$.
@@ -108,7 +110,7 @@
     La solution maximale satisfaisant la condition initiale $y(0) = y_0$ est:
     \[y(t) = y_0e^{kt}\]
 \end{parag}
-\section{Méthodes de démonstration}
+\subsubsection{Méthodes de démonstration: Disjonction des cas}
 \begin{parag}{Méthode 3: Raisonnement par disjonction des cas}
     \begin{definition}
         Soient $P, Q$ deux propositions. Pour montrer que $P \implies Q$ on sépare l'hypothèse de $P$ de départ en différent cas possibles et on montre que l'implication est vraie dans chacun des cas. Il est très important de considérer \important{tous les cas possibles}
@@ -151,6 +153,8 @@
         Finalement, $2n^2 + n + 1$ n'est pas divisible par $3 \; \forall n  \in \mathbb{Z}$.
     \end{subparag}
 \end{parag}
+\subsubsection{Méthode de démonstration: équivalence}
+
 \begin{parag}{Méthode 4: Comment démontrer les propositions de la forme $P \iff Q$}
     Deux méthode existent:
     \begin{enumerate}
