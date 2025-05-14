@@ -18,7 +18,7 @@
         Le volume d'un pavé fermé set défini par:
         \begin{align*} \left|P\right| =  \left(b_1 - a_1\right)\left(b_2 - a_2\right) \cdot  \ldots \cdot  \left(b_n - a_n\right) \end{align*}
     \end{definition}
-    
+
     \begin{definition}
         Soit $G_j$ une \important{subdivision} de $\left[a_j, b_j\right]; a_j < b_j$ tel que
         \begin{align*} G_j =  \left\{a_j =  x_0^i < x_1^j < \ldots < x_{n_j}^j < b_j\right\} \end{align*}
@@ -36,13 +36,14 @@
 
     \end{definition}
 \end{parag}
+
 \begin{parag}{Integrabilité}
     \begin{definition}
         Soit $P \subset \mathbb{R}^{n}$ une pavé fermé et $f: P \to \mathbb{R}$ une fonction bornée. Alors,  $f$ est \important{intégrable sur $P$} si et seulement si:
         \begin{align*} S\left(f\right) =  \overline{S}\left(f\right)  \end{align*}
         Pour lesquels on a toujours $S\left(f\right) \leq \overline{S} \left(f\right)$\\
         Dans ce cas, \important{l'integrale de $f$ sur $P$} est définie par:
-        \begin{align*} \int \int \int \int_P f\left(\overline{x}\right) d\overline{x} =  \int_P \int\ldot\s\int f\left(x_1, \ldots, x_n\right) dx_1 \ldots dx_n =  S\left(f\right) =  \overline{S}\left(f\right) \end{align*}
+        \begin{align*} \int \int \int \int_P f\left(\overline{x}\right) d\overline{x} =  \int_P \int\ldots\int f\left(x_1, \ldots, x_n\right) dx_1 \ldots dx_n =  \underline{S}\left(f\right) =  \overline{S}\left(f\right) \end{align*}
     \end{definition}
 \end{parag}
 \begin{parag}{Exemple $3$}
@@ -63,7 +64,8 @@
         Soit $f : P \to \mathbb{R}$ une fonction continue.\\
         En premier lieu, $f$ est bornée sur $P$. Puisque $P$ est un sous-ensemble compact. Alors cette fonction atteint son minimum et maximum sur $P \implies f$ est bornée sur $P$.\\
         Soit $\epsilon > 0$ si $f$ est continue en chaque point de $P$. Cela implique que:
-        \begin{align*} \forall \overline{x}_0 \in P\;\; \exists \delta_{\overline{x}_0}  : \left|\left|\overline{x}_0 - \overline{x}\right|\right|< \delta_{\overline{x}_0} \implies \left|f\left(\overline{x}\right) - f\left(\overline{x}_0\right)\right| \leq \frac{\epsilon}{2}\end{align*}
+        \begin{align*} \forall \overline{x}_0 \in P\;\; \exists \delta_{\overline{x}_0}  : \left|\left|\overline{x}_0 - \overline{x}\right|\right|< \delta_{\overline{x}_0} \implies \left|f\left(\overline{x}\right) - f\left(\overline{x}_0\right)\right| \leq \frac{\epsilon}{2}
+        \end{align*}
         On considère le recouvrement de $P$ pour des boules ouvertes $B\left(\overline{x}_0, \sigma_{\overline{x}_0}\right)$ Ce qui implique par le théorème de Heine-Borel_Lebesgue que parce que c'est un recouvrement fini, on a une subdivision fini $\sigma$ ce qui implique que $\overline{S}_{\sigma} - S_{\sigma} \leq \epsilon\left|P\right| \implies \overline{S} - S \leq \epsilon \left| P\right|$ Ce qui implique finalement que $f$ est intégrable sur $P$.
     \end{subparag}
 \end{parag}

@@ -16,9 +16,9 @@
     \begin{align*} 3\int_0^5\left(\int_0^4xdx\right)dy = 3\int_0^31dy\cdot \int_0^4xdx\\
     = 3y_{0 \to 3}\cdot \frac{1}{2}x^2_{0 \to 4} =  9 \cdot  8 =  72\end{align*}
     Pour la dernière intégrale on a:
-    \begin{align*} \int\int_P x \sin\left(xy\right)dxdy =  \int_0^4\left(\int_0^3x\sin\left(xy\right)dy\right)dx =  \int_0^4\left(\int_0^3 \sin\left(xy\right)d\left(xy\right)\right)dx\\
-    = \int_0^4 - \cos\left(xy\right)_{0 \to 3}dx\\
-    = \int_0^4 \left(-\cos\left(3x\right) + 1 dx =  -\frac{1}{3}\sin\left(3x\right) + x_{0 \to 4} =  -\frac{1}{3}\sin\left(12\right) + 4
+    \begin{align*} \int\int_P x \sin\left(xy\right)dxdy &=  \int_0^4\left(\int_0^3x\sin\left(xy\right)dy\right)dx =  \int_0^4\left(\int_0^3 \sin\left(xy\right)d\left(xy\right)\right)dx\\
+    &= \int_0^4 - \cos\left(xy\right)_{0 \to 3}dx\\
+    &= \int_0^4 \left(-\cos\left(3x\right) +\right) 1 dx =  -\frac{1}{3}\sin\left(3x\right) + x_{0 \to 4} =  -\frac{1}{3}\sin\left(12\right) + 4
 \end{align*}
 Ce qui nous donne pour le volume final: $V =  12 + 72 - \frac{1}{3}\sin\left(12\right) =  88 - \frac{1}{3}\sin\left(12\right)$.
 \end{parag}
@@ -45,12 +45,12 @@ Ce qui nous donne pour le volume final: $V =  12 + 72 - \frac{1}{3}\sin\left(12\
     Néanmoins ces primitives ne s'expriment pas en fonctions élémentaires. Pour quand même essayer de trouver un résultat convaincant, on peut en tirer des sommes:\\
 L'idée ici c'est d'utiliser le faite que la dérivée de $\frac{1}{y}$ est $\frac{-1}{y^2}$:
     \begin{align*} 
-        \int_0^3 \frac{\sin\left(4y\right)-4y\cos\left(4y\right)}{y^2} dy = \int_0^3\left(4y\cos\left(4y\right)-\sin\left(4y\right)d\left(\frac{1}{y}\right)\\
-            = -\frac{\sin\left(4y\right)}{y} + 4\cos\left(4y\right)_{0 \to 3} - \int \frac{4\cos\left(4y\right) - 16y\sin\left(4y\right) - 4\cos\left(4x\right)}{y} dy\\
-            = -\frac{\sin\left(12\right)}{3} + 4\cos\left(12\right) + \lim_{x \to 0} \frac{\sin\left(4y\right)}{y} - 4 + \int_0^3 16\sin\left(4y\right)dy\\
-            = -\frac{\sin\left(12\right)}{3} + 4\cos\left(12\right) + 4 - 4 -4\cos\left(4y\right)_{0 \to 3}\\
-            = -\frac{\sin\left(12\right)}{3} + 4\cos\left(12\right) - 4 \cos\left(12\right) + 4\\
-            = 4- \frac{1}{3}\sin\left(12\right)
+        \int_0^3 \frac{\sin\left(4y\right)-4y\cos\left(4y\right)}{y^2} dy &= \int_0^3\left(4y\cos\left(4y\right)-\sin\left(4y\right)\right)d\left(\frac{1}{y}\right)\\
+            &= -\frac{\sin\left(4y\right)}{y} + 4\cos\left(4y\right)_{0 \to 3} - \int \frac{4\cos\left(4y\right) - 16y\sin\left(4y\right) - 4\cos\left(4x\right)}{y} dy\\
+            &= -\frac{\sin\left(12\right)}{3} + 4\cos\left(12\right) + \lim_{x \to 0} \frac{\sin\left(4y\right)}{y} - 4 + \int_0^3 16\sin\left(4y\right)dy\\
+            &= -\frac{\sin\left(12\right)}{3} + 4\cos\left(12\right) + 4 - 4 -4\cos\left(4y\right)_{0 \to 3}\\
+            &= -\frac{\sin\left(12\right)}{3} + 4\cos\left(12\right) - 4 \cos\left(12\right) + 4\\
+            &= 4- \frac{1}{3}\sin\left(12\right)
     \end{align*}
     Qui est le même résultat que l'intégrale précédente.
     
@@ -64,7 +64,7 @@ L'idée ici c'est d'utiliser le faite que la dérivée de $\frac{1}{y}$ est $\fr
 \begin{parag}{Définition}
     \begin{definition}
         Soit $E \subset P \subset \mathbb{R}^{n}$; $f: E \to \mathbb{R}$ fonction bornée sur $E$.\\
-        Posons $\bhat{f}\left(\overline{x}\right) =  \begin{cases} f\left(\overline{x}\right), \overline{x} \in E\\ 0, \overline{x} \in P \setminus E \end{cases}$ La fonction $f$ est inégrable sur $E$ si $\bhat{f}$ est intégrable sur $P$.
+        Posons $\bhat{f}\left(\overline{x}\right) =  \begin{cases} f\left(\overline{x}\right), \overline{x} \in E\\ 0, \overline{x} \in P \setminus E \end{cases}$ La fonction $f$ est intégrable sur $E$ si $\bhat{f}$ est intégrable sur $P$.
     \end{definition}
     Dans ce cas on pose: 
     \begin{align*} \int_E f\left(\overline{x}\right) d\overline{x} =  \int_P \bhat{f}\left(\overline{x}\right) d\overline{x} \end{align*}
@@ -78,7 +78,7 @@ L'idée ici c'est d'utiliser le faite que la dérivée de $\frac{1}{y}$ est $\fr
     \begin{subparag}{Frontière régulière}
          \begin{definition}
             \begin{align*} 
-                \forall \epsilon > 0\; \; \exists \text{ un recouvrement } \partial E \subset \bigcup_{i \in I}q_i\; , q_i \text{ pavés fermés tels que } \sum_{i \in I}\left|q_i\right| < \epsilon\\
+                \forall \epsilon > 0\; \; \exists \text{ un recouvrement } \partial E \subset \bigcup_{i \in I}q_i\; , q_i \text{ pavés fermés} \\\text{ tels que } \sum_{i \in I}\left|q_i\right| < \epsilon
                 \implies \partial E \text{ est de mesure nulle }
             \end{align*}
          \end{definition}
@@ -121,13 +121,13 @@ L'idée ici c'est d'utiliser le faite que la dérivée de $\frac{1}{y}$ est $\fr
     \end{align*}
     Avec $\phi_1\left(x\right) =  0, \phi_2\left(x\right) =  2 - 2x$ On a alors l'intégrale:
     \begin{align*} 
-        \int_D\intxydxdy =  \int_0^1\left(\int_0^{2-2x} xydy\right)dx =  \int_0^1x \frac{1}{2}y^2 \mid_{0}^{2-2x} dx\\
-        = \frac{1}{2}\int_0^1x\left(2-2x\right)^2dx =  2 \int_0^1x\left(1-x\right)^2 dx =  2\int_0^1x\left(1-2x + x^2\right) dx =  2\int_0^1 \left(x-2x^2 + x^3\right) dx\\
-        = 2\left(\frac{1}{2}x^2 - \frac{2}{3}x^3 + \frac{1}{4}x^4\right)\mid_0^1 =  \frac{1}{6}
+        \int_D\int xy dxdy &=  \int_0^1\left(\int_0^{2-2x} xydy\right)dx\\ &=  \int_0^1x \frac{1}{2}y^2 \mid_{0}^{2-2x} dx\\
+        &= \frac{1}{2}\int_0^1x\left(2-2x\right)^2dx \\ &=  2 \int_0^1x\left(1-x\right)^2 dx\\ &=  2\int_0^1x\left(1-2x + x^2\right) dx\\ &=  2\int_0^1 \left(x-2x^2 + x^3\right) dx\\
+        &= 2\left(\frac{1}{2}x^2 - \frac{2}{3}x^3 + \frac{1}{4}x^4\right)\mid_0^1 =  \frac{1}{6}
     \end{align*}
     Néanmoins on peut aussi le voir comme $D$ de type $2$: $D = \left\{\left(x, y\right) \in \mathbb{R}^{2}: 0 < y < 2, 0 < x < 1 - \frac{1}{2}y\right\}$ , on a donc pour nos deux fonctions $\psi_1\left(y\right) = 0$ et $\psi_2\left(y\right) = 1 - \frac{1}{2}y$. Ce qui nous donne:
     \begin{align*} 
-        \int_D \intxydxdy =  \int_0^2\left(\int_{psi_1\left(y\right)}^{psi_2\left(y\right)}xy dx\right) dy\\
+        \int_D \intxydxdy =  \int_0^2\left(\int_{\psi_1\left(y\right)}^{\psi_2\left(y\right)}xy dx\right) dy\\
         = \int_0^2\left(\int_0^{1 - \frac{1}{2}y}xydx\right)dy 
     \end{align*}
     Intégral à faire à la maison.
