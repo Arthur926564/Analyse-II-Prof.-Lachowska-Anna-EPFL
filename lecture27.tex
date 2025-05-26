@@ -41,7 +41,7 @@
     \begin{center}
         \includegraphics[scale=0.6]{42025-05-26.png}
     \end{center}
-    \begin{align*} \left|\det J_{G\left(r, \theta, \phi\right)}\right| = r^2\s\in\theta \end{align*}
+    \begin{align*} \left|\det J_{G\left(r, \theta, \phi\right)}\right| = r^2\sin\theta \end{align*}
 \end{parag}
 \begin{parag}{Exemple}
     Le volume d'un ellipsoide $\left\{\left(x, y, z\right) \in \mathbb{R}^{3}: \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} \leq 1\right\}$.
@@ -150,7 +150,7 @@
    \end{align*}
    On a donc notre ensemble qui change:
    \begin{align*} 
-       E =  \left\{{\left(r, \phi, z\right): 0 < \phi < 2\pi, 0 < r < 2, -r < y < r^2\right\}
+       E =  \left\{\left(r, \phi, z\right): 0 < \phi < 2\pi, 0 < r < 2, -r < y < r^2\right\}
    \end{align*}
    Il nous reste plus qu'à intégrer (avec le déterminant de la jacobienne):
    \begin{align*} 
@@ -198,7 +198,7 @@
     \end{align*}
     On a donc ici la fonction $y =  x^2$ renvérsé (sur le côté) de $x =  y^2$ et $x =  \left(-y\right)^2$:
     \begin{align*} 
-        \int_{-1}^1 dy \int_{y^2}^1 \sin y \cos x dx &=\int_{-1}^1dy\left(\sin y\left( \sin 1 - \sin\left(y^2\right)\right)
+        \int_{-1}^1 dy \int_{y^2}^1 \sin y \cos x dx &=\int_{-1}^1dy\left(\sin y\left( \sin 1 - \sin\left(y^2\right)\right)\right)
     \end{align*}
     Néanmoins la fonction $\sin\left(y^2\right)$ n'a pas de primitive de fonction usuelle donc on va simplement essayer avec un autre type. Donc ici ça sera le $x$ qui varie entre deux nombre et le $y$ qui lui entre des fonctions de $x$:
     \begin{align*} 
@@ -206,7 +206,7 @@
     \end{align*}
     Si on réécrit donc notre intégrale on a:
     \begin{align*} 
-        \int_0^1 dx \int_{-\sqrt{x}}^{\sqrt{x}}\sin y \cos x dx &= \int_0^1dx \left(\cos x \left(-\cos y\right)\mid_{-\sqrt{x}}^{\sqrt{x}}\\
+        \int_0^1 dx \int_{-\sqrt{x}}^{\sqrt{x}}\sin y \cos x dx &= \int_0^1dx \left(\cos x \left(-\cos y\right)\right)\mid_{-\sqrt{x}}^{\sqrt{x}}\\
                                                                 &= \int_0^1 \cos x \left(-\cos \sqrt{x} + \cos \left(-\sqrt{x}\right)\right)dx\\
                                                                 &= 0
     \end{align*}
