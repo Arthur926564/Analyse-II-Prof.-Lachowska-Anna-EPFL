@@ -22,7 +22,7 @@
         EDVS:
         $f(y)\cdot y' = g(x)$ où $f: I \to \mathbb{R}$ continue (respectivement $J$ pour $g$), 
         \\
-        Pour résoudre $\int f(y)dy = \int g(x)dx$
+        Pour résoudre, il suffit de résoudre cette relation: $\int f(y)dy = \int g(x)dx$
         où $\int f(y)dy$ est une primitive (sans constante) et $\int g(x)dx$ est une primitive générale (avec une constante)
     \end{resume}    
 \end{parag}
@@ -48,7 +48,7 @@
 \subsection{Solution maximale}
 \begin{parag}{Solution maximale}
     \begin{definition}
-        Une solution \important{solution maximale} de l'EDVS avec la condition initiale $y(x_0) = b_0$, $x \in J, b_0 \in I$ est une fonction $y(x)$ de classe $C^1$ satisfaisant l'équation, la condition initiale et qui est définie sur le plus \textbf{grand} intervalle possible. \\
+        Une solution dite \important{solution maximale} de l'EDVS avec la condition initiale $y(x_0) = b_0$, $x \in J, b_0 \in I$ est une fonction $y(x)$ de classe $C^1$ satisfaisant l'équation, la condition initiale et qui est définie sur le plus \textbf{grand} intervalle possible. \\
         Le théorème sur EDVS dit que si $f(y) \neq 0$ sur $I$, alors il existe une unique solution maximale. Toute solution avec la même condition initiale est une restriction de la solution maximale
     \end{definition}
 \end{parag}
@@ -86,7 +86,7 @@
     \[y'(x) + p(x)y(x) = f(x), \text{ où } p, f: I \to \R \text{ sont continues }\]
     est une \important{équation différentielle linéaire du premier ordre (EDL1)}
     \end{definition}
-    Une solution est une fonction $y: I \to \R$ de classe $C^1$ satisfaisant l'équation.
+    Une solution de cette équation est une fonction $y: I \to \R$ de classe $C^1$ satisfaisant l'équation.
 \end{parag}
 \begin{parag}{Comment résoudre une EDL1}
     Considérant l'équation $y'(x) + p(x)y(x) = 0$
@@ -102,7 +102,7 @@
     \[y(x) = Ce^{-P(x)}\]
     où $C \in \R$, $x \in I$ est la solution générale de l'équation homogène associée $y' + py = 0$ sur $I$
 \end{parag}
-\subsection{Principe de superposition de solutions}\label{subsec:variationconstante}
+\subsection{Principe de superposition de solutions, variation de la constante}\label{subsec:variationconstante}
 
 \begin{parag}{Principe}
     Soit $I \subset \R$ ouvert, $p, f_1, f_2 : I \to \R$ fonctions continues
@@ -119,12 +119,12 @@
         Si juste on pose tout ça on obtient:
         \begin{align*} 
             v'\left(x\right) + p\left(x\right)v\left(x\right) &=  c_1v_1'\left(x\right) + c_2v_2'\left(x\right) + p_2\left(x\right)\left(c_1v_1\left(x\right) + c_2v_2\left(x\right)\right)\\
-            &= c_1\underbrace{\left(v_1'\left(x\right) + p\left(x\right)v_1\left(x\right)\right)}_{f_1\left(x\right)} + c_2 \underbrace{\left(v_2'\left(x\right) + p\left(x\right)v_2\left(x\right)\right)}_{f_2\left(x\right)} =  c_1f_1\left(x\right) + c_2f_2\left(x\right)
+                                                              &= c_1\underbrace{\left(v_1'\left(x\right) + p\left(x\right)v_1\left(x\right)\right)}_{f_1\left(x\right)} + c_2 \underbrace{\left(v_2'\left(x\right) + p\left(x\right)v_2\left(x\right)\right)}_{f_2\left(x\right)} \\ &=  c_1f_1\left(x\right) + c_2f_2\left(x\right)
         \end{align*}
     \end{subparag}
 \end{parag}
 \begin{parag}{Méthode de la variation de constante}
-    On cherche une solution particulière de $y'(x) + p(x) y(x) = f(x) : p, f :I\underbrace{ \to \R}_{\text{continue}}$ sous la forme : 
+    On cherche une solution particulière de $y'(x) + p(x) y(x) = f(x) : p,\underbrace{f}_{\text{continue}}:I \to \R$ sous la forme : 
     \\
     \textbf{Ansatz:}
     \[v(x) = \textcolor{red}{c(x)}e^{-P(x)}\] 
