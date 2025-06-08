@@ -1,0 +1,331 @@
+\documentclass[a4paper]{article}
+
+% Expanded on 2025-06-08 at 17:28:11.
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[bottom=2.5cm, top=2.5cm]{geometry}
+
+\title{Corrigé examen 2016}
+\author{Arthur Herbette}
+\date{Dimanche 08 juin 2025}
+
+\begin{document}
+\maketitle
+\subsection{QCM}
+
+
+\subsubsection{Question 1}
+
+\begin{align*} 
+    \lim_{\left(x, y\right) \to \left(0, 0\right)} x \cos\left(\frac{1}{xs^2 + y^2}\right)
+\end{align*}
+Ici on peut assez facilement borné car on sait que $-1 \leq \cos\left(x\right) \leq 1$, on a donc:
+\begin{align*} 
+    -x \leq x \cos\left(\frac{1}{x^2 + y^2}\right) \leq x
+\end{align*}
+Et par le théorème des deux gendarmes:
+\begin{align*} 
+    \lim_{\left(x, y\right) \to \left(0, 0\right)} f\left(x, y\right) = 0
+\end{align*}
+\subsubsection{Question 2}
+Donc ici on cherche d'abord le gradient:
+\begin{align*} 
+    \nabla f\left(x, y\right) = \left(4x + 2, 4y + 2\right)
+\end{align*}
+Et les points $\left(x, y\right)$ tel que $\nabla f\left(x, y\right) =  \left(0, 0\right)$
+
+On pose donc les deux systèmes d'équations
+\begin{align*} 
+    \begin{cases}
+        4x + 2 =  0\\
+        4y + 2 = 0
+    \end{cases} \implies
+    \begin{cases}
+        x = -\frac{1}{2}\\
+        y =  - \frac{1}{2}
+    \end{cases}
+\end{align*}
+Donc on sait que c'est un point selle, maintenant est ce que c'est un extremum, pour cela il suffit de faire le faire le déterminant de la matrice Hessienne:
+\begin{align*} 
+Hess_f\left(-\frac{1}{2}, -\frac{1}{2}\right) = \begin{pmatrix} 4 & 0 \\ 0 & 4 \end{pmatrix} 
+\end{align*}
+On peut voir même sans faire le déterminant ici que nous avons un minimum local (les deux valeurs propres de la Hessienne sont positives).
+\subsubsection{Question 3}
+On va d'abord essayer de simplifier et de voir si notre équations est séparable
+\begin{align*} 
+    y'\left(x\right)\left(x^2 + 4\right) + x\left(-y + 1\right) = 0\\
+    y'\left(x^2 + 4\right) = - x\left(-y + 1\right)\\
+    \frac{y'}{-y + 1} = \frac{x}{x^2 + 4}
+\end{align*}
+
+Donc on peut juste intégrer des deux côtés ce qui nous donne:
+\begin{align*} 
+    \int \frac{1}{-y + 1} dy =  -\int \frac{x}{x^2 + 4} dx\\
+    \ln\left(-y + 1\right) =  \frac{1}{2}\ln \left(x^2 + 4\right) + C\\
+    \ln\left(-y + 1\right) =  \frac{1}{2}\ln \left(x^2 + 4\right)+ C\\
+    y &= C\sqrt{x^2 + 4} + 1
+\end{align*}
+On peut donc maintenant poser avec la condition initiale:
+\begin{align*} 
+    y\left(0\right) = 5 &= C\sqrt{4} + 1\\
+    &= 2C + 1 \implies C = 2
+\end{align*}
+Si maintenant on essayer donc:
+\begin{align*} 
+    y\left(\sqrt{5}\right) &= 2\sqrt{5 + 4} + 1\\
+    &= 6 + 1 = 7
+\end{align*}
+
+\subsubsection{Question 4}
+Donc ici on utilise juste le théorème des fonctions implicites, j'utilise comme moyen mémo techniques que c'est toujours la dérivée partielle de ce qui est changé qui est en bas ($y$ en l'occurrence ici)
+\begin{align*} 
+    \frac{\partial g}{\partial z} \left(1, 1\right) =- \frac{\frac{\partial f\left(1, -1, 1\right)}{\partial z} }{\frac{\partial f\left(1, -1, 1\right)}{\partial y} }
+\end{align*}
+On a donc:
+\begin{align*} 
+    \frac{\partial f}{\partial y}  = -6xz^4y^2 + 4x^2y\\
+     \frac{\partial f}{\partial y}\left(1, -1, 1\right)  = -6 -4 = -10
+\end{align*}
+Maintenant pour l'autre dérivée partielle:
+\begin{align*} 
+    \frac{\partial f}{\partial z}  = \left(-8xy^3z^3\right)\\
+    \frac{\partial f}{\partial z}\left(1, -1, 1\right)  = 8
+\end{align*}
+On a donc que
+\begin{align*} 
+    \frac{\partial g}{\partial z} \left(1, 1\right) =- \frac{8}{-10} = \frac{4}{5}
+\end{align*}
+Attention à ne pas oublier le signe négatif.
+
+\subsubsection{Question 5}
+Donc ici on a une question assez classique, on va d'abord l'ensemble des points selles de la fonction:
+\begin{align*} 
+    \nabla f \left(x, y\right)  = \left(-4, 3\right)
+\end{align*}
+On voit qu'il y en a pas... On a va donc faire un maximum sous contrainte avec la méthode de Lagrange:
+\begin{align*} 
+    \nabla f \left(x, y\right) =  \lambda \nabla g \left(x, y\right)\\
+    \begin{cases}
+        -4= 2\lambda x\\
+        3 = 2 \lambda y\\
+        x^2 + y^2 = 25
+    \end{cases}
+\end{align*}
+Il suffit ensuite de résoudre ce système, comme $\lambda \neq 0$
+\begin{align*} 
+ \frac{-2}{\lambda} =  x\\
+ \frac{3}{2 \lambda} =  y
+\end{align*}
+Si on remet dans la contrainte:
+\begin{align*} \left(\frac{-2}{\lambda}^2\right) + \left(\frac{3}{2 \lambda}\right) = 25\\
+    \frac{4}{\lambda^2} + \frac{9}{4\lambda^2} = 25\\
+    \frac{16 + 9}{4 \lambda^2} =  25\\
+    25 = 100 \lambda^2\\
+    \lambda^2 = \frac{1}{4}\\
+    \lambda = \pm \frac{1}{2}
+\end{align*}
+On a donc si on remet dans première équations:
+\begin{align*} 
+    x =  -4, y = 3\\
+    x =  4, y = -3
+\end{align*}
+Or ici nous, avons que $y \geq 0$, donc nous devons exclure la deuxième solution.
+\begin{align*} 
+    f\left(-4, 3\right) = 16 + 9 = 25\\
+\end{align*}
+Pour trouver le minimum sous ces deux contraintes (que j'avais pas vu avant), donc maintenant on regarde sur la droite $y = 0$:
+
+\begin{align*} 
+ f\left(x, 0\right) = -4x
+\end{align*}
+Et comme on a que $x^2 \leq 25$, on peut choisir $x =  5$:
+\begin{align*} 
+    f \left(5, 0\right) =  -20
+\end{align*}
+qui est noter nouveau minimum sous contrainte. On a donc:
+\begin{align*} 
+    M =  25, \mathspace, m = -20
+\end{align*}
+\subsubsection{Question 6}
+Donc ici le domaine $D$ représente un arc de cercle avec seulement le troisième cardan. on a donc:
+\begin{align*} 
+    1 \leq r \leq 2, \mathspace \pi < \phi < \frac{3\pi}{2}
+\end{align*}
+et il suffit d'intégrer avec les coordonnées polaires:
+\begin{align*} 
+    \int_1^2 dr \int_\pi^{\frac{3\pi}{2}} r^4 \cos\left(\phi\right)\sin^3\left(\phi\right)\cdot r d \phi &= \int_1^2 r^5 dr \int_\pi^{\frac{3\pi}{2}}\cos \phi \sin^3 \phi\\
+                                                                                                         &= \frac{r^6}{6}\mid_1^2 \left(\int_\pi^{\frac{3\pi}{2}}\cos \phi \sin^3 \phi d\phi\right)
+\end{align*}
+Donc la on va que le $\cos$ est parfait pour rattraper la ``dérivée interne'' de $\sin^3$ il suffit juste de diviser par $4$, je fais d'abord l'intégrale a droite:
+\begin{align*} 
+    \int_\pi^{\frac{3\pi}{2}} \cos \phi \sin^3 \phi d\phi = \frac{1}{4}\sin^4 \phi \mid_\pi^{\frac{3\pi}{2}}
+\end{align*}
+si on dérive $\left(\frac{1}{4}\sin^4 \phi\right)' = 4\cos \phi \sin^3 \phi$ donc on voit que c'est juste. On obtient finalement:
+\begin{align*} 
+\left(\frac{64}{6} - \frac{1}{6} \right)\cdot \frac{1}{4} &= \frac{63}{6} \cdot  \frac{1}{4}\\
+ &= \frac{21}{3}  \cdot  \frac{1}{4} = \frac{21}{8}
+\end{align*}
+
+\subsubsection{Question 7}
+Donc ici on remarque deux trucs, le premier c'est qu'on à pas besoin de calculer les valeurs de $\overline{h}\left(1, 0\right)$ vu qu'elles sont déjà données. Ensuite on sait qu'on va utiliser la matrice Jacobienne, on va donc calculer celle de $\overline{h}$:
+\begin{align*} 
+    J_{\overline{h}} = \begin{pmatrix} 2u & 0 \\ -ve^{-u} & e^{-u} \\ 0 & -2e^{2v} \end{pmatrix} 
+\end{align*}
+On calcule ensuite:
+\begin{align*} 
+    J_{\overline{h}}\left(1, 0\right) =  \begin{pmatrix} 2 & 0 \\ 0 &e^{-1} \\ 0 & -2 \end{pmatrix} 
+\end{align*}
+On sait ensuite que 
+\begin{align*} 
+    J_{f} =  J_g\left(g\left(\overline{h}\left(u, v\right)\right)\right) \cdot  J_{\overline{h}}
+\end{align*}
+Comme on nous demande pas $J_g$ tant mieux, comme $f$ va dans $\mathbb{R}$ on sait que sa matrice jacobienne sera égal à son gradient. On a donc:
+
+\begin{align*} 
+    \left(\frac{\partial g}{\partial x} , \frac{\partial g}{\partial y} \frac{\partial g}{\partial z}  \right)\cdot  \begin{pmatrix} 2 & 0 0\\ 0 &  e^{-1}\\ 0 & -2 \end{pmatrix} = \left( 2 \frac{\partial g}{\partial x} , e^{-1} \frac{\partial g}{\partial y} -2 \frac{\partial g}{\partial z} \right)
+\end{align*}
+Et nous on nous demande la dérivée partielle de $v$ qui est donc la deuxième colonne de notre matrice.
+
+
+
+\subsubsection{Question 8}
+Donc ici on nous demande de faire le gradient:
+\begin{align*} 
+    \nabla f \left(x, y, z\right) =  \left(2zx, z, x^2 + y + 2z - 1\right)
+\end{align*}
+On nous demande ensuite un vecteur perpendiculaire à la surface de niveau passant par  le point $\left(2, 0, -1\right)$, on sait que ce dernier sera donc perpendiculaire au plan tangent (qui à pour vecteur directeur le gradient en ce point):
+\begin{align*} 
+    \nabla f \left(2, 0, -1\right) =  \left(-4, -1, 4 -3\right) = \left(-4, -1, 1\right)
+\end{align*}
+Il suffit de cherche un vecteur qui est proportionnelle au notre est on voit qu'il y a $\left(4, 1, -1\right)$.
+
+\subsubsection{Question 9}
+
+Donc ici on nous demande d'utiliser la méthode de Lagrange:
+\begin{align*} 
+    \nabla f = \left(-2x, 3\right) = \lambda \nabla g
+\end{align*}
+On a donc:
+\begin{align*} 
+    \begin{cases}
+        -2x =  8\lambda x\\
+        3 =  18 \lambda y\\
+        4x^2 + 9y^2 = 36
+    \end{cases}
+\end{align*}
+Comme $\lambda \neq 0$, prenons que $x \neq 0$:
+\begin{align*} 
+    -2x =  8 \lambda x = -2 = 8 \lambda\\
+    \lambda = -\frac{1}{4} \implies 3 = -\frac{18}{4} y\\
+    y = -\frac{12}{18} = -\frac{2}{3}\\
+    4x^2 + 9 \cdot  \frac{4}{9} = 36\\
+    4x^2 = 32\\
+    x^2 = 8\\
+    x =  \pm 2\sqrt{2}
+\end{align*}
+On a donc
+\begin{align*} 
+    f\left(-\frac{2}{3}, 2\sqrt{2}\right) = -2 - 8 = -10
+\end{align*}
+On peut déjà s'arrêter la étant donner que $-10$ est la plus petite valeur. Mais si nous voulions être juste il aurait fallu prendre le cas où $x = 0$.
+
+
+\subsubsection{Question 10}
+
+Déjà, on a une fonction $\mathbb{R}^2 \to \mathbb{R}^{3}$ donc on sait que la jacobienne sera de la forme $3 \times 2$ et comme les deux premières lignes des deux matrices possibles sont les mêmes, il suffit de calculer le gradient de la dernier lignes même la dernière dérivée partielle. Je connais pas par coeur la dérivée de $\arctan$ mais il y a deux façons de faire, soit je vois qu'on se trouve au alentour de $0$ et donc je sais que le arctan a environ une pente de $1$ (ici $-2$ pour le $-2y$) ou alors on peut le faire avec la définition mais voilà. 
+\subsubsection{Question 11}
+Donc ça c'est une question assez bizarre à cause de la valeur absolue. Si on prends les bornes de base on a:
+\begin{align*} 
+    -1 \leq x \leq 1, \mathspace 0 < y < 1 - \left|x\right|
+\end{align*}
+On peut déjà enlever deux possibilité ici. Donc maintenant on sait que le $x$ doit être négatif, pour le premier choix, cela lui est impossiblie car il est bornée par $0$ donc c'est forcément la derniere réponse.
+\subsubsection{Question 12}
+Donc ici il suffit d'utiliser la formule de Leibniz:
+\begin{align*} 
+    F'\left(t\right) = f\left(g\left(t\right), t\right)g'\left(t\right) - f\left(h\left(t\right), h\left(t\right)\right)h'\left(t\right) + \int_{h\left(t\right)}^{h\left(t\right)} \frac{\partial f}{\partial t} dx
+\end{align*}
+Ce qui nous donne ici
+\begin{align*} 
+    F'\left(1\right) &= e^{1}\cdot 2 - e^1 \cdot  1 + \int_{t}^{t^2} e^{xt}dx\\
+                     &= e + \int_{1}^{1} e^{x} dx\\
+                    &= e
+\end{align*}
+
+
+
+
+\subsubsection{Question 13}
+    J'ai pas la force de la faire en latex ¨
+
+
+\subsubsection{Question 14}
+Donc ici on demande le plan tangent:
+\begin{align*} 
+    \nabla f \left(x, y\right) =  \left(3x^2 - 2, 2y - 1\right)\\
+    \nabla f \left(1, -1\right) =  \left(1, -3\right)
+\end{align*}
+On a aussi que $f\left(\overline{p}\right) = 1 + 1 -2 + 1 = 1$. Finalement:
+\begin{align*} 
+    z &= 1 + < \left(1, -3\right), \left(x-1, y + 1\right) >\\
+    &= 1 + \left(x-1\right) -3\left(y + 1\right)\\
+    &=  x -3y -3\\
+    z - x + 3y + 3 = 0
+\end{align*}
+
+\subsubsection{Question 16}
+Donc ici le but ca va être de chercher la dérivée qui est différente pour chaque possiblités. Comme je ne vois pas de trucs directs je vais juste comment, 
+\begin{align*} 
+    \frac{\partial f\left(x, y\right)}{\partial x} = y\cos\left(xy\right)\\
+    \frac{\partial f\left(x, y\right)}{\partial y} =  x \cos \left(xy\right) 
+\end{align*}
+On a notre première partie:
+\begin{align*} 
+    p = x
+\end{align*}
+Maintenant il nous reste plus que deux possibilités, il suffit de faire la seconde dérivée de $x$:
+\begin{align*} 
+    \frac{\partial^2 f\left(x, y\right)}{\partial x} = -y^2\sin\left(xy\right) 
+\end{align*}
+Qui est bien nul en $\left(0, 0\right)$. donc la réponse est:
+\begin{align*} x + x\left(y-1\right)  \end{align*}
+
+
+
+\subsubsection{Question 17}
+Donc ici, il y a plusieurs moyen de faire, soit on fait avec la définiton, mais on va devoir utiliser des développement limité etc... ou alors, comme la fonction est de classe $C^1$ aux alentour de $\left(2, 1\right)$\\
+\begin{align*} 
+    \nabla f \left(x, y\right)= \left(\frac{2x}{x^2 + y}, \frac{1}{x^2 + y}\right)\\
+    \nabla f \left(2, 1\right) =  \left(\frac{4}{5}, \frac{1}{5}\right)
+\end{align*}
+On fait ensuite le produit scalaire avec notre vecteur $\overline{e}$:
+\begin{align*} 
+    \begin{pmatrix} \frac{4}{5} \\ \frac{1}{5} \end{pmatrix} \begin{pmatrix} \frac{3}{5} \\ \frac{4}{5} \end{pmatrix}  = \frac{4}{5}\cdot  \frac{3}{5} + \frac{1}{5}\cdot \frac{4}{5} = \frac{16}{25}
+\end{align*}
+\subsubsection{Question 18}
+
+Ici on peut assez facilement voir que notre fonction 'est pas bornée on alentour de $\left(0, 0\right)$. Ensuite, la fonction est bien définie parotut, il n'y a pas de point trou au alentour de $\left(1, 1\right)$ donc la fonction à l'air bien continue.\\
+On va regarder si les dérivée partielle existe. Par la définition:
+\begin{align*} 
+    \lim_{t \to 0} \frac{f\left(\left(1, 1\right) + \left(t, 0\right)\right)- f\left(1, 1\right)}{t} &= \lim_{t \to 0} \frac{f\left(1 + t, 1\right)}{t} \\
+    &= \lim_{t \to 0} \frac{\left| \ln\left(1 + t\right)\ln\left(1\right)\right|}{t} = 0
+\end{align*}
+On utilise le même procédé pour $y$ et on voit que les deux dérivée partielles existent.
+\subsection{Vrai ou faux}
+\textbf{Question 19}:\\
+Vrai, C'est l''énoncé du théorème de Schwartz.\\
+\textbf{Question 20}
+Faux, pour que le point soit un minimum local, il faudrait que les deux valeurs propres soit positives, or  le déterminants strictement positif pour des valeurs propres toutes deux positives ou négatives.\\
+\textbf{Question 21}
+Donc ici on va cherche à borner notre fonction. On peut voir assez aisémment que notre fonction est la plus grande lorsque $y$ est le plus petit possible, et donc le maximum de noter fonction est $1$. Ensuite nous voulons intégrer sur l'ensemble $D$ qui est un disque de rayon $1$, son volume (air) est donc $\pi r^2 = 1$ ce qui implique que l'air est bornée par $\pi$. pour la borne inférieur, comme nous avons que des puissance pair, nous avons pas vraiment d'y faire attention vu que notre fonction sera toujours plus grande ou égal à $0$.\\
+\textbf{Question 22} \\
+Faux, si on prends le point  $\overline{p} = \left(1, 1, 0\right)$ alors pour n'importe quelle $\delta > 0$ la boule $B\left( \overline{p}, \delta\right)$ admet des éléments  qui ne sont pas dans $D$.\\
+\textbf{Question 23} \\
+Faux, il suffit de prends l'ensemble précédent $D = \left\{\left(x, y, z\right) in \mathbb{R}^{3}: x > 0, y > 0, z = 0\right\}$ est la fonction $f\left(x, y, z\right) = \frac{1}{z}$. la fonction est bien continue sur $D$ mais elle n'admet pas de maximum.\\
+\textbf{Question 24}\\
+
+Faux, il n'y a aucun rapport entre la double dérivée partielle est le faite que $f$ admet un maximum (si ce n'est son signe pour la matrice hessienne).
+
+
+\end{document}
