@@ -1,0 +1,58 @@
+\lecture{15}{2025-04-09}{Jacobe}{}
+\subsection{Fonction  à valeur dans $\mathbb{R}^{m}, m \geq 1$, La matrice Jacobienne}
+
+\begin{definition}
+	Plus généralement, on peut considérer les fonctions:
+	\begin{align*} 
+		\overline{f}: E^{\mathbb{R}^{n}} \to \mathbb{R}^{n} \text{ à valeurs dans } \mathbb{R}^{m}\\
+		\overline{f}\left(\overline{x}\right) =  \begin{pmatrix} f_1\left(\overline{x}\right) \\ f_2\left(\overline{x}\right) \\ \vdots \\ f_m\left(\overline{x}\right) \end{pmatrix} 
+	\end{align*}
+	Chaque composante de $f$ est une fonction reélles. de $n$ variables réelles.
+\end{definition}
+\begin{framedremark}
+     Il faut le voir comme en algèbre linéaire, par exemple une matrice d'application $2 \times 2$ revient à faire une fonction qui va de $\mathbb{R}^{2} \to \mathbb{R}^{2}$.\\
+     Aussi,on a déjà vu en fait des fonctions à valeur dans $\mathbb{R}^{m}$, le gradient:\\
+     Preneons la fonction $f : \mathbb{R}^{2} \to \mathbb{R}, f\left(x, y\right) =  \sin\left(xy\right)$ Si on calcule son gradient on obtient:
+     \begin{align*} \nabla f/\left(x, y\right) =  \left(\frac{\partial f\left(\right)}{\partial x} \left(x, y\right), \frac{\partial f}{\partial y} \left(x, y\right)\right) \end{align*}
+     Et donc si on prends sa transposée:
+     \begin{align*} 
+	\left(\nabla f\left(x, y\right)\right)^T : \mathbb{R}^{2} \to \mathbb{R}^{2}
+     \end{align*}
+     Ce qui nous donne un champ vectoriels. (pour chaque point dans $\mathbb{R}^{2} \in$ ensemble de départ, on a un vecteur.
+\end{framedremark}
+\begin{parag}{$k$-eme dérivée partielle}
+    $k$-eme dérivée partielle de $f : e \to \mathbb{R}^{m}$ pour $\overline{a} \in E$:
+    \begin{align*} 
+	    \frac{\partial \overline{f}}{\partial x_k} \left(\overline{a}\right) = \begin{pmatrix} \frac{\partial f_1}{\partial x_k}  \\ \frac{\partial f_2}{\partial x_k}  \\ \vdots \\ \frac{\partial f_m}{\partial x_k}  \end{pmatrix} 
+    \end{align*}
+    Si chacune des fonctions $f_1, \ldots , f_m$ admet la dérivée partielle $\frac{\partial  }{\partial x_k} $ en $\overline{a}$.
+\end{parag}
+\begin{parag}{Dérivée directionelle}
+    Soit $\overline{v} \neq \overline{0}$. La dérivée directionelle de $f : E \to \mathbb{R}^{m}$ suivant $\overline{v}$ en $\overline{a} \in E$ est:
+    \begin{align*} D\overline{f}\left(\overline{a}, \overline{v}\right)= \begin{pmatrix} Df_1\left(\overline{a}, \overline{v}\right) \\ Df_2\left(\overline{a}, \overline{v}\right)  \\ \vdots \\ Df_m\left(\overline{a}, \overline{v}\right) \end{pmatrix}  \end{align*}
+    Si, encore une fois les $Df_i\left(\overline{a}, \overline{v}\right)$ existent $\forall i = 1, \ldots, m$.
+\end{parag}
+\begin{parag}{Limite}
+    \begin{definition}
+          $\overline{f}: E \to \mathbb{R}^{m}$ admet $\overline{l} \in \mathbb{R}^{m}$ pour limite lorsque $\overline{x} \to \overline{a}$ si $\forall \epsilon > 0 \mathspace \exists \delta > 0$ tel que
+	  \begin{align*} 
+		  0 < \left|\left|\overline{x} - \overline{a}\right|\right|_{\mathbb{R}^{n}} \leq \delta \implies \left|\left|\overline{f}\left(\overline{x}\right) - \overline{l}\right|\right|_{\mathbb{R}^{m}} \leq \epsilon
+	  \end{align*}
+    \end{definition}
+\end{parag}
+\begin{parag}{Résumé}
+    Ce qu'on fait ici finalement c'est exactement ce qu'on a toujours faire mais avec plusieurs fonctions en même temps, on fait toute les calculs (gradient, dérivée directionelle, limite) par \important{composante}.
+\end{parag}
+\begin{parag}{Fin du cours}
+	J'ai skip la fin de ce cours malgrès le faite qu'il y a beaucoup de définition mais toutes ces définitions et porpositons se trouve dans le résumé \textit{Calcul\_diff} sur moodle\\
+	Pour ce qui est de pourquoi la matrice Jacobienne est importante, c'est surtout car elle permet de remplace la dérivée interne des fonctions à une variable:\\
+        En analyse I, lorsqu'on dérivait des fonctions composée, on faisait de la sorte:
+	\begin{align*} f\left(g\left(x\right)\right)' = f'\left(g\left(x\right)\right) \cdot  g'\left(x\right) \end{align*}
+	Pour les fonctions à plusieurs composantes, on utilise la matrice jacobienne exactment de la même façons que la dérivée interne.
+\end{parag}
+
+
+
+
+
+

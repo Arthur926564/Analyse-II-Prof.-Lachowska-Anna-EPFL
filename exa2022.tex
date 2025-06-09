@@ -1,0 +1,152 @@
+
+\documentclass[a4paper]{article}
+
+% Expanded on !p snip.rv = get_formatted_date() at !p snip.rv = get_formatted_time().
+% Expanded on 2025-06-08 at 19:56:46.
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[bottom=2.5cm, top=2.5cm]{geometry}
+
+
+
+\title{Corrigée examen 2022}
+\author{Arthur Herbette }
+\date{Lundi 09 juin 2025}
+
+\begin{document}
+\maketitle
+
+\paragraph{Question 1}
+Donc ici on fait d'abord les solutions homogènes:
+\begin{align*} 
+	\lambda^2 + 2\lambda - 3 = 0\\
+	\lambda = 1, -3 \implies y_{hom} = C_1e^{-3x} + C_2e^{x}
+\end{align*}
+Ensuite, on va pour la solution particulière:
+\begin{align*} 
+	y_{p} = Ax + B\\
+	y_p' = A
+\end{align*}
+On met ça dans notre équation:
+\begin{align*} 
+	2A - 3\left(Ax + B\right) = 9x\\
+\end{align*}
+Donc on a:
+\begin{align*} 
+	\begin{cases}
+	    -3Ax = 9x\\
+	    2A - 3B = 0
+	\end{cases} \implies 
+	\begin{cases}
+	    A = -3\\
+	    B = -2
+	\end{cases}
+\end{align*}
+Donc voilà, On a donc comme solution $y = C_1e^{-3x} + C_2e^{x} -3x -2$
+On vérifie les condition initiales:
+\begin{align*} 
+	y\left(0\right) = C_1 + C_2 = 6\\
+        y'\left(0\right) = -3C_1 + C_2 = 6\\
+	C_1 = 0\\
+	C_2 = 6
+\end{align*}
+On a donc finalement:
+\begin{align*} 
+	y\left(1\right) = 6e^{x} -3x -2 = 6e -5
+\end{align*}
+\paragraph{Question 2}
+Donc ici on voit en premier lieu qu'on $F'\left(2\right)$ et dans l'intégrale les bornes sont $4$ et $t^2$ (qui est $4$  ici) donc on sait déjà que la partie à droite va être nul. De plus, comme on a une constante en bas, on sait que aussi avec la formule de leibniz cette partie sera nulle. Il reste donc plus qu'une seule partie:
+\begin{align*} 
+	F'\left(t\right) = f\left(g\left(t\right), t\right)g'\left(t\right)\\
+	F'\left(2\right) = e^5 \cdot 2\cdot 2 = 4e^5
+\end{align*}
+\paragraph{Question 3}
+Donc ici on peut le faire de plusieurs façon, j'ai utiliser l'identité avec $\frac{\sin\left(x\right)}{x} = 1$:
+\begin{align*} 
+	\lim_{\left(x, y\right) \to \left(0, 0\right)} \frac{\tan\left(3x^2 + y^2\right)}{3x^2 + y^2} &= \lim_{\left(x, y\right) \to \left(0, 0\right)} \frac{\sin\left(3x^2 + y^2\right)}{\left(3x^2 + y^2\right)\cos\left(3x^2 + y^2\right)}\\
+												      &= \lim_{\left(x, y\right) \to \left(0, 0\right)} 1 \cdot  \frac{1}{\cos\left(3x^2 + y^2\right)} \\ &= 1
+\end{align*}
+\paragraph{Question 4}
+Donc ici on a des coordonnées polaires de base. On a que $x$ et $y$ sont positifs donc que l'angle est entre $0$ et $\frac{\pi}{2}$:
+\begin{align*} 
+	\int_0^2\int_0^{\frac{\pi}{2}}r^4 \cos\phi\sin^3\phi r d\phi &= \int_0^2 r^5 dr \int_0^{\frac{\pi}{2}}\cos \phi \sin^3\phi d\phi\\
+								     &= \frac{64}{6}\cdot \frac{\sin^4\phi}{4} \mid_0^{\frac{\pi}{2}}\\
+								     &= \frac{64}{6} \cdot  \left(\frac{1}{4}\right)\\
+								     &= \frac{16}{6} = \frac{8}{3}
+\end{align*}
+
+\paragraph{Question 5}
+C'est une équation différentielle séparable:
+\begin{align*} 
+	\frac{y'}{y^2} = \frac{\cos\left(x\right)}{\left(2 + \sin\left(x\right)\right)^2}\\
+	\int \frac{1}{y^2} =  \int \frac{\cos\left(x\right)}{\left(2 + \sin\left(x\right)\right)^2}dx\\
+	- \frac{1}{y} = - \frac{1}{2 + \sin\left(x\right)} + C\\
+	\frac{1}{y} = \frac{1}{2 + \sin\left(x\right)} + C
+\end{align*}
+Et ici c'est pas vraimment utile de trouve la solution exact il suffit de comparer. On nous donne une condition initiale $y\left(\frac{\pi}{2}\right) = \frac{3}{4}$:
+\begin{align*} 
+     \frac{1}{2 + 1} + C = \frac{4}{3}\\
+      C = 1
+\end{align*}
+Donc il suffit de comparer pour la valeur $\frac{\pi}{6}$: 
+\begin{align*} 
+	\frac{1}{y} &= \frac{1}{2 + \frac{1}{2}} + 1\\
+ &= \frac{1}{\frac{5}{2}} + 1\\
+ &= \frac{2}{5} + \frac{5}{5} = \frac{7}{5}
+\end{align*}
+Et comme pour rappel on a l'inverse ici, la réponse est $\frac{5}{7}$
+
+\paragraph{Question 6}
+Donc on voit deux choses ici, de un le $\left(x, 0, z\right)$ qui nous dit direct que l'ensemble ne peut pas être ouvert, car pour tout point $\overline{x} \in A$ on peut prendre n'importe quelle $\delta > 0$ et la boule  $B\left(\overline{x}, \delta\right) \cup CA \neq \emptyset$\\
+On a ensuite que $x$ et $y$ sont bornés vu qu'ils ne peuvent pas dépasser $\pm \sqrt{10}$.
+\paragraph{Question 7}
+Donc ici on va faire la gradient pour nous aider:
+\begin{align*} 
+	\nabla f\left(x, y\right) =   \left(6xy - 3x^2, 3x^2 - 12y^3\right)
+\end{align*}
+On a bien un $\overline{0}$ en $\left(2, 1\right)$ donc tout va bien. On calcule mainteant la matrice Hessienne:
+\begin{align*} 
+	Hess_f\left(x, y\right) =  \begin{pmatrix}6y -6x  & 6x \\ 6x & -36 y^2 \end{pmatrix}  \\
+Hess_f\left(2,1 \right) = \begin{pmatrix} -6 & 12 \\ 12 & -36 \end{pmatrix} 
+\end{align*}
+On voit bien que le déterminant est positif $6^3 > 12^2$ et que la première valeur est négative, donc c'est un minimum local.
+\paragraph{Question 8}
+Donc ici on peut aller par élimination, 
+\begin{itemize}
+	\item Pour la première je suis pas sur
+	\item Pas forcémment, la matrice jacobienne n'implique seulement l'existence des dérivées partielles mais en aucun cas leur continuité
+	\item pas dutout
+	\item Par définition de la dérivabilité de fonction dans $\mathbb{R}^{m}$, une fonction est dérivable si tout ses composantes sont dérivables. Ici comme elle ne l'est pas, alors il existe une fonction qui n'est pas dérivable, et une fonction qui n'est pas dérivable ne peut pas être de classe $C^1$. Donc c'est la dernière réponse.
+\end{itemize}
+\paragraph{Question 9}
+Donc ici il y a deux éléments à regarder qui sont cruciales les trois critères:
+\begin{align*} 
+	0 \leq y \leq x, z \geq 0, z^2 \leq x^2 + y^2
+\end{align*}
+Donc déjà les deux premiers. on voit que $x, y, z$ sont plus grand que 0 donc: $\phi < \frac{\pi}{2}$  et qui $\theta < \frac{\pi}{2}$. on a que $y < x$ donc :
+\begin{align*} \sin \phi < \cos \phi \end{align*}
+qui arrive de $0$ a $\frac{\pi}{4}$.\\
+Pour ce qui est  du dernier critère, on a:
+\begin{align*} 
+	z^2 \leq x^2 + y^2\\
+	r^2 \cos^2\theta < r^2\sin^2\theta\\
+	\cos^2\theta < \sin^2 \theta\\
+\cos \theta < \sin \theta
+\end{align*}
+Cela est donc l'inverse de ce qu'on a dit avant, donc $\frac{\pi}{4} < \theta < \frac{\pi}{2}$. et voilà nos bornes:
+\begin{align*} 
+	\int_1^3 \int_{\frac{\pi}{4}}^{\frac{\pi}{2}} \int_0^{\frac{\pi}{4}}
+\end{align*}
+\paragraph{Question 10}
+Donc ici on va jsute utiliser la définition de la dérivée directionelle:
+\begin{align*} 
+	\lim_{h \to 0}  \frac{\frac{\frac{h}{\sqrt{2}}\sin\left(\left|\frac{h}{\sqrt{2}}\right|\right)}{\sqrt{3\left(\frac{h^2}{2}\right) + \frac{h^2}{2}}}}{h}\\
+	&= \lim_{h \to 0} \frac{\sin \left|\frac{h}{\sqrt{2}}\right|}{\sqrt{2}\sqrt{4h^2}}\\
+	&= \lim_{h \to 0} \frac{\sin \frac{h}{\sqrt{2}}}{2\sqrt{2}h} = \frac{1}{2\sqrt{2}}
+\end{align*}
+\paragraph{Question 11}
+
+
+
+\end{document}
