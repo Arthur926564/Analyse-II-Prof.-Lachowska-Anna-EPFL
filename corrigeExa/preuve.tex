@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+
+% Expanded on 2025-06-08 at 19:56:46.
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[bottom=2.5cm, top=2.5cm]{geometry}
+
+
+\title{Corrigé exa 2021}
+\author{Arthur Herbette}
+\date{Dimanche 08 juin 2025}
+
+
+\begin{document}
+Soit $p, q: I \to \mathbb{R}$ deux fonctions continues et soit $v_1, v_2: I \to \mathbb{R}$ deux solutions linéairement indépendantes de l'équations:
+\begin{align*} 
+    y'' + p\left(x\right)y' + q\left(x\right)y = 0
+\end{align*}
+Alors la solution générale de cette équation est de la forme:
+\begin{align*} v\left(x\right) = Cv_1\left(x\right) + C_2v_2\left(x\right) \mathspace \mathspace C_1, C_2 \in \mathbb{R}, \mathspace x \in I  \end{align*}
+
+\paragraph{Preuve}
+Soit $\tilde{v}$ une solution arbitraire de l'EDL2. Comme nos deux solution $v_1, v_2$ sont linéairement indépendantes, nous savons que le wronskien n'est pas nul en tout point. Dès lors nous savons qu'il existe une unique solution correspondant aux conditions initiales $\left(x_0, b_0, a_0\right)$ tel que:
+\begin{align*} 
+    \begin{pmatrix} v_1\left(x_0\right) & v_2\left(x_0\right) \\ v_1'\left(x_0\right) & v_2'\left(x_0\right) \end{pmatrix} \begin{pmatrix} C_1  \\ C_2 \end{pmatrix} = \begin{pmatrix} a_0 \\ b_0 \end{pmatrix} 
+\end{align*}
+par principe de superposition de solution d'EDL2, nous avons donc la solution $v\left(x\right) = C_1v_1\left(x\right) + C_2v_2\left(x\right)$ ayant les conditions initiales mentionnées ci-dessus. Par unicité des solutions d'EDL2 nous avons que:
+\begin{align*} \tilde{v}\left(x\right) = C_1v_1\left(x\right) + C_2v_2\left(x\right) \mathspace \mathspace \forall x \in I \end{align*}
+\end{document}

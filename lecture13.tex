@@ -1,32 +1,46 @@
-\lecture{13}{2025-04-07}{Jacobienne}{}
-\subsection{Fonction à valeur dans $ \mathbb{R}^m$, $m \geq 1$, la matrice jacobienne}
-\begin{definition}
-    Plus généralement, on peut considérer les fonctions:
-    \begin{align*}
-        \overline{f} \cdot E^{ \subset \mathbb{R}^m}
+\lecture{13}{2025-04-07}{Exemple}{}
+J'ai rien noté pendant le cours donc je reviens dessus pendant les révisions:\\
+Il y a eu que des exemples durant ce cours donc je fais en refaire quelqu'un
+\begin{parag}{Exemple 1}
+    Soit
+    \begin{align*} f\left(x, y\right) =  
+    \begin{cases}
+        x^2 \sin\left(\frac{1}{x}\right) &, \mathspace x \neq 0, \forall y \in \mathbb{R}\\
+        0 &, \mathspace x = 0 \mathspace \forall y \in \mathbb{R}
+    \end{cases}
     \end{align*}
-    
-    \begin{align*}
-        \overline{f}( \overline{x}) = \begin{pmatrix}
-            f_1( \overline{x}) \\
-            f_2( \overline{x})\\
-            \vdots \\
-            f_m( \overline{x})
-        \end{pmatrix}
+    On va chercher à savoir si notre fonction est continue sur $\mathbb{R}^2$.
+    \begin{align*} 
+        \lim_{\left(x, y\right) \to \left(0,0\right)} x^2 \sin\left(\frac{1}{x}\right) = \lim_{x \to 0} x^2 \sin\left(\frac{1}{x}\right)\\
+        = 0
     \end{align*}
-    Chaque fonction $f_i$ est une fonction réelle de $n$ variables réelles.
-\end{definition}
-
-\begin{parag}{Dérivée}
-    La $k$-ième dérivée partielle de $f: E \to \mathbb{R}^m$ en $ \overline{a} \in E$ est:
-    \begin{align*}
-        \frac{\partial \overline{f}}{\partial x}( \overline{a}) = \begin{pmatrix} \frac{\partial f}{\partial x_k}( \overline{a})       \\
-            \frac{\partial f}{\partial x_k}( \overline{a})\\
-            \vdots\\
-            \frac{\partial f}{\partial x_k}( \overline{a})
-        \end{pmatrix}
-    \end{align*}
-    
+    Donc elle est bien continue sur $\mathbb{R}^{2}$.\\
+    La question à poser maintenant ça va être la dérivabilité. Nous commençons par le ``bas'' c'est à dire les dérivée partielles.\\
+    \begin{align*} \frac{\partial f\left(x, y\right)}{\partial x} &= 2x \sin\left(\frac{1}{x}\right) + x^2 \cos\left(\frac{1}{x}\right)\left(\frac{-1}{x^2}\right)\\
+    &= 2x \sin\left(\frac{1}{x}\right) - \cos\left(\frac{1}{x}\right)   \end{align*}
+     Et pour $y$:
+     \begin{align*} \frac{\partial f\left(x, y\right)}{\partial y} = 0  \end{align*}
+     Donc on va maintenant chercher à savoir si notre fonction est de classe $C^1$ c'est à dire si les dérivée partielles sont continues. On doit comparer notre formule avec la définition de la dérivée partielle au point non définie ($x = 0$). donc par la définition  on a:
+     \begin{align*} 
+         \frac{\partial f}{\partial x} \left(0, y_0\right) =  \lim_{t   \to 0} \frac{t^2\sin\left(\frac{1}{t}\right) - 0}{t} =  \lim_{t \to 0} t \sin\left(\frac{1}{t}\right) = 0
+     \end{align*}
+     Maintenant si on le fait par notre formule on obtient:
+     \begin{align*} 
+         \lim_{\left(x, y\right) \to \left(0, 0\right)}  \frac{\partial f}{\partial x}  = \lim_{x \to 0} \left(2x \sin \left(\frac{1}{x}\right) - \cos \left(\frac{1}{x}\right)\right) = \lim_{x \to 0} \cos\left(\frac{1}{x}\right)
+     \end{align*}
+     qui n'existe pas, donc la fonction $\frac{\partial f}{\partial x} $ n'est pas continue sur $\left(0, y_0\right) \mathspace \forall y_0 \in \mathbb{R}$.\\
+     Maintenant on va garder la dérivabilité, une fonction peut être dérivable même si les dérivées partielles ne sont pas continues, néanmoins elles devront quand même exister. Donc ici, la fonction peut être dérivable.\\
+     Par la définition on peut chercher
+     \begin{align*} r\left(x, y\right) =  f\left(x, y\right)  - \underbrace{ f\left(0, y_0\right) }_{ = 0}- < \underbrace{\nabla f \left(0, y_0\right)}_{ = 0},  \left(x, y - y_0\right)> \end{align*}
+     
+     On a donc que 
+     \begin{align*} r\left(x, y\right) =  f\left(x, y\right) =  x^2\sin\left(\frac{1}{x}\right) \end{align*}
+     Par la définition:
+     \begin{align*} 
+         \lim_{\left(x, y\right) \to \left(0, 0\right)} \frac{\left|r\left(x, y\right)\right|}{\left|\left|\left(x, y\right) - \left(0, 0\right)\right|\right|} &= \lim_{\left(x, y\right) \to \left(0, y_0\right)} \frac{x^2 \left|\sin\left(\frac{1}{x}\right)\right|}{\sqrt{x^2  + \left(y - y_0\right)^2}}\\
+         \leq \lim_{x   \to 0} \frac{x^2 \left|\sin\left(\frac{1}{x}\right)\right|}{\sqrt{x^2}} =  \lim_{x \to 0} \left|x\right|\left|\sin\left(\frac{1}{x}\right)\right| = 0
+     \end{align*}
+     Ce qui implique que noter fonction est bien dérivable sur $\left(0, y_0\right) \mathspace \forall y_0 \in \mathbb{R} \implies $ dérivable sur $\mathbb{R}^{2}$.
 
 \end{parag}
 

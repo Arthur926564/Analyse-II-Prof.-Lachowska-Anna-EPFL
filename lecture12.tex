@@ -55,18 +55,16 @@
     Soit $\overline{a}$: $F( \overline{a}) = 0$, $F: \mathbb{R}^n  \to \mathbb{R}$ dérivable en $\overline{x} = \overline{a}$ et $ \nabla F( \overline{a}) \neq 0$:\\
    L'équation de l'hyperplan tangent à $F( \overline{x}) = 0$ au point $\overline{a}$ est:
    \begin{align*}
-       < \nabla F( \overline{a}),  ( \overline{x} - \overline{a}) > = 0
+       < \nabla F( \overline{a}),  ( \overline{x} - \overline{a})> =  0
    \end{align*}
    Et si $F(a, b, c) = 0$ et $ \nabla F(a, b, c) \neq 0$ Alors:
    \begin{align*}
        < \nabla F(a, b, c), (x-a, y-b, z-c) >\; = 0
    \end{align*}
    
-  
-   
 \end{definition}
 \begin{framedremark}
-    Ce qu'on fait en \textit{gros}" c'est de prendre le gradient qui donne le vecteur normal au plan tangent qui a donc dans ces coordonnées les valeur pour l'équation cartésienne du plan, et on fait comme un changement de référentiel pour pouvoir avoir le $0$ du plan à l'endroit ou il touche le point, c'est de là que provient le $x - x_0, y - y_0, z - z_0$.
+    Ce qu'on fait en \textit{gros}" c'est de prendre le gradient qui donne le vecteur normal au plan tangent qui a donc dans ces coordonnées les valeurs pour l'équation cartésienne du plan, et on fait comme un changement de référentiel pour pouvoir avoir le $0$ du plan à l'endroit ou il touche le point, c'est de là que provient le $x - x_0, y - y_0, z - z_0$.
 \end{framedremark}
 
 
@@ -108,7 +106,10 @@
         Soit $E \subset \mathbb{R}^n $ ouvert,  $f: E \to \mathbb{R}$, $\overline{a} \in E$. Supposons qu'il existe $ \delta > 0$ tel que toutes les dérivées partielles $ \frac{\partial f}{\partial x_k}( \overline{x})$ existent sur $B( \overline{a}, \delta)$ et sont continues en $\overline{a}$.\\
         Alors $f$ est dérivable en $\overline{a} \in E$
     \end{theoreme}
+    \begin{subparag}{Note personnelle}
+        Cela est vrai car, une fonction est dite de classe $C^1$ si au point donnée, toutes les dérivées partielles existent et sont continues. Dès lors, dans notre cas nous avons que notre fonction est de classe $C^1$ au alentour de notre point $\overline{a}$ dès lors elle est aussi dérivable.
+        \begin{align*} C^1\left(\overline{a}\right)  \implies \text{ dérivable en } \overline{a} \end{align*}
+    \end{subparag}
     
-
 \end{parag}
 
